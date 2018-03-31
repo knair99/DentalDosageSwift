@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E781C34206F6AA100CE5A7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E781C33206F6AA100CE5A7A /* AppDelegate.swift */; };
-		4E781C36206F6AA100CE5A7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E781C35206F6AA100CE5A7A /* ViewController.swift */; };
+		4E781C36206F6AA100CE5A7A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E781C35206F6AA100CE5A7A /* DashboardViewController.swift */; };
 		4E781C39206F6AA100CE5A7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E781C37206F6AA100CE5A7A /* Main.storyboard */; };
 		4E781C3B206F6AA100CE5A7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E781C3A206F6AA100CE5A7A /* Assets.xcassets */; };
 		4E781C3E206F6AA100CE5A7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E781C3C206F6AA100CE5A7A /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		4E781C30206F6AA100CE5A7A /* Dental Dosage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dental Dosage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E781C33206F6AA100CE5A7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E781C35206F6AA100CE5A7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4E781C35206F6AA100CE5A7A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		4E781C38206F6AA100CE5A7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E781C3A206F6AA100CE5A7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E781C3D206F6AA100CE5A7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				4E781C33206F6AA100CE5A7A /* AppDelegate.swift */,
-				4E781C35206F6AA100CE5A7A /* ViewController.swift */,
+				4E781C35206F6AA100CE5A7A /* DashboardViewController.swift */,
 				4E781C37206F6AA100CE5A7A /* Main.storyboard */,
 				4E781C3A206F6AA100CE5A7A /* Assets.xcassets */,
 				4E781C3C206F6AA100CE5A7A /* LaunchScreen.storyboard */,
@@ -149,7 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EDAFD6E207006A4002536C4 /* DentistTypeViewController.swift in Sources */,
-				4E781C36206F6AA100CE5A7A /* ViewController.swift in Sources */,
+				4E781C36206F6AA100CE5A7A /* DashboardViewController.swift in Sources */,
 				4EDAFD6C2070068A002536C4 /* WelcomeViewController.swift in Sources */,
 				4EDAFD6A2070045C002536C4 /* OnboardingViewController.swift in Sources */,
 				4EDAFD70207006B8002536C4 /* MetricViewController.swift in Sources */,

@@ -15,7 +15,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //Onboarding
+        let defaults = UserDefaults.standard
+        let key = defaults.object(forKey: "isFirstLaunch")
+        //Onboarding scene
+        if key == nil {
+            defaults.set(false, forKey: "isFirstLaunch")
+            defaults.synchronize()
+            
+            //Launch onboarding storyboard
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let onboardingViewController = sb.instantiateViewController(withIdentifier: "Onboarding")
+            self.window?.rootViewController = onboardingViewController
+            self.window?.makeKeyAndVisible()
+        }
+        
         return true
     }
 
