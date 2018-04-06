@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E2DE34F207809C30008DCD6 /* OBDentistTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DE34E207809C30008DCD6 /* OBDentistTypeTableViewCell.swift */; };
+		4E2DE35220780AFB0008DCD6 /* DentistType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DE35120780AFB0008DCD6 /* DentistType.swift */; };
 		4E781C34206F6AA100CE5A7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E781C33206F6AA100CE5A7A /* AppDelegate.swift */; };
 		4E781C36206F6AA100CE5A7A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E781C35206F6AA100CE5A7A /* DashboardViewController.swift */; };
 		4E781C39206F6AA100CE5A7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E781C37206F6AA100CE5A7A /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E2DE34E207809C30008DCD6 /* OBDentistTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBDentistTypeTableViewCell.swift; sourceTree = "<group>"; };
+		4E2DE35120780AFB0008DCD6 /* DentistType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentistType.swift; sourceTree = "<group>"; };
 		4E781C30206F6AA100CE5A7A /* Dental Dosage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dental Dosage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E781C33206F6AA100CE5A7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E781C35206F6AA100CE5A7A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +55,7 @@
 				4EDAFD6B2070068A002536C4 /* WelcomeViewController.swift */,
 				4EDAFD6D207006A4002536C4 /* DentistTypeViewController.swift */,
 				4EDAFD6F207006B8002536C4 /* MetricViewController.swift */,
+				4E2DE34E207809C30008DCD6 /* OBDentistTypeTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -61,6 +66,14 @@
 				4E781C3A206F6AA100CE5A7A /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4E2DE35020780AE00008DCD6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4E2DE35120780AFB0008DCD6 /* DentistType.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4E781C27206F6AA100CE5A7A = {
@@ -85,6 +98,7 @@
 				4E781C33206F6AA100CE5A7A /* AppDelegate.swift */,
 				4ED1AD042077212600152642 /* Views */,
 				4E23D90B207719F800BA8637 /* Controllers */,
+				4E2DE35020780AE00008DCD6 /* Models */,
 				4E23D90D20771A7B00BA8637 /* Resources */,
 				4E781C3F206F6AA100CE5A7A /* Info.plist */,
 			);
@@ -132,6 +146,7 @@
 				TargetAttributes = {
 					4E781C2F206F6AA100CE5A7A = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -173,7 +188,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EDAFD6E207006A4002536C4 /* DentistTypeViewController.swift in Sources */,
+				4E2DE35220780AFB0008DCD6 /* DentistType.swift in Sources */,
 				4E781C36206F6AA100CE5A7A /* DashboardViewController.swift in Sources */,
+				4E2DE34F207809C30008DCD6 /* OBDentistTypeTableViewCell.swift in Sources */,
 				4EDAFD6C2070068A002536C4 /* WelcomeViewController.swift in Sources */,
 				4EDAFD6A2070045C002536C4 /* OnboardingViewController.swift in Sources */,
 				4EDAFD70207006B8002536C4 /* MetricViewController.swift in Sources */,
@@ -318,11 +335,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Dental Dosage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baymonkeys.Dental-Dosage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -332,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Dental Dosage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
