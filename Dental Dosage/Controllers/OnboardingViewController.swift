@@ -47,11 +47,12 @@ class OnboardingViewController: UIPageViewController, UIPageViewControllerDataSo
         self.delegate = self
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
+        let disclaimerVc = sb.instantiateViewController(withIdentifier: "Disclaimer")as! DisclaimerViewController
         let welcomeVc = sb.instantiateViewController(withIdentifier: "Welcome") as! WelcomeViewController
         let dentistTypeVc = sb.instantiateViewController(withIdentifier: "DentistType") as! DentistTypeViewController
         let metricVc = sb.instantiateViewController(withIdentifier: "Metric") as! MetricViewController
     
-        vcArray = [welcomeVc, dentistTypeVc, metricVc]
+        vcArray = [disclaimerVc, welcomeVc, dentistTypeVc, metricVc]
         
         if let firstViewController = vcArray.first {
         setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)

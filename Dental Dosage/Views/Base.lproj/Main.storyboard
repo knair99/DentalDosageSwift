@@ -149,7 +149,7 @@ fit your needs</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcq-bn-kuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1652" y="913"/>
+            <point key="canvasLocation" x="-1666" y="913"/>
         </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -268,7 +268,7 @@ fit your needs</string>
                                     <constraint firstItem="V5T-pR-Ghq" firstAttribute="centerX" secondItem="alS-XZ-sol" secondAttribute="centerX" id="hsv-O7-OSr"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="avZ-TN-uWg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="avZ-TN-uWg">
                                 <rect key="frame" x="8" y="386" width="359" height="215"/>
                                 <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
@@ -477,6 +477,87 @@ fit your needs</string>
             </objects>
             <point key="canvasLocation" x="-258" y="913"/>
         </scene>
+        <!--Welcome-->
+        <scene sceneID="MfU-Xd-2Wm">
+            <objects>
+                <viewController storyboardIdentifier="Disclaimer" title="Welcome" id="AdL-m9-clg" customClass="DisclaimerViewController" customModule="Dental_Dosage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F2a-fz-OT7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQt-mJ-JQQ">
+                                <rect key="frame" x="0.0" y="611" width="375" height="56"/>
+                                <color key="backgroundColor" red="0.94454169269999999" green="0.55312216280000004" blue="0.60491627449999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fQt-mJ-JQQ" secondAttribute="height" multiplier="375:56" id="b6O-hF-V2Q"/>
+                                </constraints>
+                                <state key="normal" title="I AGREE">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                </variation>
+                                <connections>
+                                    <action selector="disclaimerAcceptPressed:" destination="8lZ-Y1-fk1" eventType="touchUpInside" id="KXY-JJ-4HP"/>
+                                    <action selector="disclaimerAcceptPressed:" destination="AdL-m9-clg" eventType="touchUpInside" id="NlO-8D-ygZ"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGU-Qz-MHg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="short_logo" translatesAutoresizingMaskIntoConstraints="NO" id="ehu-kp-qDd">
+                                        <rect key="frame" x="78" y="76" width="218" height="128"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ehu-kp-qDd" firstAttribute="centerY" secondItem="yGU-Qz-MHg" secondAttribute="centerY" id="3Mq-cx-BKh"/>
+                                    <constraint firstItem="ehu-kp-qDd" firstAttribute="top" secondItem="yGU-Qz-MHg" secondAttribute="top" constant="76" id="wPB-4h-0Xh"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NS1-GT-sbC">
+                                <rect key="frame" x="8" y="287" width="359" height="316"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="316" id="GSG-hp-ldu"/>
+                                </constraints>
+                                <string key="text">Dental dosage shall serve only to assist authorized medical prectitioners in avoiding drug dosage error. It is not intended to be the primary source for drug calculations.
+
+No guarantee is given to the accuracy of the app’s calculations. Dental Dosage should only be used to double check calculations and it is up to 
+authorized medical practitioners to make the final calculations before administering drugs.
+
+By using this app, you consent to this disclaimer</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yHb-se-gZr" firstAttribute="trailing" secondItem="NS1-GT-sbC" secondAttribute="trailing" constant="8" id="0SV-eD-faE"/>
+                            <constraint firstItem="yGU-Qz-MHg" firstAttribute="leading" secondItem="yHb-se-gZr" secondAttribute="leading" id="1gR-tm-KUz"/>
+                            <constraint firstItem="NS1-GT-sbC" firstAttribute="leading" secondItem="yHb-se-gZr" secondAttribute="leading" constant="8" id="6jA-lG-UjS"/>
+                            <constraint firstItem="fQt-mJ-JQQ" firstAttribute="leading" secondItem="yHb-se-gZr" secondAttribute="leading" id="Ayk-up-CF0"/>
+                            <constraint firstItem="ehu-kp-qDd" firstAttribute="centerX" secondItem="yHb-se-gZr" secondAttribute="centerX" id="ISJ-K8-oND"/>
+                            <constraint firstItem="NS1-GT-sbC" firstAttribute="centerX" secondItem="yHb-se-gZr" secondAttribute="centerX" id="JBi-6S-Wca"/>
+                            <constraint firstItem="yHb-se-gZr" firstAttribute="bottom" secondItem="fQt-mJ-JQQ" secondAttribute="bottom" id="JfO-G3-m4B"/>
+                            <constraint firstItem="fQt-mJ-JQQ" firstAttribute="top" secondItem="NS1-GT-sbC" secondAttribute="bottom" constant="8" id="TtH-KH-k3a"/>
+                            <constraint firstItem="yHb-se-gZr" firstAttribute="top" secondItem="yGU-Qz-MHg" secondAttribute="top" constant="20" id="Y7C-cb-43a"/>
+                            <constraint firstItem="NS1-GT-sbC" firstAttribute="top" secondItem="yGU-Qz-MHg" secondAttribute="bottom" constant="7" id="crD-OY-3cy"/>
+                            <constraint firstItem="yHb-se-gZr" firstAttribute="trailing" secondItem="fQt-mJ-JQQ" secondAttribute="trailing" id="dl9-GT-YI1"/>
+                            <constraint firstItem="yHb-se-gZr" firstAttribute="trailing" secondItem="yGU-Qz-MHg" secondAttribute="trailing" id="tLR-11-TKH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yHb-se-gZr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4VU-At-ae7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8lZ-Y1-fk1" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-2378" y="913"/>
+        </scene>
     </scenes>
     <resources>
         <image name="onboarding_blue_dot" width="20" height="21"/>
@@ -484,5 +565,6 @@ fit your needs</string>
         <image name="onboarding_metric" width="228" height="228"/>
         <image name="onboarding_pink_dot" width="21" height="21"/>
         <image name="onboarding_welcome" width="228" height="228"/>
+        <image name="short_logo" width="218" height="209"/>
     </resources>
 </document>
