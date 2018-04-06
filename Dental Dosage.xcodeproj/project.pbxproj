@@ -43,7 +43,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4E23D90B207719F800BA8637 /* ViewControllers */ = {
+		4E23D90B207719F800BA8637 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				4E781C35206F6AA100CE5A7A /* DashboardViewController.swift */,
@@ -52,16 +52,7 @@
 				4EDAFD6D207006A4002536C4 /* DentistTypeViewController.swift */,
 				4EDAFD6F207006B8002536C4 /* MetricViewController.swift */,
 			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		4E23D90C20771A0F00BA8637 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				4E781C37206F6AA100CE5A7A /* Main.storyboard */,
-				4E781C3C206F6AA100CE5A7A /* LaunchScreen.storyboard */,
-			);
-			path = Storyboards;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		4E23D90D20771A7B00BA8637 /* Resources */ = {
@@ -92,12 +83,21 @@
 			isa = PBXGroup;
 			children = (
 				4E781C33206F6AA100CE5A7A /* AppDelegate.swift */,
-				4E23D90B207719F800BA8637 /* ViewControllers */,
-				4E23D90C20771A0F00BA8637 /* Storyboards */,
+				4ED1AD042077212600152642 /* Views */,
+				4E23D90B207719F800BA8637 /* Controllers */,
 				4E23D90D20771A7B00BA8637 /* Resources */,
 				4E781C3F206F6AA100CE5A7A /* Info.plist */,
 			);
 			path = "Dental Dosage";
+			sourceTree = "<group>";
+		};
+		4ED1AD042077212600152642 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4E781C3C206F6AA100CE5A7A /* LaunchScreen.storyboard */,
+				4E781C37206F6AA100CE5A7A /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
