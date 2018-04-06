@@ -18,6 +18,5 @@ class DentistTypeViewController: UIViewController {
         let parent = self.parent as! OnboardingViewController
         parent.moveNextController(currentViewController: self)
     }
-    
 
 }

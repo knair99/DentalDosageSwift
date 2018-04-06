@@ -14,7 +14,6 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    //Moves to next onboarding screen
     @IBAction func welcomeButtonNextPressed(_ sender: Any) {
         let parent = self.parent as! OnboardingViewController
         parent.moveNextController(currentViewController: self)
