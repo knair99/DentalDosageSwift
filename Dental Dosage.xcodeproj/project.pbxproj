@@ -43,6 +43,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E23D90B207719F800BA8637 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E781C35206F6AA100CE5A7A /* DashboardViewController.swift */,
+				4EDAFD692070045C002536C4 /* OnboardingViewController.swift */,
+				4EDAFD6B2070068A002536C4 /* WelcomeViewController.swift */,
+				4EDAFD6D207006A4002536C4 /* DentistTypeViewController.swift */,
+				4EDAFD6F207006B8002536C4 /* MetricViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4E23D90C20771A0F00BA8637 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4E781C37206F6AA100CE5A7A /* Main.storyboard */,
+				4E781C3C206F6AA100CE5A7A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4E23D90D20771A7B00BA8637 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4E781C3A206F6AA100CE5A7A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		4E781C27206F6AA100CE5A7A = {
 			isa = PBXGroup;
 			children = (
@@ -63,15 +92,10 @@
 			isa = PBXGroup;
 			children = (
 				4E781C33206F6AA100CE5A7A /* AppDelegate.swift */,
-				4E781C35206F6AA100CE5A7A /* DashboardViewController.swift */,
-				4E781C37206F6AA100CE5A7A /* Main.storyboard */,
-				4E781C3A206F6AA100CE5A7A /* Assets.xcassets */,
-				4E781C3C206F6AA100CE5A7A /* LaunchScreen.storyboard */,
+				4E23D90B207719F800BA8637 /* ViewControllers */,
+				4E23D90C20771A0F00BA8637 /* Storyboards */,
+				4E23D90D20771A7B00BA8637 /* Resources */,
 				4E781C3F206F6AA100CE5A7A /* Info.plist */,
-				4EDAFD692070045C002536C4 /* OnboardingViewController.swift */,
-				4EDAFD6B2070068A002536C4 /* WelcomeViewController.swift */,
-				4EDAFD6D207006A4002536C4 /* DentistTypeViewController.swift */,
-				4EDAFD6F207006B8002536C4 /* MetricViewController.swift */,
 			);
 			path = "Dental Dosage";
 			sourceTree = "<group>";
