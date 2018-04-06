@@ -30,6 +30,16 @@ class OnboardingViewController: UIPageViewController, UIPageViewControllerDataSo
         return vcArray[nextIndex]
     }
     
+    //Function for NEXT buttons to manually move to the next ViewController
+    public func moveNextController(currentViewController: UIViewController){
+        let index = vcArray.index(of: currentViewController) ?? 0
+        let next = index + 1 //Get the next view controller's index
+        guard vcArray.count != next else {return}
+        guard vcArray.count > next else {return}
+        let nextViewController = vcArray[next]
+        self.setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
