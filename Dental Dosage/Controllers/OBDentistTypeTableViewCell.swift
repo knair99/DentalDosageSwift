@@ -15,6 +15,7 @@ class OBDentistTypeTableViewCell: UITableViewCell {
     @IBOutlet weak var dentistTypeSwitch: UISwitch!
     @IBOutlet weak var dentistTypeLabel: UILabel!
     
+    //Declare all custom methods here
     //Used from view controller to dynamically set the cell to view
     func setCell(dentistType: String, isSelected: Bool){
         dentistTypeSwitch.isOn = isSelected

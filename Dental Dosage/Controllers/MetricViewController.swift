@@ -16,10 +16,17 @@ class MetricViewController: UIViewController {
     //Declare outlets here
     @IBOutlet weak var metricTableView: UITableView!
     
-    //Declare actions here
+    //Declare all actions here
+    //Method to move the screen from current controller to next upon button press
     @IBAction func metricButtonNextPressed(_ sender: Any) {
         let parent = self.parent as! OnboardingViewController
         parent.moveNextController(currentViewController: self)
+    }
+    
+    //Create all custom methods here
+    func CreateMetricTypes () {
+        metricTypesArray.append(Metric(metricType: "Metric (Or decimal system)", isSelected: false))
+        metricTypesArray.append(Metric(metricType: "The US Standard (Or Imperial System)", isSelected: false))
     }
     
     //Declare all overrides here
@@ -29,13 +36,6 @@ class MetricViewController: UIViewController {
         metricTableView.delegate = self
         metricTableView.dataSource = self
     }
-    
-    //Create all custom methods here
-    func CreateMetricTypes () {
-        metricTypesArray.append(Metric(metricType: "Metric (Or decimal system)", isSelected: false))
-        metricTypesArray.append(Metric(metricType: "The US Standard (Or Imperial System)", isSelected: false))
-    }
-    
 }
 
 //Need to extend this class to accomodate a table view and its delegates

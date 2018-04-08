@@ -16,14 +16,8 @@ class DentistTypeViewController: UIViewController {
     //Create all outlets here
     @IBOutlet weak var dentistTypeTableView: UITableView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        CreateDentistTypes()
-        dentistTypeTableView.delegate = self
-        dentistTypeTableView.dataSource = self
-    }
-    
     //Create all actions here
+    //Method to move the screen from current controller to next upon button press
     @IBAction func dentistTypeNextButtonPressed(_ sender: Any) {
         let parent = self.parent as! OnboardingViewController
         parent.moveNextController(currentViewController: self)
@@ -37,7 +31,14 @@ class DentistTypeViewController: UIViewController {
         dentistTypesArray.append(DentistType(dentistType: "Endodontist", isSelected: false))
         dentistTypesArray.append(DentistType(dentistType: "Prosthodontist", isSelected: false))
     }
-
+    
+    //Declare all overrides here
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        CreateDentistTypes()
+        dentistTypeTableView.delegate = self
+        dentistTypeTableView.dataSource = self
+    }
 }
 
 //Need to extend this class to accomodate a table view and its delegates

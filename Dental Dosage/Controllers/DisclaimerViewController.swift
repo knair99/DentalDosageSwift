@@ -10,19 +10,14 @@ import UIKit
 
 class DisclaimerViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-   
+   //Declare all actions here
     @IBAction func disclaimerAcceptPressed(_ sender: Any) {
         let parent = self.parent as! OnboardingViewController
         parent.moveNextController(currentViewController: self)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    //Declare all overrides here
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
-    
-
-
 }

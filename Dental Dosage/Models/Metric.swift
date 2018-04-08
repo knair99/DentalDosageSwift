@@ -9,6 +9,7 @@
 
 import Foundation
 
+//Onboarding - models needed to hold metric type chosen
 class Metric {
     
     var metricType: String

@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Onboarding - models needed to hold dentist type(s) chosen
 class DentistType {
     
     var dentistType: String
