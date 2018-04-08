@@ -11,6 +11,7 @@ import UIKit
 //Holds and controls two items in the prototype cell - the uiswitch and the label
 class OBDentistTypeTableViewCell: UITableViewCell {
     
+    //Declare all outlets here
     @IBOutlet weak var dentistTypeSwitch: UISwitch!
     @IBOutlet weak var dentistTypeLabel: UILabel!
     
