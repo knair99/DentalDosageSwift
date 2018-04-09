@@ -26,7 +26,7 @@ class MetricViewController: UIViewController {
     //Create all custom methods here
     func CreateMetricTypes () {
         metricTypesArray.append(Metric(metricType: "Metric (Or decimal system)", isSelected: false))
-        metricTypesArray.append(Metric(metricType: "The US Standard (Or Imperial System)", isSelected: false))
+        metricTypesArray.append(Metric(metricType: "The US Standard", isSelected: false))
     }
     
     //Declare all overrides here
