@@ -207,7 +207,7 @@ fit your needs</string>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5T-pR-Ghq" userLabel="Dots View">
-                                        <rect key="frame" x="99" y="254.5" width="176" height="20"/>
+                                        <rect key="frame" x="99" y="255.5" width="176" height="20"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding_blue_dot" translatesAutoresizingMaskIntoConstraints="NO" id="4zm-Ua-LwR">
                                                 <rect key="frame" x="156" y="-1" width="20" height="21"/>
@@ -235,6 +235,29 @@ fit your needs</string>
                                     <constraint firstItem="V5T-pR-Ghq" firstAttribute="centerX" secondItem="1YM-o9-F3f" secondAttribute="centerX" id="gdF-K5-oBn"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="muv-BM-gEG" userLabel="Container Text View">
+                                <rect key="frame" x="8" y="275" width="359" height="54.5"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Enable features for" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYk-ND-jJ4">
+                                        <rect key="frame" x="8" y="7.5" width="343" height="40"/>
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        </variation>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="NYk-ND-jJ4" firstAttribute="centerY" secondItem="muv-BM-gEG" secondAttribute="centerY" id="8HJ-05-d4y"/>
+                                    <constraint firstItem="NYk-ND-jJ4" firstAttribute="leading" secondItem="muv-BM-gEG" secondAttribute="leading" constant="8" id="ARR-Yg-WAN"/>
+                                    <constraint firstItem="NYk-ND-jJ4" firstAttribute="centerX" secondItem="muv-BM-gEG" secondAttribute="centerX" id="LF2-IX-U2y"/>
+                                    <constraint firstAttribute="width" secondItem="muv-BM-gEG" secondAttribute="height" multiplier="375:128" constant="200" id="O88-my-Vf5"/>
+                                    <constraint firstAttribute="trailing" secondItem="NYk-ND-jJ4" secondAttribute="trailing" constant="8" id="PxX-yh-Jf3"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mny-mu-xzC">
                                 <rect key="frame" x="0.0" y="611" width="375" height="56"/>
                                 <color key="backgroundColor" red="0.94454169269999999" green="0.55312216280000004" blue="0.60491627449999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -252,7 +275,7 @@ fit your needs</string>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="avZ-TN-uWg">
-                                <rect key="frame" x="0.0" y="337" width="375" height="297.5"/>
+                                <rect key="frame" x="0.0" y="338" width="375" height="263"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -303,36 +326,10 @@ fit your needs</string>
                                 </tableView>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVc-Ro-sW9" userLabel="Separator Line View">
-                                <rect key="frame" x="0.0" y="264.5" width="375" height="1"/>
+                                <rect key="frame" x="0.0" y="265.5" width="375" height="1"/>
                                 <color key="backgroundColor" red="0.34509803919999998" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Gsy-Tt-yEH"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="muv-BM-gEG" userLabel="Container Text View">
-                                <rect key="frame" x="8" y="274.5" width="359" height="54.5"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Enable features for" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYk-ND-jJ4">
-                                        <rect key="frame" x="8" y="12.5" width="343" height="30"/>
-                                        <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="wtH-7Y-poi"/>
-                                        </constraints>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                        </variation>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="NYk-ND-jJ4" firstAttribute="centerY" secondItem="muv-BM-gEG" secondAttribute="centerY" id="8HJ-05-d4y"/>
-                                    <constraint firstItem="NYk-ND-jJ4" firstAttribute="leading" secondItem="muv-BM-gEG" secondAttribute="leading" constant="8" id="ARR-Yg-WAN"/>
-                                    <constraint firstItem="NYk-ND-jJ4" firstAttribute="centerX" secondItem="muv-BM-gEG" secondAttribute="centerX" id="LF2-IX-U2y"/>
-                                    <constraint firstAttribute="width" secondItem="muv-BM-gEG" secondAttribute="height" multiplier="375:128" constant="200" id="O88-my-Vf5"/>
-                                    <constraint firstAttribute="trailing" secondItem="NYk-ND-jJ4" secondAttribute="trailing" constant="8" id="PxX-yh-Jf3"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -396,12 +393,9 @@ fit your needs</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kyy-5t-8pJ" userLabel="Container Text View">
                                 <rect key="frame" x="0.0" y="270" width="375" height="59.5"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Choose preferred metric" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ar-HJ-JUC">
-                                        <rect key="frame" x="8" y="15" width="359" height="30"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Choose preferred metric" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ar-HJ-JUC">
+                                        <rect key="frame" x="8" y="10" width="359" height="40"/>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="zqV-UN-Mzt"/>
-                                        </constraints>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
