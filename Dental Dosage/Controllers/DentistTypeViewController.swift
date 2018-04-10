@@ -41,6 +41,13 @@ class DentistTypeViewController: UIViewController {
     }
 }
 
+//Need to set cell delegates for the view controller to implement (take action on)
+extension DentistTypeViewController : OBDentistTypeCellDelegate {
+    func didTapDentistTypeSwitch(dentistType: String) {
+        print ("\(dentistType)")
+    }
+}
+
 //Need to extend this class to accomodate a table view and its delegates
 extension DentistTypeViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,6 +58,10 @@ extension DentistTypeViewController : UITableViewDataSource, UITableViewDelegate
         let dentist = dentistTypesArray[indexPath.item]
         let cell = dentistTypeTableView.dequeueReusableCell(withIdentifier: "DentistTypePrototypeCell") as! OBDentistTypeTableViewCell
         cell.setCell(dentistType: dentist.dentistType, isSelected: dentist.isSelected)
+        
+        //Set the cell delegate for the appropriate action on items in the cell
+        cell.delegate = self
+        
         return cell
     }
     

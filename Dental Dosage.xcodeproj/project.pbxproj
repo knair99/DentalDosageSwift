@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0978F6207C51E9003727B4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0978F5207C51E9003727B4 /* Settings.swift */; };
 		4E2DE34F207809C30008DCD6 /* OBDentistTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DE34E207809C30008DCD6 /* OBDentistTypeTableViewCell.swift */; };
 		4E2DE35220780AFB0008DCD6 /* DentistType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DE35120780AFB0008DCD6 /* DentistType.swift */; };
 		4E2DE354207839250008DCD6 /* DisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DE353207839250008DCD6 /* DisclaimerViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E0978F5207C51E9003727B4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		4E2DE34E207809C30008DCD6 /* OBDentistTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBDentistTypeTableViewCell.swift; sourceTree = "<group>"; };
 		4E2DE35120780AFB0008DCD6 /* DentistType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentistType.swift; sourceTree = "<group>"; };
 		4E2DE353207839250008DCD6 /* DisclaimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				4E2DE35120780AFB0008DCD6 /* DentistType.swift */,
 				4E2DE3572079B12C0008DCD6 /* Metric.swift */,
+				4E0978F5207C51E9003727B4 /* Settings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				4E2DE354207839250008DCD6 /* DisclaimerViewController.swift in Sources */,
 				4E781C36206F6AA100CE5A7A /* DashboardViewController.swift in Sources */,
 				4E2DE34F207809C30008DCD6 /* OBDentistTypeTableViewCell.swift in Sources */,
+				4E0978F6207C51E9003727B4 /* Settings.swift in Sources */,
 				4EDAFD6C2070068A002536C4 /* WelcomeViewController.swift in Sources */,
 				4E2DE3582079B12C0008DCD6 /* Metric.swift in Sources */,
 				4EDAFD6A2070045C002536C4 /* OnboardingViewController.swift in Sources */,
