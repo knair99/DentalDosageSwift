@@ -38,6 +38,14 @@ class MetricViewController: UIViewController {
     }
 }
 
+//Need to set cell delegates for the view controller to implement (take action on)
+extension MetricViewController : OBMetricCellDelegate {
+    func didTapMetricSwitch(metricChosen: String) {
+        let parent = self.parent as! OnboardingViewController
+        parent.userSettings.setMetric(metricChosen: metricChosen)
+    }
+}
+
 //Need to extend this class to accomodate a table view and its delegates
 extension MetricViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,6 +56,8 @@ extension MetricViewController : UITableViewDataSource, UITableViewDelegate {
         let metric = metricTypesArray[indexPath.item]
         let cell = metricTableView.dequeueReusableCell(withIdentifier: "MetricPrototypeCell") as! OBMetricTableViewCell
         cell.setCell(metricLabel: metric.metricType, isSelected: metric.isSelected)
+        //Set the cell delegate for the appropriate action on items in the cell
+        cell.delegate = self
         return cell
     }
     

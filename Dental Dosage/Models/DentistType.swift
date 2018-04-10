@@ -13,9 +13,13 @@ class DentistType {
     
     var dentistType: String
     var isSelected: Bool
+    //Need an identifier to recognize what kind of dentist later on (for key-value lookup)
+    //Keys: "general", "oral", "orthodontist", "endodontist", "periodontist", "prosthodontist"
+    var key : String
     
-    init(dentistType: String, isSelected: Bool) {
+    init(dentistType: String, isSelected: Bool, key: String) {
         self.dentistType = dentistType
         self.isSelected = isSelected
+        self.key =  key
     }
 }
