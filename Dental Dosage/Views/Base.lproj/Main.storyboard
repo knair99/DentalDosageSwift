@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GCE-DE-CkO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -274,59 +273,51 @@ fit your needs</string>
                                     <action selector="dentistTypeNextButtonPressed:" destination="eTV-wk-bXQ" eventType="touchUpInside" id="8dt-MD-EOs"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="avZ-TN-uWg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X3D-mQ-3sa">
                                 <rect key="frame" x="0.0" y="338" width="375" height="263"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="sectionIndexColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="X3D-mQ-3sa">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="188"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="separatorColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="sectionIndexBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <prototypes>
-                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DentistTypePrototypeCell" id="fgf-hG-U5y" customClass="OBDentistTypeTableViewCell" customModule="Dental_Dosage" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DentistTypePrototypeCell" id="fgf-hG-U5y" customClass="OBDentistTypeTableViewCell" customModule="Dental_Dosage" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fgf-hG-U5y" id="skD-23-pJC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fgf-hG-U5y" id="skD-23-pJC">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <subviews>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="F2u-Pe-MFQ">
-                                                        <rect key="frame" x="15" y="6" width="51" height="31"/>
-                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="onTintColor" red="0.94454169269999999" green="0.55312216280000004" blue="0.60491627449999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <connections>
-                                                            <action selector="dentistTypeSwitchTapped:" destination="fgf-hG-U5y" eventType="valueChanged" id="2Q3-Bo-Eb2"/>
-                                                        </connections>
-                                                    </switch>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dentist Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXD-wJ-bmG" userLabel="Dentist Type">
-                                                        <rect key="frame" x="89" y="12" width="97" height="21"/>
-                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" red="0.34509803919999998" green="0.6588235294" blue="0.6588235294" alpha="0.35999999999999999" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstItem="F2u-Pe-MFQ" firstAttribute="centerY" secondItem="skD-23-pJC" secondAttribute="centerY" id="9JB-Uw-Jt0"/>
-                                                    <constraint firstItem="ZXD-wJ-bmG" firstAttribute="leading" secondItem="F2u-Pe-MFQ" secondAttribute="trailing" constant="25" id="Jqn-fX-Ema"/>
-                                                    <constraint firstItem="ZXD-wJ-bmG" firstAttribute="centerY" secondItem="skD-23-pJC" secondAttribute="centerY" id="aFT-cB-nHt"/>
-                                                    <constraint firstItem="F2u-Pe-MFQ" firstAttribute="leading" secondItem="skD-23-pJC" secondAttribute="leading" constant="15" id="lHZ-4h-ZL3"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZXD-wJ-bmG" secondAttribute="trailing" constant="20" symbolic="YES" id="xru-Yx-tEV"/>
-                                                </constraints>
-                                            </tableViewCellContentView>
-                                            <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <connections>
-                                                <outlet property="dentistTypeLabel" destination="ZXD-wJ-bmG" id="sfA-s3-Qio"/>
-                                                <outlet property="dentistTypeSwitch" destination="F2u-Pe-MFQ" id="CQj-AY-ibL"/>
-                                            </connections>
-                                        </tableViewCell>
-                                    </prototypes>
-                                </tableView>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="F2u-Pe-MFQ">
+                                                    <rect key="frame" x="15" y="6" width="51" height="31"/>
+                                                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="onTintColor" red="0.94454169269999999" green="0.55312216280000004" blue="0.60491627449999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="dentistTypeSwitchTapped:" destination="fgf-hG-U5y" eventType="valueChanged" id="2Q3-Bo-Eb2"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dentist Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXD-wJ-bmG" userLabel="Dentist Type">
+                                                    <rect key="frame" x="89" y="12" width="97" height="21"/>
+                                                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.34509803919999998" green="0.6588235294" blue="0.6588235294" alpha="0.35999999999999999" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="F2u-Pe-MFQ" firstAttribute="centerY" secondItem="skD-23-pJC" secondAttribute="centerY" id="9JB-Uw-Jt0"/>
+                                                <constraint firstItem="ZXD-wJ-bmG" firstAttribute="leading" secondItem="F2u-Pe-MFQ" secondAttribute="trailing" constant="25" id="Jqn-fX-Ema"/>
+                                                <constraint firstItem="ZXD-wJ-bmG" firstAttribute="centerY" secondItem="skD-23-pJC" secondAttribute="centerY" id="aFT-cB-nHt"/>
+                                                <constraint firstItem="F2u-Pe-MFQ" firstAttribute="leading" secondItem="skD-23-pJC" secondAttribute="leading" constant="15" id="lHZ-4h-ZL3"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZXD-wJ-bmG" secondAttribute="trailing" constant="20" symbolic="YES" id="xru-Yx-tEV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="dentistTypeLabel" destination="ZXD-wJ-bmG" id="sfA-s3-Qio"/>
+                                            <outlet property="dentistTypeSwitch" destination="F2u-Pe-MFQ" id="CQj-AY-ibL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVc-Ro-sW9" userLabel="Separator Line View">
                                 <rect key="frame" x="0.0" y="265.5" width="375" height="1"/>
@@ -338,23 +329,22 @@ fit your needs</string>
                         </subviews>
                         <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="mny-mu-xzC" firstAttribute="firstBaseline" secondItem="avZ-TN-uWg" secondAttribute="baseline" constant="10" id="3Wx-iB-6U1"/>
                             <constraint firstItem="Uaf-ye-ggJ" firstAttribute="bottom" secondItem="muv-BM-gEG" secondAttribute="bottom" multiplier="1.66" constant="120" id="4Hs-6I-r4n"/>
                             <constraint firstItem="zVc-Ro-sW9" firstAttribute="leading" secondItem="Uaf-ye-ggJ" secondAttribute="leading" id="8oq-O7-baa"/>
+                            <constraint firstItem="mny-mu-xzC" firstAttribute="top" secondItem="X3D-mQ-3sa" secondAttribute="bottom" constant="10" id="9nW-Rl-FjP"/>
                             <constraint firstItem="Uaf-ye-ggJ" firstAttribute="bottom" secondItem="mny-mu-xzC" secondAttribute="bottom" id="Cda-yy-Zrs"/>
+                            <constraint firstItem="X3D-mQ-3sa" firstAttribute="top" secondItem="muv-BM-gEG" secondAttribute="bottom" constant="8.5" id="Dms-Kf-REu"/>
                             <constraint firstItem="zVc-Ro-sW9" firstAttribute="centerY" secondItem="V5T-pR-Ghq" secondAttribute="centerY" id="IL1-nc-vIf"/>
+                            <constraint firstItem="X3D-mQ-3sa" firstAttribute="leading" secondItem="Uaf-ye-ggJ" secondAttribute="leading" id="Io3-pg-78B"/>
                             <constraint firstItem="Uaf-ye-ggJ" firstAttribute="trailing" secondItem="mny-mu-xzC" secondAttribute="trailing" id="K2b-kV-5uq"/>
                             <constraint firstItem="zVc-Ro-sW9" firstAttribute="centerX" secondItem="V5T-pR-Ghq" secondAttribute="centerX" id="MJm-dv-JqX"/>
-                            <constraint firstItem="avZ-TN-uWg" firstAttribute="top" secondItem="muv-BM-gEG" secondAttribute="bottom" constant="8" id="MPa-XU-7yD"/>
-                            <constraint firstItem="mny-mu-xzC" firstAttribute="top" secondItem="avZ-TN-uWg" secondAttribute="bottom" constant="10" id="PJg-RH-i1S"/>
                             <constraint firstItem="muv-BM-gEG" firstAttribute="top" secondItem="V5T-pR-Ghq" secondAttribute="bottom" id="QFr-Zm-lUc"/>
                             <constraint firstItem="mny-mu-xzC" firstAttribute="leading" secondItem="Uaf-ye-ggJ" secondAttribute="leading" id="X4g-L3-bRY"/>
                             <constraint firstItem="Uaf-ye-ggJ" firstAttribute="trailing" secondItem="alS-XZ-sol" secondAttribute="trailing" id="ZOc-E8-1w6"/>
-                            <constraint firstItem="avZ-TN-uWg" firstAttribute="leading" secondItem="Uaf-ye-ggJ" secondAttribute="leading" id="c9b-On-1q3"/>
                             <constraint firstItem="alS-XZ-sol" firstAttribute="leading" secondItem="Uaf-ye-ggJ" secondAttribute="leading" id="eFR-Sm-BXU"/>
+                            <constraint firstItem="Uaf-ye-ggJ" firstAttribute="trailing" secondItem="X3D-mQ-3sa" secondAttribute="trailing" id="j57-Um-biR"/>
                             <constraint firstItem="Uaf-ye-ggJ" firstAttribute="trailing" secondItem="zVc-Ro-sW9" secondAttribute="trailing" id="o9T-av-AKp"/>
                             <constraint firstItem="Uaf-ye-ggJ" firstAttribute="top" secondItem="alS-XZ-sol" secondAttribute="top" constant="20" id="sOE-rG-S5Z"/>
-                            <constraint firstItem="Uaf-ye-ggJ" firstAttribute="trailing" secondItem="avZ-TN-uWg" secondAttribute="trailing" id="sxz-We-85s"/>
                             <constraint firstItem="muv-BM-gEG" firstAttribute="centerX" secondItem="Uaf-ye-ggJ" secondAttribute="centerX" id="tCp-IY-Tpc"/>
                             <constraint firstItem="muv-BM-gEG" firstAttribute="leading" secondItem="Uaf-ye-ggJ" secondAttribute="leading" constant="8" id="wF1-EG-akj"/>
                             <constraint firstAttribute="bottom" secondItem="alS-XZ-sol" secondAttribute="bottom" multiplier="2.33" id="xlD-hg-OYc"/>
