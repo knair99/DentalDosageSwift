@@ -90,13 +90,6 @@ class OnboardingViewController: UIPageViewController, UIPageViewControllerDataSo
         let userSettingsEncoded = NSKeyedArchiver.archivedData(withRootObject: userSettings)
         defaults.set(userSettingsEncoded, forKey: "DefaultSettingsKey")
         defaults.synchronize()
-        
-        _ = UserDefaults.standard
-        
-        if let savedSettings = defaults.object(forKey: "DefaultSettingsKey") as? Data {
-            let settings = NSKeyedUnarchiver.unarchiveObject(with: savedSettings) as! Settings
-            print("\(settings)")
-        }
     }
     
 }
