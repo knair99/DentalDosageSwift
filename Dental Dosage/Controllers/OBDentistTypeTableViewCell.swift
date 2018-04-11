@@ -13,6 +13,7 @@ protocol OBDentistTypeCellDelegate {
     
     //Need one method - To find if a switch is tapped on
     func didTapDentistTypeSwitch (dentistType: String)
+    func updateSwitchState (indexPath: IndexPath, isSelected:Bool)
 }
 
 
@@ -31,6 +32,12 @@ class OBDentistTypeTableViewCell: UITableViewCell {
     
     //When a switch is tapped, a delegate method at the table level needs to be fired
     @IBAction func dentistTypeSwitchTapped(_ sender: Any) {
+        //Regardless of switch state, we need to update its model
+        let cell = dentistTypeSwitch.superview?.superview as! OBDentistTypeTableViewCell
+        let table = cell.superview as! UITableView
+        let index = table.indexPath(for: cell)
+        delegate?.updateSwitchState(indexPath: index!, isSelected: dentistTypeSwitch.isOn)
+        
        //We only need to call a delegate to action if the button is ON
         if dentistTypeSwitch.isOn {
         delegate?.didTapDentistTypeSwitch(dentistType: dentistTypeLabel.text!)
@@ -43,7 +50,5 @@ class OBDentistTypeTableViewCell: UITableViewCell {
         dentistTypeSwitch.isOn = isSelected
         dentistTypeLabel.text = dentistType
     }
-    
-    
     
 }

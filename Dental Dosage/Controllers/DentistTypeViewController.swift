@@ -12,7 +12,7 @@ class DentistTypeViewController: UIViewController {
     
     //Create all locals here
     var dentistTypesArray : [DentistType] = []
-
+    
     //Create all outlets here
     @IBOutlet weak var dentistTypeTableView: UITableView!
     
@@ -53,6 +53,11 @@ extension DentistTypeViewController : OBDentistTypeCellDelegate {
         let parent = self.parent as! OnboardingViewController
         parent.userSettings.setTypes(dentistType: dentistType)
     }
+    
+    func updateSwitchState(indexPath: IndexPath, isSelected: Bool) {
+        let dentist = dentistTypesArray[indexPath.item]
+        dentist.isSelected = isSelected
+    }
 }
 
 //Need to extend this class to accomodate a table view and its delegates
@@ -65,13 +70,9 @@ extension DentistTypeViewController : UITableViewDataSource, UITableViewDelegate
         let dentist = dentistTypesArray[indexPath.item]
         let cell = dentistTypeTableView.dequeueReusableCell(withIdentifier: "DentistTypePrototypeCell") as! OBDentistTypeTableViewCell
         cell.setCell(dentistType: dentist.dentistType, isSelected: dentist.isSelected)
-        
         //Set the cell delegate for the appropriate action on items in the cell
         cell.delegate = self
-        
         return cell
     }
-    
-
     
 }

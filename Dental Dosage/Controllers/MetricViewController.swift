@@ -25,8 +25,8 @@ class MetricViewController: UIViewController {
     
     //Create all custom methods here
     func CreateMetricTypes () {
-        metricTypesArray.append(Metric(metricType: "Metric (Or decimal system)", isSelected: false))
-        metricTypesArray.append(Metric(metricType: "The US Standard", isSelected: false))
+        metricTypesArray.append(Metric(metricType: "Metric (Or decimal system)", isSelected: false, key: "metric"))
+        metricTypesArray.append(Metric(metricType: "The US Standard", isSelected: false, key: "us"))
     }
     
     //Declare all overrides here
@@ -43,6 +43,11 @@ extension MetricViewController : OBMetricCellDelegate {
     func didTapMetricSwitch(metricChosen: String) {
         let parent = self.parent as! OnboardingViewController
         parent.userSettings.setMetric(metricChosen: metricChosen)
+    }
+    
+    func updateSwitchState(indexPath: IndexPath, isSelected: Bool) {
+        let metric = metricTypesArray[indexPath.item]
+        metric.isSelected = isSelected
     }
 }
 

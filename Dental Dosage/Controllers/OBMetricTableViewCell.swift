@@ -13,6 +13,7 @@ protocol OBMetricCellDelegate {
     
     //Need one method - To find if a switch is tapped on
     func didTapMetricSwitch (metricChosen: String)
+    func updateSwitchState(indexPath: IndexPath, isSelected: Bool)
 }
 
 class OBMetricTableViewCell: UITableViewCell {
@@ -26,6 +27,13 @@ class OBMetricTableViewCell: UITableViewCell {
     
     //Declare all actions here
     @IBAction func didTapMetricSwitch(_ sender: Any) {
+        //Regardless of switch state, we need to update its model to reflect state
+        let cell = metricUISwitch.superview?.superview as! OBMetricTableViewCell
+        let table = cell.superview as! UITableView
+        let index = table.indexPath(for: cell)
+        delegate?.updateSwitchState(indexPath: index!, isSelected: metricUISwitch.isOn)
+        
+        //We only need to call a delegate to action if the button is ON
         if metricUISwitch.isOn {
             delegate?.didTapMetricSwitch(metricChosen: metricUILabel.text!)
         }

@@ -14,10 +14,12 @@ class Metric {
     
     var metricType: String
     var isSelected: Bool
+    var key: String //"metric" or "us"
     
-    init(metricType: String, isSelected: Bool) {
+    init(metricType: String, isSelected: Bool, key: String) {
         self.metricType = metricType
         self.isSelected = isSelected
+        self.key = key
     }
 }
 
