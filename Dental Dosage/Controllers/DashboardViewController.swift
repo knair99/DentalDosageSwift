@@ -12,12 +12,22 @@ class DashboardViewController: UIViewController {
     
     //Declare all locals here
     var settings : Settings?
-    var dashboardDummyArray : [[String]] = [["M1", "M2", "M3"], ["R1", "R2", "R3"],["F1", "F2", "F3"]]
+    var dashboardDummyArray : [[String]] =
+        [
+            ["M1", "M2", "M3"], //All drug types
+            ["R1", "R2", "R3"], //Recents
+            ["F1", "F2", "F3"]  //Favorites
+        ]
     var currentIndex : Int = 0
     
     //Declare all outlets here
+    @IBOutlet weak var dashboardTableView: UITableView!
     
     //Declare all actions here
+    @IBAction func dashboardTabsSwitched(_ sender: UISegmentedControl) {
+        currentIndex =  sender.selectedSegmentIndex
+        dashboardTableView.reloadData()
+    }
     
     //Declare all custom methods here
     //Retrieve user settings
@@ -37,6 +47,7 @@ class DashboardViewController: UIViewController {
     }
 }
 
+//Extend the dashboard viewcontroller to handle table views
 extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dashboardDummyArray[currentIndex].count
@@ -49,7 +60,10 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
         cell.setCell(drugLabel: dashboardValues, drugImage: "dashboard_anasthetic")
         return cell
     }
-    
+    //Make sure that the row selected
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
     
 }
 

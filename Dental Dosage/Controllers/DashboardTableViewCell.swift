@@ -12,6 +12,7 @@ class DashboardTableViewCell: UITableViewCell {
 
     @IBOutlet weak var drugTypeLabel: UILabel!
     @IBOutlet weak var drugTypeImageView: UIImageView!
+
     
     //Declare all custom methods here
     func setCell(drugLabel: String, drugImage: String){
