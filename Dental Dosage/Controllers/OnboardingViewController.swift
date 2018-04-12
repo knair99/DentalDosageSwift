@@ -33,6 +33,12 @@ class OnboardingViewController: UIPageViewController, UIPageViewControllerDataSo
         self.setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)
     }
     
+    //Function to stop onboarding and begin the transition to Dashboard
+    public func performTransitionToDashboard (){
+        //Launch onboarding storyboard
+        performSegue(withIdentifier: "obToDashSegue", sender: self)
+    }
+    
     //Declare all overrides here
     
     //Handles swiping left

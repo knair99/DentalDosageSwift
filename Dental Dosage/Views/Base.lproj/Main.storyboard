@@ -15,10 +15,14 @@
         <!--Onboarding View Controller-->
         <scene sceneID="fht-g0-rCh">
             <objects>
-                <pageViewController storyboardIdentifier="Onboarding" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="GCE-DE-CkO" customClass="OnboardingViewController" customModule="Dental_Dosage" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="Onboarding" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="GCE-DE-CkO" customClass="OnboardingViewController" customModule="Dental_Dosage" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="obToDashSegue" id="kLS-u2-Gb2"/>
+                    </connections>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VeV-gM-kv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-807" y="155"/>
+            <point key="canvasLocation" x="-822" y="153"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="pl9-4O-gc0">
@@ -165,7 +169,7 @@ fit your needs</string>
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="Dashboard" id="BYZ-38-t0r" customClass="DashboardViewController" customModule="Dental_Dosage" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Main View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -185,7 +189,7 @@ fit your needs</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="153" y="152"/>
         </scene>
         <!--Choose Dentist Type-->
         <scene sceneID="fXH-w4-32c">

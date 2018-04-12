@@ -20,7 +20,7 @@ class MetricViewController: UIViewController {
     //Method to move the screen from current controller to next upon button press
     @IBAction func metricButtonNextPressed(_ sender: Any) {
         let parent = self.parent as! OnboardingViewController
-        parent.moveNextController(currentViewController: self)
+        parent.performTransitionToDashboard()
     }
     
     //Create all custom methods here
