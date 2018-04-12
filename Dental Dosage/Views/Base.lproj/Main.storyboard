@@ -207,7 +207,7 @@ fit your needs</string>
                                 <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DashboardTableViewCell" id="6wa-Dp-L9A" userLabel="Dashboard Table View Cell" customClass="DashboardTableViewCell" customModule="Dental_Dosage" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DashboardTableViewCell" id="6wa-Dp-L9A" userLabel="Dashboard Table View Cell" customClass="DashboardTableViewCell" customModule="Dental_Dosage" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6wa-Dp-L9A" id="Y4h-Xt-9rS">
