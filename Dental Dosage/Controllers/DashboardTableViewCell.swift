@@ -10,22 +10,24 @@ import UIKit
 
 class DashboardTableViewCell: UITableViewCell {
 
+    //Declare all outlets here
     @IBOutlet weak var drugTypeLabel: UILabel!
     @IBOutlet weak var drugTypeImageView: UIImageView!
-
+    
+    //Declare all locals here
+    var fixedLeadingSpace = "  "
     
     //Declare all custom methods here
     func setCell(drugLabel: String, drugImage: String){
-        drugTypeLabel.text = drugLabel
+        drugTypeLabel.text = fixedLeadingSpace + drugLabel
         drugTypeImageView.image = UIImage(named: drugImage)
     }
     
+    //Declare all overrrides here
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
     }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
