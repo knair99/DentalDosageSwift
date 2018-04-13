@@ -215,15 +215,28 @@ fit your needs</string>
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ds-XM-Vzs" userLabel="Drug Type Image View">
-                                                    <rect key="frame" x="30" y="5" width="69.5" height="69.5"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FqV-mj-skS" userLabel="Image Container View">
+                                                    <rect key="frame" x="30" y="5" width="70" height="69.5"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ds-XM-Vzs" userLabel="Drug Type Image View">
+                                                            <rect key="frame" x="10" y="10" width="50" height="49.5"/>
+                                                            <color key="backgroundColor" red="0.34509803919999998" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="6ds-XM-Vzs" secondAttribute="height" multiplier="1:1" id="t8g-mT-tXn"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
                                                     <color key="backgroundColor" red="0.34509803919999998" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="6ds-XM-Vzs" secondAttribute="height" multiplier="1:1" id="t8g-mT-tXn"/>
+                                                        <constraint firstAttribute="trailing" secondItem="6ds-XM-Vzs" secondAttribute="trailing" constant="10" id="F3w-Xn-ePF"/>
+                                                        <constraint firstItem="6ds-XM-Vzs" firstAttribute="centerY" secondItem="FqV-mj-skS" secondAttribute="centerY" id="M4P-fH-mDL"/>
+                                                        <constraint firstItem="6ds-XM-Vzs" firstAttribute="centerX" secondItem="FqV-mj-skS" secondAttribute="centerX" id="RbA-iB-2oe"/>
+                                                        <constraint firstItem="6ds-XM-Vzs" firstAttribute="top" secondItem="FqV-mj-skS" secondAttribute="top" constant="10" id="Xpo-x4-7RP"/>
+                                                        <constraint firstItem="6ds-XM-Vzs" firstAttribute="leading" secondItem="FqV-mj-skS" secondAttribute="leading" constant="10" id="eG2-WO-Mvd"/>
                                                     </constraints>
-                                                </imageView>
+                                                </view>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7v-zV-NJ8">
-                                                    <rect key="frame" x="99.5" y="5" width="245.5" height="69.5"/>
+                                                    <rect key="frame" x="100" y="5.5" width="245" height="69"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
@@ -232,13 +245,14 @@ fit your needs</string>
                                             </subviews>
                                             <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstItem="Q7v-zV-NJ8" firstAttribute="centerY" secondItem="FqV-mj-skS" secondAttribute="centerY" id="2Mp-mT-sM6"/>
+                                                <constraint firstItem="Q7v-zV-NJ8" firstAttribute="height" secondItem="FqV-mj-skS" secondAttribute="height" id="2Px-7F-b7I"/>
                                                 <constraint firstAttribute="trailing" secondItem="Q7v-zV-NJ8" secondAttribute="trailing" constant="30" id="6Pu-6H-Q8Z"/>
-                                                <constraint firstAttribute="bottom" secondItem="6ds-XM-Vzs" secondAttribute="bottom" constant="5" id="Ihu-yE-Jbz"/>
-                                                <constraint firstItem="6ds-XM-Vzs" firstAttribute="leading" secondItem="Y4h-Xt-9rS" secondAttribute="leading" constant="30" id="Kie-TC-wZo"/>
-                                                <constraint firstItem="Q7v-zV-NJ8" firstAttribute="leading" secondItem="6ds-XM-Vzs" secondAttribute="trailing" id="M06-im-Ncc"/>
-                                                <constraint firstItem="6ds-XM-Vzs" firstAttribute="top" secondItem="Y4h-Xt-9rS" secondAttribute="top" constant="5" id="Wc3-pG-WGy"/>
-                                                <constraint firstItem="Q7v-zV-NJ8" firstAttribute="height" secondItem="6ds-XM-Vzs" secondAttribute="height" id="YAB-5f-WAU"/>
-                                                <constraint firstItem="Q7v-zV-NJ8" firstAttribute="centerY" secondItem="6ds-XM-Vzs" secondAttribute="centerY" id="d7j-Cz-bVu"/>
+                                                <constraint firstAttribute="bottom" secondItem="FqV-mj-skS" secondAttribute="bottom" constant="5" id="Tz7-T8-kwx"/>
+                                                <constraint firstItem="FqV-mj-skS" firstAttribute="top" secondItem="Y4h-Xt-9rS" secondAttribute="top" constant="5" id="bls-QI-bnp"/>
+                                                <constraint firstItem="Q7v-zV-NJ8" firstAttribute="leading" secondItem="FqV-mj-skS" secondAttribute="trailing" id="hBw-wR-VbC"/>
+                                                <constraint firstItem="FqV-mj-skS" firstAttribute="centerY" secondItem="Y4h-Xt-9rS" secondAttribute="centerY" id="pB7-ii-VYz"/>
+                                                <constraint firstItem="FqV-mj-skS" firstAttribute="leading" secondItem="Y4h-Xt-9rS" secondAttribute="leading" constant="30" id="wpt-pp-0UZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
