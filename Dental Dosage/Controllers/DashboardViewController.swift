@@ -11,6 +11,7 @@ import UIKit
 class DashboardViewController: UIViewController {
     
     //Declare all locals here
+    let row_height = 60
     var settings : Settings?
     var dashboardDummyArray : [[String]] =
         [
@@ -49,6 +50,7 @@ class DashboardViewController: UIViewController {
 
 //Extend the dashboard viewcontroller to handle table views
 extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dashboardDummyArray[currentIndex].count
     }
@@ -62,7 +64,13 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     }
     //Make sure that the row selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Segue into specific view controller
         
+    }
+    
+    //Adding method to make sure the row height is proper
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(row_height);//Choose your custom row height
     }
     
 }

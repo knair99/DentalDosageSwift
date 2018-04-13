@@ -165,22 +165,22 @@ fit your needs</string>
             </objects>
             <point key="canvasLocation" x="-1666" y="913"/>
         </scene>
-        <!--Dental Dosage-->
+        <!--Dashboard-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Dashboard" id="BYZ-38-t0r" customClass="DashboardViewController" customModule="Dental_Dosage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Dashboard" id="BYZ-38-t0r" userLabel="Dashboard" customClass="DashboardViewController" customModule="Dental_Dosage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Main View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdL-fW-o23" userLabel="Tab Container View">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hn2-Wa-g2N" userLabel="Tab Segments">
-                                        <rect key="frame" x="8" y="10.5" width="359" height="28"/>
+                                        <rect key="frame" x="8" y="13" width="359" height="26"/>
                                         <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="Hn2-Wa-g2N" secondAttribute="height" multiplier="359:27" id="Z5s-xi-hFa"/>
+                                            <constraint firstAttribute="width" secondItem="Hn2-Wa-g2N" secondAttribute="height" multiplier="360:25" id="Z5s-xi-hFa"/>
                                         </constraints>
                                         <segments>
                                             <segment title="Drug types"/>
@@ -198,31 +198,32 @@ fit your needs</string>
                                     <constraint firstAttribute="width" constant="375" id="OPv-CM-Tfq"/>
                                     <constraint firstItem="Hn2-Wa-g2N" firstAttribute="leading" secondItem="fdL-fW-o23" secondAttribute="leading" constant="8" id="ens-NP-vcK"/>
                                     <constraint firstAttribute="trailing" secondItem="Hn2-Wa-g2N" secondAttribute="trailing" constant="8" id="erW-zT-uXt"/>
-                                    <constraint firstAttribute="width" secondItem="fdL-fW-o23" secondAttribute="height" multiplier="375:47" id="iKD-uq-rKr"/>
+                                    <constraint firstAttribute="width" secondItem="fdL-fW-o23" secondAttribute="height" multiplier="375:50" id="iKD-uq-rKr"/>
                                     <constraint firstItem="Hn2-Wa-g2N" firstAttribute="centerY" secondItem="fdL-fW-o23" secondAttribute="centerY" id="vhE-T3-eyX"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rOH-dS-xUP" userLabel="Dashboard Table View">
-                                <rect key="frame" x="0.0" y="67" width="375" height="536"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rOH-dS-xUP" userLabel="Dashboard Table View">
+                                <rect key="frame" x="0.0" y="70" width="375" height="533"/>
                                 <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DashboardTableViewCell" id="6wa-Dp-L9A" userLabel="Dashboard Table View Cell" customClass="DashboardTableViewCell" customModule="Dental_Dosage" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DashboardTableViewCell" rowHeight="80" id="6wa-Dp-L9A" userLabel="Dashboard Table View Cell" customClass="DashboardTableViewCell" customModule="Dental_Dosage" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6wa-Dp-L9A" id="Y4h-Xt-9rS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ds-XM-Vzs" userLabel="Drug Type Image View">
-                                                    <rect key="frame" x="15" y="-18" width="80" height="80"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ds-XM-Vzs" userLabel="Drug Type Image View">
+                                                    <rect key="frame" x="15" y="5" width="69.5" height="69.5"/>
                                                     <color key="backgroundColor" red="0.34509803919999998" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="6ds-XM-Vzs" secondAttribute="height" multiplier="1:1" id="eHj-vY-l3b"/>
+                                                        <constraint firstAttribute="width" secondItem="6ds-XM-Vzs" secondAttribute="height" multiplier="1:1" id="t8g-mT-tXn"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7v-zV-NJ8">
-                                                    <rect key="frame" x="95" y="-18" width="265" height="80"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7v-zV-NJ8">
+                                                    <rect key="frame" x="84.5" y="5" width="275.5" height="69.5"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
@@ -231,12 +232,13 @@ fit your needs</string>
                                             </subviews>
                                             <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="6ds-XM-Vzs" firstAttribute="centerY" secondItem="Y4h-Xt-9rS" secondAttribute="centerY" id="05T-CW-ouK"/>
                                                 <constraint firstAttribute="trailing" secondItem="Q7v-zV-NJ8" secondAttribute="trailing" constant="15" id="6Pu-6H-Q8Z"/>
+                                                <constraint firstAttribute="bottom" secondItem="6ds-XM-Vzs" secondAttribute="bottom" constant="5" id="Ihu-yE-Jbz"/>
                                                 <constraint firstItem="6ds-XM-Vzs" firstAttribute="leading" secondItem="Y4h-Xt-9rS" secondAttribute="leading" constant="15" id="Kie-TC-wZo"/>
                                                 <constraint firstItem="Q7v-zV-NJ8" firstAttribute="leading" secondItem="6ds-XM-Vzs" secondAttribute="trailing" id="M06-im-Ncc"/>
-                                                <constraint firstItem="Q7v-zV-NJ8" firstAttribute="centerY" secondItem="Y4h-Xt-9rS" secondAttribute="centerY" id="hkb-qw-4gx"/>
-                                                <constraint firstItem="Q7v-zV-NJ8" firstAttribute="height" secondItem="6ds-XM-Vzs" secondAttribute="height" id="zJ6-yg-VbM"/>
+                                                <constraint firstItem="6ds-XM-Vzs" firstAttribute="top" secondItem="Y4h-Xt-9rS" secondAttribute="top" constant="5" id="Wc3-pG-WGy"/>
+                                                <constraint firstItem="Q7v-zV-NJ8" firstAttribute="height" secondItem="6ds-XM-Vzs" secondAttribute="height" id="YAB-5f-WAU"/>
+                                                <constraint firstItem="Q7v-zV-NJ8" firstAttribute="centerY" secondItem="6ds-XM-Vzs" secondAttribute="centerY" id="d7j-Cz-bVu"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
