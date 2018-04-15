@@ -13,7 +13,8 @@ class DashboardViewController: UIViewController {
     //Declare all locals here
     let row_height = 60
     var settings : Settings?
-    var drugModel = DrugModel(resource: "drugs")
+    //All drug data
+    var drugModel : DrugModel?
     
     var dashboardDummyArray : [[String]]?
     var currentIndex : Int = 0
@@ -41,16 +42,20 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         currentIndex = 0
+        
         //Get initial user settings
         GetInitialUserSettings()
         
+        //Get JSON Data from App delegate where it was intialized
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        drugModel = delegate.drugModel!
+        
         //Get drug model info out of JSON
-        dashboardDummyArray =
-            [
-                drugModel.drugCategoriesNames, //All drug types
-                ["R1", "R2", "R3"], //Recents
-                ["F1", "F2", "F3"]  //Favorites
-        ]
+        dashboardDummyArray = [
+            (drugModel?.drugCategoriesNames)!, //All drug types
+            (drugModel?.drugRecentNames)!, //Recents
+            (drugModel?.drugFavoriteNames)! //Favorites
+            ]
     }
 }
 

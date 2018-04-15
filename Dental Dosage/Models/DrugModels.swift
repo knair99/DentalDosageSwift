@@ -13,9 +13,12 @@ class DrugModel {
     
     //Entire JSON dump
     var jsonData : [String: Any]?
-    //Root of all dental JSON data
+    //Names of various categories of drugs for the Dashboard screen
     var drugCategoriesNames: [String] = []
-    //All drug information
+    var drugRecentNames: [String] = []
+    var drugFavoriteNames: [String] = []
+    
+    //All drug information - root JSON dictionary named "categories"
     var drugDictionaryByCategory : [[String: Any]] = []
     
     //Get the JSON out in the initializer
@@ -35,7 +38,6 @@ class DrugModel {
                     //Extract all drug categories into a separate array
                     for category in jsonCategories {
                         drugCategoriesNames.append(category["name"] as! String)
-                        print("\(String(describing: category["name"]))")
                     }
                 }
             }

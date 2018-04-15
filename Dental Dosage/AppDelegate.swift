@@ -10,11 +10,13 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
-
-
+    //All drug data available as global on the delegate
+    var drugModel: DrugModel?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        //Initialize settings data as a global
+        drugModel = DrugModel(resource: "drugs")
         
         //Onboarding
         let defaults = UserDefaults.standard
@@ -29,7 +31,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let onboardingViewController = sb.instantiateViewController(withIdentifier: "Onboarding")
             self.window?.rootViewController = onboardingViewController
             self.window?.makeKeyAndVisible()
+            
+            
         }
+        
+        
         
         return true
     }
