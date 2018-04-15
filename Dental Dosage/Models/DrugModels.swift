@@ -16,7 +16,7 @@ class DrugModel {
     //Root of all dental JSON data
     var drugCategoriesNames: [String] = []
     //All drug information
-    var drugDictionaryByCategory : [String: Any] = []
+    var drugDictionaryByCategory : [[String: Any]] = []
     
     //Get the JSON out in the initializer
     init(resource jsonResource: String) {
@@ -30,7 +30,7 @@ class DrugModel {
              
                 if let jsonCategories = jsonData!["categories"] as? [[String: Any]] {
                     //Save dictionary of category vs drug info as a dictionary
-                    drugCategoriesNames =  jsonCategories
+                    drugDictionaryByCategory =  jsonCategories
                     
                     //Extract all drug categories into a separate array
                     for category in jsonCategories {

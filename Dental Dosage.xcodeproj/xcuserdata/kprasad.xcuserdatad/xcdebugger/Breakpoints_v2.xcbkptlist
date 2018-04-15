@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dental Dosage/Models/DrugModels.swift"
-            timestampString = "545450626.3185821"
+            timestampString = "545451156.405214"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "init(resource:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -38,15 +38,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dental Dosage/Models/DrugModels.swift"
-            timestampString = "545450667.507736"
+            timestampString = "545451156.4058681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "init(resource:)"
             landmarkType = "7">
          </BreakpointContent>
