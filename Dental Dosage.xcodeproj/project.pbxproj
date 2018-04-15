@@ -19,6 +19,8 @@
 		4E781C39206F6AA100CE5A7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E781C37206F6AA100CE5A7A /* Main.storyboard */; };
 		4E781C3B206F6AA100CE5A7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E781C3A206F6AA100CE5A7A /* Assets.xcassets */; };
 		4E781C3E206F6AA100CE5A7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E781C3C206F6AA100CE5A7A /* LaunchScreen.storyboard */; };
+		4E8D1A38208182F900B12112 /* DrugModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D1A37208182F900B12112 /* DrugModels.swift */; };
+		4E8D1A3D2081873900B12112 /* drugs.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E8D1A3C2081839800B12112 /* drugs.json */; };
 		4EDAFD6A2070045C002536C4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAFD692070045C002536C4 /* OnboardingViewController.swift */; };
 		4EDAFD6C2070068A002536C4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAFD6B2070068A002536C4 /* WelcomeViewController.swift */; };
 		4EDAFD6E207006A4002536C4 /* DentistTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAFD6D207006A4002536C4 /* DentistTypeViewController.swift */; };
@@ -40,6 +42,8 @@
 		4E781C3A206F6AA100CE5A7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E781C3D206F6AA100CE5A7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E781C3F206F6AA100CE5A7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E8D1A37208182F900B12112 /* DrugModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugModels.swift; sourceTree = "<group>"; };
+		4E8D1A3C2081839800B12112 /* drugs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = drugs.json; sourceTree = "<group>"; };
 		4EDAFD692070045C002536C4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		4EDAFD6B2070068A002536C4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		4EDAFD6D207006A4002536C4 /* DentistTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentistTypeViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 				4E2DE35120780AFB0008DCD6 /* DentistType.swift */,
 				4E2DE3572079B12C0008DCD6 /* Metric.swift */,
 				4E0978F5207C51E9003727B4 /* Settings.swift */,
+				4E8D1A37208182F900B12112 /* DrugModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 		4E781C27206F6AA100CE5A7A = {
 			isa = PBXGroup;
 			children = (
+				4E8D1A3B2081839100B12112 /* Data */,
 				4E781C32206F6AA100CE5A7A /* Dental Dosage */,
 				4E781C31206F6AA100CE5A7A /* Products */,
 			);
@@ -118,6 +124,14 @@
 				4E781C3F206F6AA100CE5A7A /* Info.plist */,
 			);
 			path = "Dental Dosage";
+			sourceTree = "<group>";
+		};
+		4E8D1A3B2081839100B12112 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4E8D1A3C2081839800B12112 /* drugs.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		4ED1AD042077212600152642 /* Views */ = {
@@ -189,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E8D1A3D2081873900B12112 /* drugs.json in Resources */,
 				4E781C3E206F6AA100CE5A7A /* LaunchScreen.storyboard in Resources */,
 				4E781C3B206F6AA100CE5A7A /* Assets.xcassets in Resources */,
 				4E781C39206F6AA100CE5A7A /* Main.storyboard in Resources */,
@@ -207,6 +222,7 @@
 				4E2DE35220780AFB0008DCD6 /* DentistType.swift in Sources */,
 				4E2DE354207839250008DCD6 /* DisclaimerViewController.swift in Sources */,
 				4E781C36206F6AA100CE5A7A /* DashboardViewController.swift in Sources */,
+				4E8D1A38208182F900B12112 /* DrugModels.swift in Sources */,
 				4E2DE34F207809C30008DCD6 /* OBDentistTypeTableViewCell.swift in Sources */,
 				4E0978F6207C51E9003727B4 /* Settings.swift in Sources */,
 				4EDAFD6C2070068A002536C4 /* WelcomeViewController.swift in Sources */,

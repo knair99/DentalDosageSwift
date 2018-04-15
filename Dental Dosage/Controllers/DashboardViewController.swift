@@ -13,6 +13,8 @@ class DashboardViewController: UIViewController {
     //Declare all locals here
     let row_height = 60
     var settings : Settings?
+    var drugModel = DrugModel(resource: "drugs")
+    
     var dashboardDummyArray : [[String]] =
         [
             ["M1", "M2", "M3"], //All drug types
@@ -23,6 +25,7 @@ class DashboardViewController: UIViewController {
     
     //Declare all outlets here
     @IBOutlet weak var dashboardTableView: UITableView!
+    @IBOutlet weak var dashTabSegments: UISegmentedControl!
     
     //Declare all actions here
     @IBAction func dashboardTabsSwitched(_ sender: UISegmentedControl) {

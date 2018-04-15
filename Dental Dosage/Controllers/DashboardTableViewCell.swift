@@ -15,7 +15,7 @@ class DashboardTableViewCell: UITableViewCell {
     @IBOutlet weak var drugTypeImageView: UIImageView!
     
     //Declare all locals here
-    var fixedLeadingSpace = "  "
+    var fixedLeadingSpace = "   "
     
     //Declare all custom methods here
     func setCell(drugLabel: String, drugImage: String){

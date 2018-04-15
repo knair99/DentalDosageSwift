@@ -1,0 +1,612 @@
+﻿{
+    "name": "All Categories",
+    "display": true,
+    "categories": [
+        {
+            "name": "Local Anesthetics",
+            "display": true,
+            "drugs": [
+                {
+                    "name": "Lidocaine",
+                    "display": true,
+                    "brand": "Xylocaine™",
+                    "method": "syringe",
+                    "specs": "2% 1:100,000 epi",
+                    "unit_dosage": "weight",
+                    "mrd_metric": 4.4,
+                    "mrd_us": 2.0,
+                    "max_dosage": 300,
+                    "mg_per_carpule": 36
+                },
+                {
+                    "name": "Mepivacaine",
+                    "display": true,
+                    "brand": "Carbocaine™",
+                    "method": "syringe",
+                    "specs": "3% plain",
+                    "unit_dosage": "weight",
+                    "mrd_metric": 4.4,
+                    "mrd_us": 2.0,
+                    "max_dosage": 300,
+                    "mg_per_carpule": 54,
+                    "note": "No epinephrine present, use for patients with hypertension and hyperthyroidism"
+                },
+                {
+                    "name": "Articaine",
+                    "display": true,
+                    "brand": "Septocaine™",
+                    "method": "syringe",
+                    "specs": "4% 1:100,000 epi",
+                    "unit_dosage": "weight",
+                    "mrd_metric": 7.0,
+                    "mrd_us": 3.2,
+                    "max_dosage": 500,
+                    "mg_per_carpule": 72,
+                    "warning": "Avoid using for inferior alveolar nerve blocks - may cause parasthesia"
+                },
+                {
+                    "name": "Prilocaine",
+                    "display": true,
+                    "brand": "Citanest™",
+                    "method": "syringe",
+                    "specs": "4% plain",
+                    "unit_dosage": "weight",
+                    "mrd_metric": 6.0,
+                    "mrd_us": 2.7,
+                    "max_dosage": 400,
+                    "mg_per_carpule": 72,
+                    "warning": "May cause methemoglobinemia in susceptible individuals"
+                },
+                {
+                    "name": "Bupivacaine",
+                    "display": true,
+                    "brand": "Marcaine™",
+                    "method": "syringe",
+                    "specs": "0.5% 1:200,000 epi",
+                    "unit_dosage": "weight",
+                    "mrd_metric": 1.3,
+                    "mrd_us": 0.6,
+                    "max_dosage": 90,
+                    "mg_per_carpule": 9,
+                    "note": "Extremely long duration, avoid using in children to avoid lip biting"
+                }
+            ]
+        },
+        {
+            "name": "Antibiotics",
+            "display": true,
+            "drugs": [
+                {
+                    "name": "Amoxicillin",
+                    "display": true,
+                    "specs": "For Endocarditis prophylaxis (weight under 40 kg)",
+                    "method": "pill",
+                    "unit_dosage": "weight",
+                    "mrd_metric": 50,
+                    "max_dosage": 2000,
+                    "max_weight": 40,
+                    "note": "1 hr before appointment"
+                },
+                {
+                    "name": "Clindamycin",
+                    "display": true,
+                    "specs": "For Endocarditis prophylaxis (age 12 years and under)",
+                    "method": "pill",
+                    "unit_dosage": "weight",
+                    "mrd_metric": 20,
+                    "max_dosage": 600,
+                    "note": "Use if penicillin allergy; 1 hr before appointment; may cause GI disturbance"
+                },
+                {
+                    "name": "Penicillin",
+                    "display": true,
+                    "specs": "For age 12 years and under",
+                    "brand": "Penicillin VK™",
+                    "method": "pill",
+                    "unit_dosage": "weight",
+                    "mrd_metric_min": 25,
+                    "mrd_metric_max": 50,
+                    "max_dosage": 3000,
+                    "note": "In equally divided doses q6-8h for at least 7 days; maximum dose: 3.0g/day"
+                },
+                {
+                    "name": "Penicillin",
+                    "display": true,
+                    "specs": "For age over 12 years",
+                    "brand": "Penicillin VK™",
+                    "method": "pill",
+                    "unit_dosage": "static",
+                    "mrd_metric": 500,
+                    "max_dosage": 500,
+                    "note": "q6h for at least 7 days"
+                },
+                {
+                    "name": "Amoxicillin",
+                    "display": true,
+                    "specs": "For weight under 40 kg",
+                    "method": "pill",
+                    "unit_dosage": "weight",
+                    "mrd_metric_min": 20,
+                    "mrd_metric_max": 40,
+                    "max_dosage": 875,
+                    "max_weight": 40,
+                    "note": "In divided doses q8h"
+                },
+                {
+                    "name": "Amoxicillin",
+                    "display": true,
+                    "specs": "For weight over 40 kg",
+                    "method": "pill",
+                    "unit_dosage": "static",
+                    "mrd_metric_min": 250,
+                    "mrd_metric_max": 500,
+                    "max_dosage": 2000,
+                    "min_weight": 40,
+                    "note": "q8h for at least 7 days; maximum dose: 2.0g/day"
+                },
+                {
+                    "name": "Clindamycin",
+                    "display": true,
+                    "specs": "For age 12 years and under",
+                    "method": "pill",
+                    "unit_dosage": "weight",
+                    "mrd_metric_min": 8,
+                    "mrd_metric_max": 25,
+                    "max_dosage": 600,
+                    "note": "In 3-4 equally divided doses"
+                },
+                {
+                    "name": "Clindamycin",
+                    "display": true,
+                    "specs": "For age over 12 years",
+                    "method": "pill",
+                    "unit_dosage": "static",
+                    "mrd_metric_min": 150,
+                    "mrd_metric_max": 450,
+                    "max_dosage": 1800,
+                    "note": "q6h for at least 7 days; maximum dose: 1.8g/day"
+                },
+                {
+                    "name": "Cephalexin",
+                    "display": true,
+                    "brand": "Keflex™",
+                    "specs": "For age 12 years and under",
+                    "method": "pill",
+                    "unit_dosage": "weight",
+                    "mrd_metric_min": 25,
+                    "mrd_metric_max": 50,
+                    "max_dosage": 3000,
+                    "note": "In divided doses q6h; maximum dose: 3.0g/day"
+                },
+                {
+                    "name": "Cephalexin",
+                    "display": true,
+                    "brand": "Keflex™",
+                    "specs": "For age over 12 years",
+                    "method": "pill",
+                    "unit_dosage": "static",
+                    "mrd_metric_min": 250,
+                    "mrd_metric_max": 1000,
+                    "max_dosage": 4000,
+                    "note": "q6h; maximum dose: 4.0g/day"
+                }
+            ]
+        },
+        {
+            "name": "Pain Medications",
+            "display": true,
+            "premium": false,
+            "drugs": [
+                {
+                    "name": "Acetaminophen",
+                    "display": true,
+                    "brand": "Tylenol™",
+                    "specs": "For age over 12 years",
+                    "method": "pill",
+                    "unit_dosage": "static",
+                    "mrd_metric_min": 650,
+                    "mrd_metric_max": 1000,
+                    "max_dosage": 4000,
+                    "note": "q6h; maximum dose: 4.0g/day; alternate with Ibuprofen if round-the-clock pain relief is required over several days to prevent liver problems and GI upset"
+                },
+                {
+                    "name": "Acetaminophen",
+                    "display": true,
+                    "brand": "Children's Tylenol™",
+                    "specs": "160 mg/5ml oral suspension (age 12 years and under)",
+                    "method": "cup",
+                    "show_ml": true,
+                    "mg_per_ml": 32,
+                    "unit_dosage": "weight",
+                    "mrd_metric": 10,
+                    "max_dosage": 2000,
+                    "note": "5 ml = 1 tsp; q6h; maximum dose: 75mg/kg/day; alternate with Ibuprofen if round-the-clock pain relief is required over several days to prevent liver problems and GI upset"
+                },
+                {
+                    "name": "Ibuprofen",
+                    "display": true,
+                    "brand": "Motrin™",
+                    "specs": "For age over 12 years",
+                    "method": "pill",
+                    "unit_dosage": "static",
+                    "mrd_metric_min": 300,
+                    "mrd_metric_max": 600,
+                    "max_dosage": 2400,
+                    "note": "q6h; maximum dose: 2.4g/day; take with food; GI upset may occur; alternate with Tylenol if round-the-clock pain relief is required over several days to prevent liver problems and GI upset"
+                },
+                {
+                    "name": "Ibuprofen",
+                    "display": true,
+                    "brand": "Children's Motrin™",
+                    "specs": "100 mg/5ml oral suspension (age 12 years and under)",
+                    "method": "cup",
+                    "show_ml": true,
+                    "mg_per_ml": 20,
+                    "unit_dosage": "weight",
+                    "mrd_metric": 10,
+                    "max_dosage": 1800,
+                    "note": "5 ml = 1 tsp; q6h; maximum dose: 40mg/kg/day; alternate with Tylenol if round-the-clock pain relief is required over several days to prevent liver problems and GI upset"
+                }
+            ]
+        },
+        {
+            "name": "Oral Sedatives",
+            "display": true,
+            "drugs": [
+                {
+                    "name": "Diazepam",
+                    "display": true,
+                    "brand": "Valium™",
+                    "method": "cup",
+                    "unit_dosage": "weight",
+                    "mrd_metric_min": 0.25,
+                    "mrd_metric_max": 0.5,
+                    "max_dosage": 10,
+                    "note": "Onset: 45-60 min<br/>Duration: 6-8 hrs"
+                },
+                {
+                    "name": "Chloral Hydrate",
+                    "display": true,
+                    "method": "cup",
+                    "unit_dosage": "weight",
+                    "mrd_metric_min": 35,
+                    "mrd_metric_max": 50,
+                    "max_dosage": 1000,
+                    "note": "Onset: 30-45 min<br/>Duration: 2 hrs"
+                },
+                {
+                    "name": "Hydroxyzine",
+                    "display": true,
+                    "method": "cup",
+                    "brand": "Visteril™",
+                    "unit_dosage": "weight",
+                    "mrd_metric_min": 1,
+                    "mrd_metric_max": 2,
+                    "max_dosage": 50
+                },
+                {
+                    "name": "Meperidine",
+                    "display": true,
+                    "brand": "Demerol™",
+                    "method": "cup",
+                    "unit_dosage": "weight",
+                    "mrd_metric_min": 1,
+                    "mrd_metric_max": 2,
+                    "max_dosage": 100000,
+                    "note": "Onset: 30 min<br/>Duration: 1-2 hrs"
+                },
+                {
+                    "name": "Naloxone",
+                    "display": true,
+                    "brand": "Narcan™",
+                    "method": "cup",
+                    "unit_dosage": "weight",
+                    "mrd_metric": 0.1,
+                    "max_dosage": 10,
+                    "note": "Use twice if required to reverse the effects of opioids used"
+                }
+            ]
+        },
+        {
+            "name": "Emergency Drugs",
+            "display": true,
+           	"premium": true,
+            "categories": [
+                {
+                    "name": "Allergic reaction",
+                    "display": true,
+                    "categories": [
+                        {
+                            "name": "Short acting allergy drugs",
+                            "display": true,
+                            "categories": [
+                                {
+                                    "name": "Diphenhydramine",
+                                    "display": true,
+                                    "drugs": [
+                                        {
+                                            "name": "Diphenhydramine",
+                                            "display": true,
+                                            "brand": "",
+                                            "specs": "For weight > 20 lbs (9 kg)",
+                                            "method": "pill",
+                                            "unit_dosage": "static",
+                                            "mrd_metric": 50,
+                                            "max_dosage": 50,
+                                            "note": "Give orally, intravenously, or intramuscularly. Indication: mild allergic reaction"
+                                        },
+                                        {
+                                            "name": "Diphenhydramine",
+                                            "display": true,
+                                            "brand": "",
+                                            "specs": "For weight < 20 lbs (9 kg)",
+                                            "method": "pill",
+                                            "unit_dosage": "static",
+                                            "mrd_metric": 25,
+                                            "max_dosage": 25,
+                                            "note": "Give orally, intravenously, or intramuscularly. Indication: mild allergic reaction"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Epinephrine",
+                                    "display": true,
+                                    "drugs": [
+                                        {
+                                            "name": "Epipen Junior Auto Injector (Intramuscular)",
+                                            "display": true,
+                                            "brand": "Epipen Jr™",
+                                            "specs": "1:1000 solution (weight 33-66 lbs or 15-30 kg)",
+                                            "method": "syringe",
+                                            "unit_dosage": "static",
+                                            "mrd_metric": 0.15,
+                                            "max_dosage": 0.15,
+                                            "note": "Max: 3 doses. Give intramuscularly, remove blue cap and stab needle in thigh and hold for 10 seconds. Indication: anaphylactic shock, acute asthmatic attack that is not improving with albuterol."
+                                        },
+                                        {
+                                            "name": "Epipen Auto Injector (Intramuscular)",
+                                            "display": true,
+                                            "brand": "Epipen™",
+                                            "specs": "1:1000 solution (weight >66 lbs or >30 kg)",
+                                            "method": "syringe",
+                                            "unit_dosage": "static",
+                                            "mrd_metric": 0.3,
+                                            "max_dosage": 0.3,
+                                            "note": "Max: 3 doses. Give intramuscularly, remove blue cap and stab needle in thigh and hold for 10 seconds. Indication: anaphylactic shock, acute asthmatic attack that is not improving with albuterol."
+                                        },
+                                        {
+                                            "name": "Epinephrine (Intravenous)",
+                                            "display": true,
+                                            "brand": "",
+                                            "specs": "For weight < 66 lbs (30 kg)",
+                                            "method": "syringe",
+                                            "unit_dosage": "weight",
+                                            "mrd_metric": 0.01,
+                                            "max_dosage": 0.3
+                                        },
+                                        {
+                                            "name": "Epinephrine (Intravenous)",
+                                            "display": true,
+                                            "brand": "",
+                                            "specs": "For weight > 66 lbs (30 kg)",
+                                            "method": "syringe",
+                                            "unit_dosage": "weight",
+                                            "mrd_metric": 0.01,
+                                            "max_dosage": 0.5
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Long acting allergy drugs",
+                            "display": true,
+                            "premium": false,
+                            "drugs": [
+                                {
+                                    "name": "Prednisone",
+                                    "display": true,
+                                    "brand": "",
+                                    "method": "pill",
+                                    "specs": "",
+                                    "unit_dosage": "weight",
+                                    "mrd_metric": 2.0,
+                                    "max_dosage": 60,
+                                    "note": "Give orally"
+                                },
+                                {
+                                    "name": "Dexamethasone",
+                                    "display": true,
+                                    "brand": "",
+                                    "method": "syringe",
+                                    "specs": "",
+                                    "unit_dosage": "weight",
+                                    "mrd_metric": 0.1,
+                                    "max_dosage": 12,
+                                    "note": "Give intramuscularly"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Local anesthesia overdose",
+                    "display": true,
+                    "drugs": [
+                        {
+                            "name": "Diazepam",
+                            "display": true,
+                            "brand": "",
+                            "specs": "",
+                            "method": "syringe",
+                            "unit_dosage": "weight",
+                            "mrd_metric": 0.2,
+                            "max_dosage": 10,
+                            "note": "Give intravenously or intramuscularly. Note: Patients often report they can't see properly right after overdose of anesthesia administration particularly if inside a blood vessel because of pupil dilation."
+                        }
+                    ]
+                },
+                {
+                    "name": "Adrenal insufficiency",
+                    "display": true,
+                    "drugs": [
+                        {
+                            "name": "Hydrocortisone",
+                            "display": true,
+                            "brand": "",
+                            "specs": "",
+                            "method": "syringe",
+                            "unit_dosage": "weight",
+                            "mrd_metric_min": 1,
+                            "mrd_metric_max": 2,
+                            "max_dosage": 100,
+                            "note": "Give intravenously or intramuscularly"
+                        }
+                    ]
+                },
+                {
+                    "name": "Anti-seizure",
+                    "display": true,
+                    "premium": false,
+                    "drugs": [
+                        {
+                            "name": "Diazepam",
+                            "display": true,
+                            "brand": "",
+                            "specs": "",
+                            "method": "syringe",
+                            "unit_dosage": "weight",
+                            "mrd_metric": 0.2,
+                            "max_dosage": 10,
+                            "note": "Give intravenously or intramuscularly. Note: intervention required if seizure lasts for more than 1 minute"
+                        },
+                        {
+                            "name": "Midazolam",
+                            "display": true,
+                            "brand": "",
+                            "specs": "",
+                            "method": "syringe",
+                            "unit_dosage": "weight",
+                            "mrd_metric": 0.1,
+                            "max_dosage": 5,
+                            "note": "Give intravenously or intramuscularly. Note: intervention required if seizure lasts for more than 1 minute"
+                        },
+                        {
+                            "name": "Phenobarbital",
+                            "display": true,
+                            "brand": "",
+                            "specs": "",
+                            "method": "syringe",
+                            "unit_dosage": "weight",
+                            "mrd_metric": 20,
+                            "max_dosage": 1000,
+                            "note": "Give intravenously or intramuscularly. Note: intervention required if seizure lasts for more than 1 minute"
+                        }
+                    ]
+                },
+                {
+                    "name": "Asthma attack",
+                    "display": true,
+                    "drugs": [
+                        {
+                            "name": "Albuterol inhaler",
+                            "display": true,
+                            "brand": "",
+                            "specs": "",
+                            "method": "cup",
+                            "unit_dosage": "string",
+                            "note": "1 puff every 20 min (max: 3 times)"
+                        }
+                    ]
+                },
+                {
+                    "name": "Hypoglycemia",
+                    "display": true,
+                    "drugs": [
+                        {
+                            "name": "25% Dextrose for child",
+                            "display": true,
+                            "premium": false,
+                            "brand": "",
+                            "specs": "",
+                            "method": "cup",
+                            "unit_dosage": "weight",
+                            "drug_unit": "ml",
+                            "mrd_metric": 2,
+                            "max_dosage": 100000,
+                            "note": "Indication: blood glucose level < 70"
+                        },
+                        {
+                            "name": "10% Dextrose for infant",
+                            "display": true,
+                            "brand": "",
+                            "specs": "",
+                            "method": "cup",
+                            "unit_dosage": "weight",
+                            "drug_unit": "ml",
+                            "mrd_metric": 5,
+                            "max_dosage": 100000
+                        },
+                        {
+                            "name": "Glucagon",
+                            "display": true,
+                            "brand": "",
+                            "specs": "",
+                            "method": "syringe",
+                            "unit_dosage": "static",
+                            "mrd_metric": 1,
+                            "max_dosage": 1,
+                            "note": "Give intramuscularly"
+                        }
+                    ]
+                },
+                {
+                    "name": "Laryngospasm",
+                    "display": true,
+                    "drugs": [
+                        {
+                            "name": "Succinylcholine",
+                            "display": true,
+                            "brand": "Anectine™",
+                            "specs": "",
+                            "method": "syringe",
+                            "unit_dosage": "weight",
+                            "mrd_metric_min": 2,
+                            "mrd_metric_max": 4,
+                            "max_dosage": 150,
+                            "note": "Give intramuscularly. If ineffective, do tracheotomy."
+                        }
+                    ]
+                },
+                {
+                    "name": "Reversal agents",
+                    "display": true,
+                    "drugs": [
+                        {
+                            "name": "Flumazenil",
+                            "display": true,
+                            "brand": "Romazicon™",
+                            "specs": "",
+                            "method": "syringe",
+                            "unit_dosage": "weight",
+                            "mrd_metric": 0.01,
+                            "max_dosage": 0.2,
+                            "note": "Give intravenously; reverses benzodiazepine effect"
+                        },
+                        {
+                            "name": "Naloxone",
+                            "display": true,
+                            "brand": "Narcan™",
+                            "specs": "",
+                            "method": "syringe",
+                            "unit_dosage": "weight",
+                            "mrd_metric": 0.01,
+                            "max_dosage": 2,
+                            "note": "Give intravenously; reverses opioid effect. Reversal effect lasts 45 min."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
