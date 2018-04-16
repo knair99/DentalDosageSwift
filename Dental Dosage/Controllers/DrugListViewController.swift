@@ -12,6 +12,7 @@ class DrugListViewController: UIViewController {
 
     //Declare all locals here
     var drugTypeName : String = "Dental Dosage"
+    var drugTypeImage : String = ""
     //Contains dictionaries of each drug relevant to current drug type
     var drugArray : [[String:Any]] = []
     //Store just the names of the drugs relevant to current drug type
@@ -19,9 +20,14 @@ class DrugListViewController: UIViewController {
     
     //Declare all outlets here
     @IBOutlet weak var drugListTableView: UITableView!
+    @IBOutlet weak var drugHeaderImage: UIImageView!
+    @IBOutlet weak var drugNameHeader: UILabel!
     
+    //Declare all overrides here
     override func viewDidLoad() {
         super.viewDidLoad()
+        drugNameHeader.text = drugTypeName
+        drugHeaderImage.image = UIImage(named:drugTypeImage)
         
         //Get individual drug names into specific types array for cell view later
         for drug in drugArray {

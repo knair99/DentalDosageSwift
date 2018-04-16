@@ -85,6 +85,8 @@ class DashboardViewController: UIViewController {
         
         //Give new view its appropriate list of specific drugs
         let drugTypeDetails  = drugTypeDictionary![dashboardDrugName] as! [String:Any]
+        let dashboardImageName = drugTypeDetails["display_image"] as! String
+        drugListViewController?.drugTypeImage = dashboardImageName
         drugListViewController?.drugArray = (drugTypeDetails["drugs"] as! [[String:Any]])
     }
 }

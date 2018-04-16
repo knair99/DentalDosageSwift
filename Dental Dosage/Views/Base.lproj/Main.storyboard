@@ -453,7 +453,9 @@ fit your needs</string>
                         <viewLayoutGuide key="safeArea" id="49M-Ib-gh9"/>
                     </view>
                     <connections>
+                        <outlet property="drugHeaderImage" destination="5Lo-cA-O17" id="w03-dK-iMR"/>
                         <outlet property="drugListTableView" destination="rOh-Tn-qZl" id="W2v-1v-1an"/>
+                        <outlet property="drugNameHeader" destination="5W8-Qj-Wko" id="FaL-cF-cTz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMz-Qp-6Zv" userLabel="First Responder" sceneMemberID="firstResponder"/>
