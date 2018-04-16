@@ -26,6 +26,11 @@ class DrugListViewController: UIViewController {
     //Declare all overrides here
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Set nav bar back button color
+        self.navigationController?.navigationBar.tintColor = UIColor.white;
+        
+        //Set header and image
         drugNameHeader.text = drugTypeName
         drugHeaderImage.image = UIImage(named:drugTypeImage)
         
