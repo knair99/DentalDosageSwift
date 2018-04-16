@@ -368,14 +368,14 @@ fit your needs</string>
                                                     <rect key="frame" x="30" y="5" width="45.5" height="89.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="VMt-o0-Bd0">
-                                                            <rect key="frame" x="9" y="35.5" width="29" height="19"/>
+                                                            <rect key="frame" x="9" y="30.5" width="29" height="29"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.34509803919999998" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="VMt-o0-Bd0" firstAttribute="centerY" secondItem="aGo-J9-cki" secondAttribute="centerY" id="AHr-Hb-Vef"/>
-                                                        <constraint firstItem="VMt-o0-Bd0" firstAttribute="top" secondItem="aGo-J9-cki" secondAttribute="top" constant="35" id="gav-nR-0wF"/>
                                                         <constraint firstItem="VMt-o0-Bd0" firstAttribute="centerX" secondItem="aGo-J9-cki" secondAttribute="centerX" id="xfH-vC-G4M"/>
+                                                        <constraint firstAttribute="width" secondItem="aGo-J9-cki" secondAttribute="height" multiplier="45:89" id="ywV-NF-djB"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDi-Ve-Naf" userLabel="Drug Details View">
