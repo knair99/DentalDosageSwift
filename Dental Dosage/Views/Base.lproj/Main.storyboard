@@ -300,16 +300,166 @@ fit your needs</string>
         <scene sceneID="A3V-lf-A2k">
             <objects>
                 <viewController id="jZk-Nb-72I" userLabel="Drug List View Controller" customClass="DrugListViewController" customModule="Dental_Dosage" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Dce-iT-Yef">
+                    <view key="view" contentMode="scaleToFill" id="Dce-iT-Yef" userLabel="Main View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rah-ON-XIz" userLabel="Header View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcu-hL-mMZ" userLabel="Drug Image View Container">
+                                        <rect key="frame" x="30" y="10" width="100" height="100"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Lo-cA-O17" userLabel="Drug Image View">
+                                                <rect key="frame" x="25" y="25" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="5Lo-cA-O17" secondAttribute="height" multiplier="1:1" id="7Fc-Br-loG"/>
+                                                    <constraint firstAttribute="width" secondItem="5Lo-cA-O17" secondAttribute="height" multiplier="1:1" id="Qe7-bG-fex"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.34509803919999998" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="5Lo-cA-O17" firstAttribute="centerX" secondItem="vcu-hL-mMZ" secondAttribute="centerX" id="0nC-Vk-Ers"/>
+                                            <constraint firstAttribute="trailing" secondItem="5Lo-cA-O17" secondAttribute="trailing" constant="25" id="8AC-9h-zUa"/>
+                                            <constraint firstItem="5Lo-cA-O17" firstAttribute="top" secondItem="vcu-hL-mMZ" secondAttribute="top" constant="25" id="JMW-01-Thh"/>
+                                            <constraint firstItem="5Lo-cA-O17" firstAttribute="centerY" secondItem="vcu-hL-mMZ" secondAttribute="centerY" id="Qfb-Py-Hyq"/>
+                                            <constraint firstAttribute="bottom" secondItem="5Lo-cA-O17" secondAttribute="bottom" constant="25" id="gsZ-bA-wtU"/>
+                                            <constraint firstAttribute="width" secondItem="vcu-hL-mMZ" secondAttribute="height" multiplier="1:1" id="h5R-Sx-QW8"/>
+                                            <constraint firstItem="5Lo-cA-O17" firstAttribute="leading" secondItem="vcu-hL-mMZ" secondAttribute="leading" constant="25" id="ooj-eF-Wad"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug  Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5W8-Qj-Wko" userLabel="Drug Type Label">
+                                        <rect key="frame" x="145" y="10" width="200" height="100"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="75"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="5W8-Qj-Wko" firstAttribute="leading" secondItem="vcu-hL-mMZ" secondAttribute="trailing" constant="15" id="7tb-le-Dd9"/>
+                                    <constraint firstItem="vcu-hL-mMZ" firstAttribute="leading" secondItem="rah-ON-XIz" secondAttribute="leading" constant="30" id="9ky-9W-Cbc"/>
+                                    <constraint firstAttribute="trailing" secondItem="5W8-Qj-Wko" secondAttribute="trailing" constant="30" id="Dv5-Ts-fAA"/>
+                                    <constraint firstItem="5W8-Qj-Wko" firstAttribute="height" secondItem="vcu-hL-mMZ" secondAttribute="height" id="FxJ-t7-xLO"/>
+                                    <constraint firstItem="vcu-hL-mMZ" firstAttribute="top" secondItem="rah-ON-XIz" secondAttribute="top" constant="10" id="L6S-dj-jqH"/>
+                                    <constraint firstAttribute="bottom" secondItem="vcu-hL-mMZ" secondAttribute="bottom" constant="10" id="XUf-FA-kFV"/>
+                                    <constraint firstAttribute="width" secondItem="rah-ON-XIz" secondAttribute="height" multiplier="25:8" id="sat-K9-K2f"/>
+                                    <constraint firstItem="5W8-Qj-Wko" firstAttribute="centerY" secondItem="vcu-hL-mMZ" secondAttribute="centerY" id="zdn-oz-gg3"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rOh-Tn-qZl" userLabel="Drug List Table View">
+                                <rect key="frame" x="0.0" y="120" width="375" height="483"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="drugTableViewCell" rowHeight="100" id="BHr-V8-nWv" userLabel="Drug Table View Cell" customClass="DrugTypeTableViewCell" customModule="Dental_Dosage" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BHr-V8-nWv" id="Sg1-gT-el4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGo-J9-cki" userLabel="Favorites Container View">
+                                                    <rect key="frame" x="0.0" y="5" width="45" height="99.5"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="VMt-o0-Bd0">
+                                                            <rect key="frame" x="8" y="35.5" width="30" height="29"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.34509803919999998" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="VMt-o0-Bd0" firstAttribute="centerY" secondItem="aGo-J9-cki" secondAttribute="centerY" id="AHr-Hb-Vef"/>
+                                                        <constraint firstItem="VMt-o0-Bd0" firstAttribute="width" secondItem="aGo-J9-cki" secondAttribute="height" multiplier="3:10" id="FqW-6g-ZpI"/>
+                                                        <constraint firstItem="VMt-o0-Bd0" firstAttribute="top" secondItem="aGo-J9-cki" secondAttribute="top" constant="35" id="gav-nR-0wF"/>
+                                                        <constraint firstItem="VMt-o0-Bd0" firstAttribute="centerX" secondItem="aGo-J9-cki" secondAttribute="centerX" id="xfH-vC-G4M"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDi-Ve-Naf" userLabel="Drug Details View">
+                                                    <rect key="frame" x="45" y="5" width="300" height="99.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkj-36-oMe" userLabel="Drug Name Label">
+                                                            <rect key="frame" x="8" y="30.5" width="290.5" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="aJv-o5-tBc"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g72-he-OT3" userLabel="Drug Percent Label">
+                                                            <rect key="frame" x="8" y="59.5" width="90.5" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Brand" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdT-Fo-5wa" userLabel="Drug Brand Label">
+                                                            <rect key="frame" x="220" y="11.5" width="78.5" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="zkj-36-oMe" firstAttribute="top" secondItem="SdT-Fo-5wa" secondAttribute="bottom" constant="1" id="Hzn-pq-eZY"/>
+                                                        <constraint firstItem="zkj-36-oMe" firstAttribute="width" secondItem="LDi-Ve-Naf" secondAttribute="height" multiplier="73:25" id="QHB-yb-LXy"/>
+                                                        <constraint firstItem="g72-he-OT3" firstAttribute="leading" secondItem="zkj-36-oMe" secondAttribute="leading" id="VuZ-SO-Ueu"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zkj-36-oMe" secondAttribute="trailing" id="hfW-pZ-ybp"/>
+                                                        <constraint firstItem="zkj-36-oMe" firstAttribute="top" secondItem="LDi-Ve-Naf" secondAttribute="top" constant="30" id="nDk-AF-MxR"/>
+                                                        <constraint firstItem="SdT-Fo-5wa" firstAttribute="trailing" secondItem="zkj-36-oMe" secondAttribute="trailing" id="sTY-5O-LQ2"/>
+                                                        <constraint firstItem="zkj-36-oMe" firstAttribute="leading" secondItem="LDi-Ve-Naf" secondAttribute="leading" constant="8" id="xGb-Bz-AYa"/>
+                                                        <constraint firstItem="g72-he-OT3" firstAttribute="top" secondItem="zkj-36-oMe" secondAttribute="bottom" constant="8" symbolic="YES" id="znr-KM-RHy"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="LDi-Ve-Naf" secondAttribute="trailing" constant="30" id="0V2-VC-9DZ"/>
+                                                <constraint firstItem="aGo-J9-cki" firstAttribute="leading" secondItem="Sg1-gT-el4" secondAttribute="leading" id="3B0-hG-3Th"/>
+                                                <constraint firstAttribute="bottom" secondItem="LDi-Ve-Naf" secondAttribute="bottom" constant="5" id="GJL-Gw-b1y"/>
+                                                <constraint firstAttribute="bottom" secondItem="aGo-J9-cki" secondAttribute="bottom" constant="5" id="HAX-C1-4kI"/>
+                                                <constraint firstItem="LDi-Ve-Naf" firstAttribute="leading" secondItem="aGo-J9-cki" secondAttribute="trailing" id="ULE-3G-CQx"/>
+                                                <constraint firstItem="LDi-Ve-Naf" firstAttribute="top" secondItem="Sg1-gT-el4" secondAttribute="top" constant="5" id="b90-TV-E8q"/>
+                                                <constraint firstAttribute="trailing" secondItem="aGo-J9-cki" secondAttribute="trailing" constant="330" id="h0o-kh-Xgr"/>
+                                                <constraint firstItem="aGo-J9-cki" firstAttribute="top" secondItem="Sg1-gT-el4" secondAttribute="top" constant="5" id="tgf-0g-uBK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="drugBrandLabel" destination="SdT-Fo-5wa" id="nTb-mz-syw"/>
+                                            <outlet property="drugNameLabel" destination="zkj-36-oMe" id="4fU-bt-D98"/>
+                                            <outlet property="drugPercentLabel" destination="g72-he-OT3" id="mdJ-kJ-HWG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="jZk-Nb-72I" id="gR4-TL-fKH"/>
+                                    <outlet property="delegate" destination="jZk-Nb-72I" id="LNG-Cj-NQA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rah-ON-XIz" firstAttribute="leading" secondItem="49M-Ib-gh9" secondAttribute="leading" id="CfC-rD-CTd"/>
+                            <constraint firstItem="49M-Ib-gh9" firstAttribute="trailing" secondItem="rah-ON-XIz" secondAttribute="trailing" id="Fjs-GA-d3q"/>
+                            <constraint firstItem="rah-ON-XIz" firstAttribute="top" secondItem="49M-Ib-gh9" secondAttribute="top" id="YIv-lg-X7g"/>
+                            <constraint firstItem="rOh-Tn-qZl" firstAttribute="leading" secondItem="49M-Ib-gh9" secondAttribute="leading" id="gGS-c0-fVz"/>
+                            <constraint firstItem="49M-Ib-gh9" firstAttribute="trailing" secondItem="rOh-Tn-qZl" secondAttribute="trailing" id="guh-93-T8P"/>
+                            <constraint firstItem="49M-Ib-gh9" firstAttribute="bottom" secondItem="rOh-Tn-qZl" secondAttribute="bottom" id="nKn-sr-Tx1"/>
+                            <constraint firstItem="rOh-Tn-qZl" firstAttribute="top" secondItem="rah-ON-XIz" secondAttribute="bottom" id="ssW-Rf-gdp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="49M-Ib-gh9"/>
                     </view>
+                    <connections>
+                        <outlet property="drugListTableView" destination="rOh-Tn-qZl" id="W2v-1v-1an"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMz-Qp-6Zv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1575" y="152"/>
+            <point key="canvasLocation" x="1573.5999999999999" y="151.57421289355324"/>
         </scene>
         <!--Choose Dentist Type-->
         <scene sceneID="fXH-w4-32c">
