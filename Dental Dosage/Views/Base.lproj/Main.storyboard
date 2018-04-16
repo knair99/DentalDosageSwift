@@ -364,10 +364,10 @@ fit your needs</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGo-J9-cki" userLabel="Favorites Container View">
-                                                    <rect key="frame" x="0.0" y="5" width="45" height="99.5"/>
+                                                    <rect key="frame" x="30" y="5" width="45.5" height="89.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="VMt-o0-Bd0">
-                                                            <rect key="frame" x="8" y="35.5" width="30" height="29"/>
+                                                            <rect key="frame" x="10" y="35.5" width="27" height="19"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.34509803919999998" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
@@ -379,10 +379,10 @@ fit your needs</string>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDi-Ve-Naf" userLabel="Drug Details View">
-                                                    <rect key="frame" x="45" y="5" width="300" height="99.5"/>
+                                                    <rect key="frame" x="75.5" y="5" width="269.5" height="89.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkj-36-oMe" userLabel="Drug Name Label">
-                                                            <rect key="frame" x="8" y="30.5" width="290.5" height="21"/>
+                                                            <rect key="frame" x="8" y="30.5" width="261.5" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="aJv-o5-tBc"/>
                                                             </constraints>
@@ -397,7 +397,7 @@ fit your needs</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Brand" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdT-Fo-5wa" userLabel="Drug Brand Label">
-                                                            <rect key="frame" x="220" y="11.5" width="78.5" height="18"/>
+                                                            <rect key="frame" x="191" y="11.5" width="78.5" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -419,12 +419,11 @@ fit your needs</string>
                                             <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="LDi-Ve-Naf" secondAttribute="trailing" constant="30" id="0V2-VC-9DZ"/>
-                                                <constraint firstItem="aGo-J9-cki" firstAttribute="leading" secondItem="Sg1-gT-el4" secondAttribute="leading" id="3B0-hG-3Th"/>
+                                                <constraint firstItem="aGo-J9-cki" firstAttribute="leading" secondItem="Sg1-gT-el4" secondAttribute="leading" constant="30" id="3B0-hG-3Th"/>
                                                 <constraint firstAttribute="bottom" secondItem="LDi-Ve-Naf" secondAttribute="bottom" constant="5" id="GJL-Gw-b1y"/>
                                                 <constraint firstAttribute="bottom" secondItem="aGo-J9-cki" secondAttribute="bottom" constant="5" id="HAX-C1-4kI"/>
                                                 <constraint firstItem="LDi-Ve-Naf" firstAttribute="leading" secondItem="aGo-J9-cki" secondAttribute="trailing" id="ULE-3G-CQx"/>
                                                 <constraint firstItem="LDi-Ve-Naf" firstAttribute="top" secondItem="Sg1-gT-el4" secondAttribute="top" constant="5" id="b90-TV-E8q"/>
-                                                <constraint firstAttribute="trailing" secondItem="aGo-J9-cki" secondAttribute="trailing" constant="330" id="h0o-kh-Xgr"/>
                                                 <constraint firstItem="aGo-J9-cki" firstAttribute="top" secondItem="Sg1-gT-el4" secondAttribute="top" constant="5" id="tgf-0g-uBK"/>
                                             </constraints>
                                         </tableViewCellContentView>
