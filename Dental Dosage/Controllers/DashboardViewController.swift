@@ -75,10 +75,10 @@ class DashboardViewController: UIViewController {
         
         //Set the header
         let dashboardDrugName = dashboardDrugNames![currentIndex][index]
-        drugListViewController?.drugListHeader = dashboardDrugName
+        drugListViewController?.drugTypeName = dashboardDrugName
         
-        //Prepare the entire names of drug lists
-        
+        //Pass the global drugModel JSON data too
+        drugListViewController?.drugModel =  drugModel
     }
 }
 

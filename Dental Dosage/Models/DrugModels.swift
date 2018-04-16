@@ -13,11 +13,14 @@ class DrugModel {
     
     //Entire JSON dump
     var jsonData : [String: Any]?
+
     //Names of various categories of drugs for the Dashboard screen
     var drugCategoriesNames: [String] = []
+    
     //Drug type image names (corresponding to approp index in drugCategoriesNames)
     var drugCategoriesImages: [String] = []
     
+    //For recently visited and favorites
     var drugRecentNames: [String] = []
     var drugFavoriteNames: [String] = []
     
@@ -35,6 +38,7 @@ class DrugModel {
                 jsonData = try! JSONSerialization.jsonObject(with: fileData, options: []) as! [String : Any]
              
                 if let jsonCategories = jsonData!["categories"] as? [[String: Any]] {
+                    
                     //Save dictionary of category vs drug info as a dictionary
                     drugDictionaryByCategory =  jsonCategories
                     
