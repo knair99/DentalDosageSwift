@@ -13,10 +13,14 @@ class DashboardViewController: UIViewController {
     //Declare all locals here
     let row_height = 60
     var settings : Settings?
+    
+    //Details of next view controller
+    var drugListViewController: DrugListViewController?
+    
     //All drug data
     var drugModel : DrugModel?
-    
-    var dashboardDummyArray : [[String]]?
+    var dashboardDrugNames : [[String]]?
+    var dashboardDrugImages: [String]?
     var currentIndex : Int = 0
     
     //Declare all outlets here
@@ -46,16 +50,35 @@ class DashboardViewController: UIViewController {
         //Get initial user settings
         GetInitialUserSettings()
         
+        //Get info about next View controller
+        drugListViewController = DrugListViewController()
+        
         //Get JSON Data from App delegate where it was intialized
         let delegate = UIApplication.shared.delegate as! AppDelegate
         drugModel = delegate.drugModel!
         
         //Get drug model info out of JSON
-        dashboardDummyArray = [
+        dashboardDrugNames = [
             (drugModel?.drugCategoriesNames)!, //All drug types
             (drugModel?.drugRecentNames)!, //Recents
             (drugModel?.drugFavoriteNames)! //Favorites
             ]
+        //Get drug image names too
+        dashboardDrugImages = drugModel?.drugCategoriesImages
+    }
+    
+    //Handle segues
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Prep data to be passed into "Drug List" view controller
+        drugListViewController = segue.destination as? DrugListViewController
+        let index = dashboardTableView.indexPathForSelectedRow!.row
+        
+        //Set the header
+        let dashboardDrugName = dashboardDrugNames![currentIndex][index]
+        drugListViewController?.drugListHeader = dashboardDrugName
+        
+        //Prepare the entire names of drug lists
+        
     }
 }
 
@@ -63,20 +86,29 @@ class DashboardViewController: UIViewController {
 extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dashboardDummyArray![currentIndex].count
+        return dashboardDrugNames![currentIndex].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //Get approp table index
         let index = indexPath.item
-        let dashboardValues = dashboardDummyArray![currentIndex][index]
+        
+        //Get approp drug data
+        let dashboardDrugName = dashboardDrugNames![currentIndex][index]
+        let dashboardImageName = dashboardDrugImages![index]
+        
+        //Get cell to update, update, and return it for rendering
         let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardTableViewCell") as! DashboardTableViewCell
-        cell.setCell(drugLabel: dashboardValues, drugImage: "dashboard_anasthetic")
+        cell.setCell(drugLabel: dashboardDrugName, drugImage: dashboardImageName)
         return cell
     }
-    //Make sure that the row selected
+    
+    
+    //Make sure that the row selected opens its specific viewcontroller
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Segue into specific view controller
-        
+        performSegue(withIdentifier: "dashToDrugListSegue", sender: self)
+
     }
     
     //Adding method to make sure the row height is proper

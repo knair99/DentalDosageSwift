@@ -15,6 +15,9 @@ class DrugModel {
     var jsonData : [String: Any]?
     //Names of various categories of drugs for the Dashboard screen
     var drugCategoriesNames: [String] = []
+    //Drug type image names (corresponding to approp index in drugCategoriesNames)
+    var drugCategoriesImages: [String] = []
+    
     var drugRecentNames: [String] = []
     var drugFavoriteNames: [String] = []
     
@@ -38,6 +41,7 @@ class DrugModel {
                     //Extract all drug categories into a separate array
                     for category in jsonCategories {
                         drugCategoriesNames.append(category["name"] as! String)
+                        drugCategoriesImages.append(category["display_image"] as! String)
                     }
                 }
             }

@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dental Dosage/Models/DrugModels.swift"
-            timestampString = "545454915.5279011"
+            timestampString = "545535131.107527"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "init(resource:)"
             landmarkType = "7">
          </BreakpointContent>
