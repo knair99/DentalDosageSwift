@@ -355,6 +355,7 @@ fit your needs</string>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rOh-Tn-qZl" userLabel="Drug List Table View">
                                 <rect key="frame" x="0.0" y="120" width="375" height="483"/>
                                 <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="drugTableViewCell" rowHeight="100" id="BHr-V8-nWv" userLabel="Drug Table View Cell" customClass="DrugTypeTableViewCell" customModule="Dental_Dosage" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
@@ -367,13 +368,12 @@ fit your needs</string>
                                                     <rect key="frame" x="30" y="5" width="45.5" height="89.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="VMt-o0-Bd0">
-                                                            <rect key="frame" x="10" y="35.5" width="27" height="19"/>
+                                                            <rect key="frame" x="9" y="35.5" width="29" height="19"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.34509803919999998" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="VMt-o0-Bd0" firstAttribute="centerY" secondItem="aGo-J9-cki" secondAttribute="centerY" id="AHr-Hb-Vef"/>
-                                                        <constraint firstItem="VMt-o0-Bd0" firstAttribute="width" secondItem="aGo-J9-cki" secondAttribute="height" multiplier="3:10" id="FqW-6g-ZpI"/>
                                                         <constraint firstItem="VMt-o0-Bd0" firstAttribute="top" secondItem="aGo-J9-cki" secondAttribute="top" constant="35" id="gav-nR-0wF"/>
                                                         <constraint firstItem="VMt-o0-Bd0" firstAttribute="centerX" secondItem="aGo-J9-cki" secondAttribute="centerX" id="xfH-vC-G4M"/>
                                                     </constraints>

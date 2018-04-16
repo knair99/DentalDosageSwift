@@ -10,6 +10,9 @@ import UIKit
 
 class DrugTypeTableViewCell: UITableViewCell {
 
+    //Declare all locals here
+    let fixedTrailingSpace : String = "  "
+    
     //Declare all outlets here
     @IBOutlet weak var drugNameLabel: UILabel!
     @IBOutlet weak var drugPercentLabel: UILabel!
@@ -19,7 +22,7 @@ class DrugTypeTableViewCell: UITableViewCell {
     func setCell(name:String, percent:String, brand:String){
         
         drugNameLabel.text = name
-        drugBrandLabel.text = brand
+        drugBrandLabel.text = brand + fixedTrailingSpace
         drugPercentLabel.text = percent
     }
     
