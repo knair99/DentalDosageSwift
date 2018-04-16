@@ -19,8 +19,14 @@ class DashboardViewController: UIViewController {
     
     //All drug data
     var drugModel : DrugModel?
-    var dashboardDrugNames : [[String]]?
-    var dashboardDrugImages: [String]?
+    
+    //The array that holds the strings current in all tabs
+    //3 indexes : Drug type names = 0, Recents = 1, Favorites = 2
+    //Index for currently clicked tab will be pointed to by currentIndex
+    var dashboardAllTabContentsArray : [[String]]?
+    var drugTypeDictionary : [String:Any]?
+    
+    //Denotes what tab index we're currently at
     var currentIndex : Int = 0
     
     //Declare all outlets here
@@ -43,6 +49,7 @@ class DashboardViewController: UIViewController {
     }
     
     //Declare all overrrides here
+    //All initialization for the dashboard done here
     override func viewDidLoad() {
         super.viewDidLoad()
         currentIndex = 0
@@ -56,15 +63,14 @@ class DashboardViewController: UIViewController {
         //Get JSON Data from App delegate where it was intialized
         let delegate = UIApplication.shared.delegate as! AppDelegate
         drugModel = delegate.drugModel!
+        drugTypeDictionary = drugModel?.drugTypeDictionary
         
         //Get drug model info out of JSON
-        dashboardDrugNames = [
+        dashboardAllTabContentsArray = [
             (drugModel?.drugCategoriesNames)!, //All drug types
             (drugModel?.drugRecentNames)!, //Recents
             (drugModel?.drugFavoriteNames)! //Favorites
             ]
-        //Get drug image names too
-        dashboardDrugImages = drugModel?.drugCategoriesImages
     }
     
     //Handle segues
@@ -74,11 +80,12 @@ class DashboardViewController: UIViewController {
         let index = dashboardTableView.indexPathForSelectedRow!.row
         
         //Set the header
-        let dashboardDrugName = dashboardDrugNames![currentIndex][index]
+        let dashboardDrugName = dashboardAllTabContentsArray![currentIndex][index]
         drugListViewController?.drugTypeName = dashboardDrugName
         
-        //Pass the global drugModel JSON data too
-        drugListViewController?.drugModel =  drugModel
+        //Give new view its appropriate list of specific drugs
+        let drugTypeDetails  = drugTypeDictionary![dashboardDrugName] as! [String:Any]
+        drugListViewController?.drugArray = (drugTypeDetails["drugs"] as! [[String:Any]])
     }
 }
 
@@ -86,18 +93,19 @@ class DashboardViewController: UIViewController {
 extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dashboardDrugNames![currentIndex].count
+        return dashboardAllTabContentsArray![currentIndex].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Get approp table index
         let index = indexPath.item
         
-        //Get approp drug data
-        let dashboardDrugName = dashboardDrugNames![currentIndex][index]
-        let dashboardImageName = dashboardDrugImages![index]
+        //Get approp drug data - name and display image
+        let dashboardDrugName = dashboardAllTabContentsArray![currentIndex][index]
+        let drugType =  drugTypeDictionary![dashboardDrugName] as! [String: Any]
+        let dashboardImageName = drugType["display_image"] as! String
         
-        //Get cell to update, update, and return it for rendering
+        //Get cell to set name and image, update, and return for rendering
         let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardTableViewCell") as! DashboardTableViewCell
         cell.setCell(drugLabel: dashboardDrugName, drugImage: dashboardImageName)
         return cell

@@ -11,21 +11,23 @@ import Foundation
 
 class DrugModel {
     
-    //Entire JSON dump
-    var jsonData : [String: Any]?
-
+    //Also, For recently visited and favorites
     //Names of various categories of drugs for the Dashboard screen
     var drugCategoriesNames: [String] = []
-    
     //Drug type image names (corresponding to approp index in drugCategoriesNames)
     var drugCategoriesImages: [String] = []
-    
-    //For recently visited and favorites
     var drugRecentNames: [String] = []
     var drugFavoriteNames: [String] = []
     
-    //All drug information - root JSON dictionary named "categories"
-    var drugDictionaryByCategory : [[String: Any]] = []
+    //All JSON information - root JSON array named "categories"
+    var jsonRootDictionary : [[String: Any]] = []
+    
+    //Aside from this, to make matters simpler, we will create two more dictionaries from the JSON
+    //Dictionary that has a drug type name as key, and all its properties as values
+    var drugTypeDictionary : [String: Any] = [:]
+    
+    //Dictionary that has individual drugs with names as keys, and its measurements as values
+    var drugDetailsDictionary : [String: Any] = [:]
     
     //Get the JSON out in the initializer
     init(resource jsonResource: String) {
@@ -35,17 +37,30 @@ class DrugModel {
                 let fileData = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 
                 //Next get the json from the data read from file
-                jsonData = try! JSONSerialization.jsonObject(with: fileData, options: []) as! [String : Any]
-             
-                if let jsonCategories = jsonData!["categories"] as? [[String: Any]] {
+                if let jsonData = try! JSONSerialization.jsonObject(with: fileData, options: []) as? [String : Any] {
                     
-                    //Save dictionary of category vs drug info as a dictionary
-                    drugDictionaryByCategory =  jsonCategories
-                    
-                    //Extract all drug categories into a separate array
-                    for category in jsonCategories {
-                        drugCategoriesNames.append(category["name"] as! String)
-                        drugCategoriesImages.append(category["display_image"] as! String)
+                    if let jsonCategories = jsonData["categories"] as? [[String: Any]] {
+                        
+                        //Save dictionary of category vs drug info as a dictionary
+                        jsonRootDictionary =  jsonCategories
+                        
+                        //Extract all drug categories into a separate array
+                        for category in jsonCategories {
+                            let name = category["name"] as! String
+                            let image = category["display_image"] as! String
+                            drugCategoriesNames.append(name)
+                            drugCategoriesImages.append(image)
+                            
+                            //Put appropriate category as key and all its elements as values
+                            drugTypeDictionary[name] = category as Any
+                            
+                            //Put all drugs into a dictionary, indexed by drug name
+                            let drugArray = category["drugs"] as! [[String:Any]]
+                            for drug in drugArray {
+                                let drugName = drug["name"] as! String
+                                drugDetailsDictionary[drugName] = drug
+                            }
+                        }
                     }
                 }
             }
