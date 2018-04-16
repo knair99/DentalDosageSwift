@@ -43,17 +43,31 @@ extension DrugListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        //Get the right drug
         let index = indexPath.item
         let drug = drugArray[index]
-        let name = drug["name"] as! String
-        var percent = drug["specs"] as? String
-        var brand =  drug["brand"] as? String
-        if brand == nil {
-            brand = name
+        
+        //Get name; If too long, clip it to 10 chars
+        var name = drug["name"] as! String
+        if name.count > 15 {
+            let startIndex = name.index(name.startIndex, offsetBy: 10)
+            name = String(name[..<startIndex])
         }
+        
+        //Get brand, if no brand exists, just use the name of the drug
+        var brand =  drug["brand"] as? String
+        if brand == nil || brand?.count == 0{
+            brand = ""
+        }
+        
+        //Get percent - if no spec exists, just mention method name
+        var percent = drug["specs"] as? String
         if percent ==  nil || percent!.count >= 25 {
             percent = drug["method"] as? String
         }
+        
+        //U[date cell
         let cell = drugListTableView.dequeueReusableCell(withIdentifier: "drugTableViewCell") as! DrugTypeTableViewCell
         cell.setCell(name: name, percent: percent!, brand: brand!)
         return cell
