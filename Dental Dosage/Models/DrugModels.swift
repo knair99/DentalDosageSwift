@@ -30,6 +30,13 @@ class DrugModel {
     
     //Get the JSON out in the initializer
     init(resource jsonResource: String) {
+        //Get favorites and recents if they exist, first, from User Defaults
+        let defaults = UserDefaults.standard
+        let favorites = defaults.array(forKey: "favoriteMedicines") as? [String] ?? []
+        drugFavoriteNames = favorites
+        let recents = defaults.array(forKey: "recentMedicines") as? [String] ?? []
+        drugRecentNames = recents
+        
         if let path = Bundle.main.path(forResource: jsonResource, ofType: "json") {
             do {
                 //First, procure the file out of the resources
