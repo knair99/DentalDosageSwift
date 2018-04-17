@@ -126,6 +126,9 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate, D
         let drugModel = delegate.drugModel!
         drugModel.drugFavoriteNames = favorites
         
+        //Also, update the dashboardAllTabContentsArray
+        dashboardAllTabContentsArray![currentIndex] = favorites
+        
         //Save settings to user defaults
         defaults.set(favorites, forKey: "favoriteMedicines")
         defaults.synchronize()
@@ -157,9 +160,10 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate, D
             cell.setCell(drugLabel: dashboardDrugName, drugImage: dashboardImageName)
             return cell
         }
-        else{ //Recents, and favorites are drug type cells
+        else{ //Recents, and favorites are drug type cells - require different treatment
             //Get the right drug
             let index = indexPath.item
+
             let drugName = drugModel?.drugFavoriteNames[index]
             let drug = drugModel?.drugDetailsDictionary[drugName!] as! [String:Any]
             
