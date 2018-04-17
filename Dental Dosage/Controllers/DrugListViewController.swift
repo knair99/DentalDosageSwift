@@ -72,9 +72,9 @@ extension DrugListViewController: UITableViewDelegate, UITableViewDataSource, Dr
     }
     
     //Perform transition to calculator
-    func transitionToDosageView(data: Any?) {
+    func transitionToDosageView(data: Any?, segue: String) {
         //Segue to new dosage view controller
-        performSegue(withIdentifier: "drugListToDosageSegue", sender: self)
+        performSegue(withIdentifier: segue, sender: self)
     }
     
     //Custom protocol stub
@@ -111,6 +111,7 @@ extension DrugListViewController: UITableViewDelegate, UITableViewDataSource, Dr
         //U[date cell
         let cell = drugListTableView.dequeueReusableCell(withIdentifier: "drugTableViewCell") as! DrugTypeTableViewCell
         cell.setCell(name: name, percent: percent!, brand: brand!)
+        cell.setSegue(segueToUse: "drugListToDosageSegue")
         
         //Remember to set the cell delegate for the transition protocol
         cell.drugListCellDelegate = self

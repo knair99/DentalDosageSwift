@@ -11,7 +11,7 @@ import UIKit
 //Create a protocol here to perform segue & save data
 protocol DrugTypeCellDelegate {
     //Pass data through here later on, if need be
-    func transitionToDosageView (data: Any?)
+    func transitionToDosageView (data: Any?, segue: String)
     func updateFavorites (drugName: String, remove: Bool)
 }
 
@@ -20,6 +20,7 @@ class DrugTypeTableViewCell: UITableViewCell {
     //Declare all locals here
     let fixedTrailingSpace : String = "  "
     var favoritesSwitched = false
+    var segueToUse: String = ""
     
     var drugListCellDelegate: DrugTypeCellDelegate!
     
@@ -55,6 +56,11 @@ class DrugTypeTableViewCell: UITableViewCell {
         drugBrandLabel.text = brand + fixedTrailingSpace
         drugPercentLabel.text = percent
     }
+    
+    func setSegue (segueToUse: String){
+        self.segueToUse = segueToUse
+    }
+    
     //Declare the tap recgnizers
     //Favorites: Change colors and store
     @objc func favoritesViewTapped(_ sender: UITapGestureRecognizer) {
@@ -72,7 +78,7 @@ class DrugTypeTableViewCell: UITableViewCell {
         }
     }
     @objc func drugDetailsViewTapped(_ sender: UITapGestureRecognizer){
-        drugListCellDelegate.transitionToDosageView(data: nil)
+        drugListCellDelegate.transitionToDosageView(data: nil, segue: segueToUse)
     }
   
 }

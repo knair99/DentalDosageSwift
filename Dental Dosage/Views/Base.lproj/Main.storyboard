@@ -228,11 +228,13 @@ fit your needs</string>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.34509803919999998" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="87R-H9-owT"/>
                                                         <constraint firstAttribute="trailing" secondItem="6ds-XM-Vzs" secondAttribute="trailing" constant="10" id="F3w-Xn-ePF"/>
                                                         <constraint firstItem="6ds-XM-Vzs" firstAttribute="centerY" secondItem="FqV-mj-skS" secondAttribute="centerY" id="M4P-fH-mDL"/>
                                                         <constraint firstItem="6ds-XM-Vzs" firstAttribute="centerX" secondItem="FqV-mj-skS" secondAttribute="centerX" id="RbA-iB-2oe"/>
                                                         <constraint firstItem="6ds-XM-Vzs" firstAttribute="top" secondItem="FqV-mj-skS" secondAttribute="top" constant="10" id="Xpo-x4-7RP"/>
                                                         <constraint firstItem="6ds-XM-Vzs" firstAttribute="leading" secondItem="FqV-mj-skS" secondAttribute="leading" constant="10" id="eG2-WO-Mvd"/>
+                                                        <constraint firstAttribute="height" constant="69.5" id="tnI-hD-OK2"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7v-zV-NJ8">
@@ -262,6 +264,98 @@ fit your needs</string>
                                         <connections>
                                             <outlet property="drugTypeImageView" destination="6ds-XM-Vzs" id="dAV-dm-GWX"/>
                                             <outlet property="drugTypeLabel" destination="Q7v-zV-NJ8" id="4Lh-9g-01U"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="drugFavViewCell" rowHeight="100" id="N4o-AP-aw0" userLabel="FavRecents View Cell" customClass="DrugTypeTableViewCell" customModule="Dental_Dosage" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="108" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N4o-AP-aw0" id="9nz-VE-rEG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8d-QT-dkg" userLabel="Favorites Container View">
+                                                    <rect key="frame" x="30" y="5" width="45.5" height="89.5"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="rQE-ou-tEL">
+                                                            <rect key="frame" x="9" y="30.5" width="29" height="29"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.34509803919999998" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45.5" id="Fu4-T2-FHa"/>
+                                                        <constraint firstItem="rQE-ou-tEL" firstAttribute="centerX" secondItem="g8d-QT-dkg" secondAttribute="centerX" id="Icu-J0-ndx"/>
+                                                        <constraint firstItem="rQE-ou-tEL" firstAttribute="centerY" secondItem="g8d-QT-dkg" secondAttribute="centerY" id="VWS-NI-1aT"/>
+                                                        <constraint firstAttribute="height" constant="89.5" id="eFX-Bv-yGh"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUE-3h-QGI" userLabel="Drug Details View">
+                                                    <rect key="frame" x="75.5" y="5" width="269.5" height="89.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3x7-Ph-UyL" userLabel="Drug Name Label">
+                                                            <rect key="frame" x="8" y="30" width="261.5" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="5Hm-Lf-QWi"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                            </variation>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Brand" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fni-ZB-TEQ" userLabel="Drug Brand Label">
+                                                            <rect key="frame" x="8" y="13" width="262" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            </variation>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kl-9r-HvN" userLabel="Drug Percent Label">
+                                                            <rect key="frame" x="8" y="51" width="254" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" red="0.34509803919999998" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                            </variation>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="3x7-Ph-UyL" firstAttribute="top" secondItem="Fni-ZB-TEQ" secondAttribute="bottom" id="4bp-es-vp5"/>
+                                                        <constraint firstItem="1Kl-9r-HvN" firstAttribute="top" secondItem="3x7-Ph-UyL" secondAttribute="bottom" id="6nS-ub-ZUd"/>
+                                                        <constraint firstItem="3x7-Ph-UyL" firstAttribute="top" secondItem="AUE-3h-QGI" secondAttribute="top" constant="30" id="DOU-CF-7rg"/>
+                                                        <constraint firstItem="Fni-ZB-TEQ" firstAttribute="trailing" secondItem="3x7-Ph-UyL" secondAttribute="trailing" id="H39-Bs-QIP"/>
+                                                        <constraint firstItem="Fni-ZB-TEQ" firstAttribute="leading" secondItem="AUE-3h-QGI" secondAttribute="leading" constant="8" id="QsY-Dp-zLZ"/>
+                                                        <constraint firstItem="3x7-Ph-UyL" firstAttribute="leading" secondItem="AUE-3h-QGI" secondAttribute="leading" constant="8" id="TJH-cv-q2o"/>
+                                                        <constraint firstAttribute="trailing" secondItem="1Kl-9r-HvN" secondAttribute="trailing" constant="7.5" id="UKV-R6-uPI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Fni-ZB-TEQ" secondAttribute="trailing" id="aaI-Sn-9C7"/>
+                                                        <constraint firstItem="3x7-Ph-UyL" firstAttribute="width" secondItem="AUE-3h-QGI" secondAttribute="height" multiplier="73:25" id="c5X-lH-Z2Z"/>
+                                                        <constraint firstItem="1Kl-9r-HvN" firstAttribute="leading" secondItem="3x7-Ph-UyL" secondAttribute="leading" id="eTK-vQ-QFK"/>
+                                                        <constraint firstAttribute="trailing" secondItem="3x7-Ph-UyL" secondAttribute="trailing" id="pFp-49-Hef"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="AUE-3h-QGI" firstAttribute="leading" secondItem="g8d-QT-dkg" secondAttribute="trailing" id="98q-S1-BHC"/>
+                                                <constraint firstItem="AUE-3h-QGI" firstAttribute="top" secondItem="9nz-VE-rEG" secondAttribute="top" constant="5" id="IjZ-xc-STL"/>
+                                                <constraint firstAttribute="trailing" secondItem="AUE-3h-QGI" secondAttribute="trailing" constant="30" id="K6d-Jk-pNc"/>
+                                                <constraint firstItem="g8d-QT-dkg" firstAttribute="leading" secondItem="9nz-VE-rEG" secondAttribute="leading" constant="30" id="V7t-ei-7Ah"/>
+                                                <constraint firstItem="g8d-QT-dkg" firstAttribute="top" secondItem="9nz-VE-rEG" secondAttribute="top" constant="5" id="Vjf-DU-Z2c"/>
+                                                <constraint firstAttribute="bottom" secondItem="AUE-3h-QGI" secondAttribute="bottom" constant="5" id="fxM-6E-ZCe"/>
+                                                <constraint firstAttribute="bottom" secondItem="g8d-QT-dkg" secondAttribute="bottom" constant="5" id="itF-d1-WXS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="drugBrandLabel" destination="Fni-ZB-TEQ" id="35O-zE-101"/>
+                                            <outlet property="drugDetailsView" destination="AUE-3h-QGI" id="zbV-cH-v1G"/>
+                                            <outlet property="drugNameLabel" destination="3x7-Ph-UyL" id="1Nr-G2-9L4"/>
+                                            <outlet property="drugPercentLabel" destination="1Kl-9r-HvN" id="kV3-kb-SIv"/>
+                                            <outlet property="favoritesView" destination="g8d-QT-dkg" id="Qf5-Yg-LmV"/>
+                                            <segue destination="Krf-84-zyJ" kind="show" identifier="favRecentToDosageSeugue" id="hdD-CH-FRJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -302,7 +396,7 @@ fit your needs</string>
         <!--Drug List View Controller-->
         <scene sceneID="A3V-lf-A2k">
             <objects>
-                <viewController id="jZk-Nb-72I" userLabel="Drug List View Controller" customClass="DrugListViewController" customModule="Dental_Dosage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DrugList" id="jZk-Nb-72I" userLabel="Drug List View Controller" customClass="DrugListViewController" customModule="Dental_Dosage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dce-iT-Yef" userLabel="Main View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -480,7 +574,7 @@ fit your needs</string>
         <!--Dosage Calculator View Controller-->
         <scene sceneID="k8o-6c-xNM">
             <objects>
-                <viewController id="Krf-84-zyJ" userLabel="Dosage Calculator View Controller" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Dosage" id="Krf-84-zyJ" userLabel="Dosage Calculator View Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WVr-ax-LZi" userLabel="Main View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -952,4 +1046,7 @@ By using this app, you consent to this disclaimer.</string>
         <image name="settings" width="29" height="29"/>
         <image name="short_logo" width="218" height="209"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hdD-CH-FRJ"/>
+    </inferredMetricsTieBreakers>
 </document>
