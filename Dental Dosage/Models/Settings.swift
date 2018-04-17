@@ -31,8 +31,8 @@ class Settings: NSObject, NSCoding {
     
     //Required protocol stubs
     func encode(with aCoder: NSCoder) {
-    aCoder.encode(dentistTypesChosen, forKey: "dentistTypesChosen")
-    aCoder.encode(metricChosen, forKey: "metricChosen")
+        aCoder.encode(dentistTypesChosen, forKey: "dentistTypesChosen")
+        aCoder.encode(metricChosen, forKey: "metricChosen")
     }
 
     required init?(coder aDecoder: NSCoder) {

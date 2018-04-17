@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+//Class for mining JSON input, and saving into global object during app delegate startup
 class DrugModel {
     
     //Also, For recently visited and favorites
@@ -21,8 +21,7 @@ class DrugModel {
     
     //All JSON information - root JSON array named "categories"
     var jsonRootDictionary : [[String: Any]] = []
-    
-    //Aside from this, to make matters simpler, we will create two more dictionaries from the JSON
+
     //Dictionary that has a drug type name as key, and all its properties as values
     var drugTypeDictionary : [String: Any] = [:]
     

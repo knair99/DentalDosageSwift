@@ -70,7 +70,17 @@ class DashboardViewController: UIViewController {
             (drugModel?.drugCategoriesNames)!, //All drug types
             (drugModel?.drugRecentNames)!, //Recents
             (drugModel?.drugFavoriteNames)! //Favorites
-            ]
+        ]
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //Get drug model info out of JSON
+//        dashboardAllTabContentsArray = [
+//            (drugModel?.drugCategoriesNames)!, //All drug types
+//            (drugModel?.drugRecentNames)!, //Recents
+//            (drugModel?.drugFavoriteNames)! //Favorites
+//        ]
     }
     
     //Handle segues
@@ -101,7 +111,6 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Get approp table index
         let index = indexPath.item
-        
         //Get approp drug data - name and display image
         let dashboardDrugName = dashboardAllTabContentsArray![currentIndex][index]
         let drugType =  drugTypeDictionary![dashboardDrugName] as! [String: Any]
@@ -111,6 +120,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardTableViewCell") as! DashboardTableViewCell
         cell.setCell(drugLabel: dashboardDrugName, drugImage: dashboardImageName)
         return cell
+        
     }
     
     

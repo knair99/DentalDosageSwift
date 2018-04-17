@@ -8,10 +8,20 @@
 
 import UIKit
 
+//Create a protocol here to perform segue & save data
+protocol DrugTypeCellDelegate {
+    //Pass data through here later on, if need be
+    func transitionToDosageView (data: Any?)
+    func updateFavorites (drugName: String, remove: Bool)
+}
+
 class DrugTypeTableViewCell: UITableViewCell {
 
     //Declare all locals here
     let fixedTrailingSpace : String = "  "
+    var favoritesSwitched = false
+    
+    var drugListCellDelegate: DrugTypeCellDelegate!
     
     //Declare all outlets here
     @IBOutlet weak var drugNameLabel: UILabel!
@@ -46,12 +56,23 @@ class DrugTypeTableViewCell: UITableViewCell {
         drugPercentLabel.text = percent
     }
     //Declare the tap recgnizers
+    //Favorites: Change colors and store
     @objc func favoritesViewTapped(_ sender: UITapGestureRecognizer) {
-        print ("Fav tapped")
+        if favoritesSwitched == true { //Remove from favorites
+            //Set to green
+            favoritesView.backgroundColor = UIColor(red: 88/255, green: 168/255, blue: 168/255, alpha: 1)
+            favoritesSwitched = false
+            drugListCellDelegate.updateFavorites(drugName: drugNameLabel.text!, remove: true)
+        }
+        else { //Save to favorites
+            //Set to pink
+            favoritesView.backgroundColor = UIColor(red: 241/255, green: 141/255, blue: 154/255, alpha: 1)
+            favoritesSwitched = true
+            drugListCellDelegate.updateFavorites(drugName: drugNameLabel.text!, remove: false)
+        }
     }
     @objc func drugDetailsViewTapped(_ sender: UITapGestureRecognizer){
-        print ("Details tapped")
+        drugListCellDelegate.transitionToDosageView(data: nil)
     }
-    
   
 }

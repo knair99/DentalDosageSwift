@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Initialize settings data as a global
         drugModel = DrugModel(resource: "drugs")
         
+        //Silence autolayout runtime warnings
+        UserDefaults.standard.setValue(false, forKey:"_UIConstraintBasedLayoutLogUnsatisfiable")
+        
         //Onboarding
         let defaults = UserDefaults.standard
         let key = defaults.object(forKey: "isFirstLaunch")
@@ -31,12 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let onboardingViewController = sb.instantiateViewController(withIdentifier: "Onboarding")
             self.window?.rootViewController = onboardingViewController
             self.window?.makeKeyAndVisible()
-            
-            
         }
-        
-        
-        
+
         return true
     }
 

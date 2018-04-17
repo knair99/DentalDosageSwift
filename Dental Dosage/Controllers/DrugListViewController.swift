@@ -45,11 +45,44 @@ class DrugListViewController: UIViewController {
     }
 }
 
-extension DrugListViewController: UITableViewDelegate, UITableViewDataSource {
+extension DrugListViewController: UITableViewDelegate, UITableViewDataSource, DrugTypeCellDelegate {
+    
+    //Save favorites data into global settings
+    func updateFavorites(drugName: String, remove: Bool) {
+        let defaults = UserDefaults.standard
+        var favorites = defaults.array(forKey: "favoriteMedicines") as? [String] ?? []
+        if remove == false {
+            //Add to favorites if not already in there
+            if !favorites.contains(drugName) {
+                favorites.append(drugName)
+            }
+        }
+        else {
+            //Remove from favorites
+            favorites = favorites.filter {$0 != drugName}
+        }
+        //Update the drugModel JSON so the favorites tab will reflect this
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let drugModel = delegate.drugModel!
+        drugModel.drugFavoriteNames = favorites
+        
+        //Save settings to user defaults
+        defaults.set(favorites, forKey: "favoriteMedicines")
+        defaults.synchronize()
+    }
+    
+    //Perform transition to calculator
+    func transitionToDosageView(data: Any?) {
+        //Segue to new dosage view controller
+        performSegue(withIdentifier: "drugListToDosageSegue", sender: self)
+    }
+    
+    //Custom protocol stub
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return drugArray.count
     }
     
+    //Each time table view reloads, reload the cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         //Get the right drug
@@ -78,6 +111,9 @@ extension DrugListViewController: UITableViewDelegate, UITableViewDataSource {
         //U[date cell
         let cell = drugListTableView.dequeueReusableCell(withIdentifier: "drugTableViewCell") as! DrugTypeTableViewCell
         cell.setCell(name: name, percent: percent!, brand: brand!)
+        
+        //Remember to set the cell delegate for the transition protocol
+        cell.drugListCellDelegate = self
         return cell
     }
     
