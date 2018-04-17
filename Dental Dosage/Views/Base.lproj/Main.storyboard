@@ -395,28 +395,30 @@ fit your needs</string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g72-he-OT3" userLabel="Drug Percent Label">
                                                             <rect key="frame" x="8" y="51" width="254" height="16"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                            </variation>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="SdT-Fo-5wa" firstAttribute="leading" secondItem="LDi-Ve-Naf" secondAttribute="leading" constant="8" id="2ai-73-pfG"/>
                                                         <constraint firstAttribute="trailing" secondItem="SdT-Fo-5wa" secondAttribute="trailing" id="2tD-d8-5kE"/>
-                                                        <constraint firstItem="g72-he-OT3" firstAttribute="top" secondItem="zkj-36-oMe" secondAttribute="bottom" id="Cdb-Rp-Hzt"/>
                                                         <constraint firstItem="zkj-36-oMe" firstAttribute="width" secondItem="LDi-Ve-Naf" secondAttribute="height" multiplier="73:25" id="QHB-yb-LXy"/>
                                                         <constraint firstItem="g72-he-OT3" firstAttribute="leading" secondItem="zkj-36-oMe" secondAttribute="leading" id="VuZ-SO-Ueu"/>
                                                         <constraint firstItem="zkj-36-oMe" firstAttribute="top" secondItem="SdT-Fo-5wa" secondAttribute="bottom" id="aki-sr-c2O"/>
-                                                        <constraint firstItem="zkj-36-oMe" firstAttribute="top" secondItem="SdT-Fo-5wa" secondAttribute="bottom" id="cF0-d8-euq"/>
-                                                        <constraint firstAttribute="bottom" secondItem="g72-he-OT3" secondAttribute="bottom" constant="22.5" id="e3I-ko-F2f"/>
                                                         <constraint firstAttribute="trailing" secondItem="zkj-36-oMe" secondAttribute="trailing" id="hfW-pZ-ybp"/>
-                                                        <constraint firstItem="zkj-36-oMe" firstAttribute="top" secondItem="SdT-Fo-5wa" secondAttribute="bottom" id="iYY-xK-lHD"/>
                                                         <constraint firstItem="zkj-36-oMe" firstAttribute="top" secondItem="LDi-Ve-Naf" secondAttribute="top" constant="30" id="nDk-AF-MxR"/>
-                                                        <constraint firstItem="g72-he-OT3" firstAttribute="top" secondItem="zkj-36-oMe" secondAttribute="bottom" id="pVw-Ms-lyF"/>
+                                                        <constraint firstItem="g72-he-OT3" firstAttribute="top" secondItem="zkj-36-oMe" secondAttribute="bottom" id="pxa-Oy-TEF"/>
                                                         <constraint firstItem="SdT-Fo-5wa" firstAttribute="trailing" secondItem="zkj-36-oMe" secondAttribute="trailing" id="sTY-5O-LQ2"/>
                                                         <constraint firstItem="zkj-36-oMe" firstAttribute="leading" secondItem="LDi-Ve-Naf" secondAttribute="leading" constant="8" id="xGb-Bz-AYa"/>
                                                         <constraint firstAttribute="trailing" secondItem="g72-he-OT3" secondAttribute="trailing" constant="7.5" id="y6m-yn-j2v"/>
