@@ -22,7 +22,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VeV-gM-kv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-828" y="174"/>
+            <point key="canvasLocation" x="-1186" y="152"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="pl9-4O-gc0">
@@ -163,7 +163,7 @@ fit your needs</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcq-bn-kuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1666" y="913"/>
+            <point key="canvasLocation" x="-1395" y="913"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="tne-QT-ifu">
@@ -241,6 +241,9 @@ fit your needs</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -294,7 +297,7 @@ fit your needs</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="820" y="151.57421289355324"/>
+            <point key="canvasLocation" x="386" y="152"/>
         </scene>
         <!--Drug List View Controller-->
         <scene sceneID="A3V-lf-A2k">
@@ -340,7 +343,7 @@ fit your needs</string>
                                 <constraints>
                                     <constraint firstItem="5W8-Qj-Wko" firstAttribute="leading" secondItem="vcu-hL-mMZ" secondAttribute="trailing" constant="15" id="7tb-le-Dd9"/>
                                     <constraint firstItem="vcu-hL-mMZ" firstAttribute="leading" secondItem="rah-ON-XIz" secondAttribute="leading" constant="30" id="9ky-9W-Cbc"/>
-                                    <constraint firstAttribute="trailing" secondItem="5W8-Qj-Wko" secondAttribute="trailing" constant="30" id="Dv5-Ts-fAA"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="5W8-Qj-Wko" secondAttribute="trailing" constant="30" id="Dv5-Ts-fAA"/>
                                     <constraint firstItem="5W8-Qj-Wko" firstAttribute="height" secondItem="vcu-hL-mMZ" secondAttribute="height" id="FxJ-t7-xLO"/>
                                     <constraint firstItem="vcu-hL-mMZ" firstAttribute="top" secondItem="rah-ON-XIz" secondAttribute="top" constant="10" id="L6S-dj-jqH"/>
                                     <constraint firstAttribute="bottom" secondItem="vcu-hL-mMZ" secondAttribute="bottom" constant="10" id="XUf-FA-kFV"/>
@@ -384,16 +387,16 @@ fit your needs</string>
                                                                 <constraint firstAttribute="height" constant="21" id="aJv-o5-tBc"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="heightClass=regular-widthClass=regular">
-                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Brand" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdT-Fo-5wa" userLabel="Drug Brand Label">
                                                             <rect key="frame" x="8" y="13" width="262" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="heightClass=regular-widthClass=regular">
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -402,7 +405,7 @@ fit your needs</string>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g72-he-OT3" userLabel="Drug Percent Label">
                                                             <rect key="frame" x="8" y="51" width="254" height="16"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.34509803919999998" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="heightClass=regular-widthClass=regular">
                                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -438,8 +441,10 @@ fit your needs</string>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="drugBrandLabel" destination="SdT-Fo-5wa" id="nTb-mz-syw"/>
+                                            <outlet property="drugDetailsView" destination="LDi-Ve-Naf" id="oJX-O2-F5I"/>
                                             <outlet property="drugNameLabel" destination="zkj-36-oMe" id="4fU-bt-D98"/>
                                             <outlet property="drugPercentLabel" destination="g72-he-OT3" id="mdJ-kJ-HWG"/>
+                                            <outlet property="favoritesView" destination="aGo-J9-cki" id="9v4-8h-sNF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -465,11 +470,27 @@ fit your needs</string>
                         <outlet property="drugHeaderImage" destination="5Lo-cA-O17" id="w03-dK-iMR"/>
                         <outlet property="drugListTableView" destination="rOh-Tn-qZl" id="W2v-1v-1an"/>
                         <outlet property="drugNameHeader" destination="5W8-Qj-Wko" id="FaL-cF-cTz"/>
+                        <segue destination="Krf-84-zyJ" kind="show" identifier="drugListToDosageSegue" id="I7o-nd-nrA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMz-Qp-6Zv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1573.5999999999999" y="151.57421289355324"/>
+            <point key="canvasLocation" x="1126" y="152"/>
+        </scene>
+        <!--Dosage Calculator View Controller-->
+        <scene sceneID="k8o-6c-xNM">
+            <objects>
+                <viewController id="Krf-84-zyJ" userLabel="Dosage Calculator View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WVr-ax-LZi" userLabel="Main View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="E67-TM-vmW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TMJ-kT-wLb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1938" y="152"/>
         </scene>
         <!--Choose Dentist Type-->
         <scene sceneID="fXH-w4-32c">
@@ -814,7 +835,7 @@ fit your needs</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNN-rR-Gra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-258.39999999999998" y="912.5937031484259"/>
+            <point key="canvasLocation" x="-496" y="913"/>
         </scene>
         <!--Disclaimer-->
         <scene sceneID="MfU-Xd-2Wm">
@@ -897,7 +918,7 @@ By using this app, you consent to this disclaimer.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4VU-At-ae7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="8lZ-Y1-fk1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-2378.4000000000001" y="912.5937031484259"/>
+            <point key="canvasLocation" x="-1835" y="913"/>
         </scene>
         <!--Dashboard Navigation Controller-->
         <scene sceneID="emw-1W-AS7">
@@ -919,7 +940,7 @@ By using this app, you consent to this disclaimer.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ole-aa-uKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="152"/>
+            <point key="canvasLocation" x="-334" y="140"/>
         </scene>
     </scenes>
     <resources>

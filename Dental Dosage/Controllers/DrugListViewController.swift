@@ -23,6 +23,9 @@ class DrugListViewController: UIViewController {
     @IBOutlet weak var drugHeaderImage: UIImageView!
     @IBOutlet weak var drugNameHeader: UILabel!
     
+    //Declare all custom methods here
+    
+    
     //Declare all overrides here
     override func viewDidLoad() {
         super.viewDidLoad()
