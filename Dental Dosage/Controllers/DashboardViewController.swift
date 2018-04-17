@@ -164,11 +164,8 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate, D
             let drug = drugModel?.drugDetailsDictionary[drugName!] as! [String:Any]
             
             //Get name; If too long, clip it to 10 chars
-            var name = drug["name"] as! String
-            if name.count > 15 {
-                let startIndex = name.index(name.startIndex, offsetBy: 10)
-                name = String(name[..<startIndex])
-            }
+            let name = drug["name"] as! String
+
             //Get brand, if no brand exists, just use the name of the drug
             var brand =  drug["brand"] as? String
             if brand == nil || brand?.count == 0{
@@ -179,7 +176,6 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate, D
             if percent ==  nil || percent!.count >= 25 {
                 percent = drug["method"] as? String
             }
-            
             //Update cell
             let cell = tableView.dequeueReusableCell(withIdentifier: "drugFavViewCell") as! DrugTypeTableViewCell
             cell.setCell(name: name, percent: percent!, brand: brand!)
@@ -189,9 +185,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate, D
             cell.drugListCellDelegate = self
             return cell
         }
-        
     }
-    
     
     //Make sure that the row selected opens its specific viewcontroller
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
