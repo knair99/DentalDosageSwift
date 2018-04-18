@@ -163,7 +163,7 @@ fit your needs</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcq-bn-kuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1395" y="913"/>
+            <point key="canvasLocation" x="-1607" y="913"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="tne-QT-ifu">
@@ -244,7 +244,7 @@ fit your needs</string>
                                                     <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=regular">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -266,7 +266,7 @@ fit your needs</string>
                                             <outlet property="drugTypeLabel" destination="Q7v-zV-NJ8" id="4Lh-9g-01U"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="drugFavViewCell" rowHeight="100" id="N4o-AP-aw0" userLabel="FavRecents View Cell" customClass="DrugTypeTableViewCell" customModule="Dental_Dosage" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="drugFavViewCell" rowHeight="100" id="N4o-AP-aw0" userLabel="FavRecents View Cell" customClass="FavOrRecentTableViewCell" customModule="Dental_Dosage" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="108" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N4o-AP-aw0" id="9nz-VE-rEG">
@@ -350,11 +350,11 @@ fit your needs</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="drugBrandLabel" destination="Fni-ZB-TEQ" id="35O-zE-101"/>
-                                            <outlet property="drugDetailsView" destination="AUE-3h-QGI" id="zbV-cH-v1G"/>
-                                            <outlet property="drugNameLabel" destination="3x7-Ph-UyL" id="1Nr-G2-9L4"/>
-                                            <outlet property="drugPercentLabel" destination="1Kl-9r-HvN" id="kV3-kb-SIv"/>
-                                            <outlet property="favoritesView" destination="g8d-QT-dkg" id="Qf5-Yg-LmV"/>
+                                            <outlet property="drugBrandLabel" destination="Fni-ZB-TEQ" id="1SZ-Id-V1c"/>
+                                            <outlet property="drugDetailsView" destination="AUE-3h-QGI" id="Z0W-6c-I4O"/>
+                                            <outlet property="drugNameLabel" destination="3x7-Ph-UyL" id="Hsy-aR-Glv"/>
+                                            <outlet property="drugPercentLabel" destination="1Kl-9r-HvN" id="Bw1-pG-jco"/>
+                                            <outlet property="favoritesView" destination="g8d-QT-dkg" id="wAc-0a-uVk"/>
                                             <segue destination="Krf-84-zyJ" kind="show" identifier="favRecentToDosageSeugue" id="hdD-CH-FRJ"/>
                                         </connections>
                                     </tableViewCell>
@@ -756,7 +756,7 @@ fit your needs</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDM-C4-3hu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-959.20000000000005" y="912.5937031484259"/>
+            <point key="canvasLocation" x="-940" y="913"/>
         </scene>
         <!--Choose Metric-->
         <scene sceneID="yca-dF-cZi">
@@ -929,7 +929,7 @@ fit your needs</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNN-rR-Gra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-496" y="913"/>
+            <point key="canvasLocation" x="-263" y="913"/>
         </scene>
         <!--Disclaimer-->
         <scene sceneID="MfU-Xd-2Wm">
@@ -1012,7 +1012,7 @@ By using this app, you consent to this disclaimer.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4VU-At-ae7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="8lZ-Y1-fk1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1835" y="913"/>
+            <point key="canvasLocation" x="-2343" y="913"/>
         </scene>
         <!--Dashboard Navigation Controller-->
         <scene sceneID="emw-1W-AS7">

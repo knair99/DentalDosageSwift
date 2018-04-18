@@ -9,6 +9,7 @@
 import Foundation
 
 //Class for mining JSON input, and saving into global object during app delegate startup
+//This is a one time setup (during program startup)
 class DrugModel {
     
     //Also, For recently visited and favorites

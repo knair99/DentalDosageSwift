@@ -47,26 +47,50 @@ class DrugListViewController: UIViewController {
 extension DrugListViewController: UITableViewDelegate, UITableViewDataSource, DrugTypeCellDelegate {
     
     //Save favorites data into global settings
-    func updateFavorites(drugName: String, remove: Bool) {
+    func updateFavoritesOrRecents(drugName: String, remove: Bool, favorites: Bool) {
         let defaults = UserDefaults.standard
-        var favorites = defaults.array(forKey: "favoriteMedicines") as? [String] ?? []
+        var arrayOfSavedMeds : [String] = []
+        var key : String = ""
+        if favorites == true {
+            arrayOfSavedMeds = defaults.array(forKey: "favoriteMedicines") as? [String] ?? []
+            key = "favoriteMedicines"
+        }
+        else{
+            arrayOfSavedMeds = defaults.array(forKey: "recentMedicines") as? [String] ?? []
+            key = "recentMedicines"
+        }
+        
+        //Do appropriate add or remove operation
         if remove == false {
-            //Add to favorites if not already in there
-            if !favorites.contains(drugName) {
-                favorites.append(drugName)
+            //If Recents, then make sure there's a circular limit of 5
+            if favorites == false &&  arrayOfSavedMeds.count == 5 {
+                arrayOfSavedMeds.remove(at: 0) //Remove the oldest meds
+            }
+            //Add to favorites/recents if not already in there
+            if !arrayOfSavedMeds.contains(drugName) {
+                arrayOfSavedMeds.append(drugName)
             }
         }
         else {
-            //Remove from favorites
-            favorites = favorites.filter {$0 != drugName}
+            //Remove from favorites only
+            if favorites == true {
+                arrayOfSavedMeds = arrayOfSavedMeds.filter {$0 != drugName}
+            }
+            //There is no removing from recents - Automatically removed after 5 (Circular buffer)
         }
-        //Update the drugModel JSON so the favorites tab will reflect this
+        
+        //Update the drugModel JSON so the favorites/recents tab will reflect this
         let delegate = UIApplication.shared.delegate as! AppDelegate
         let drugModel = delegate.drugModel!
-        drugModel.drugFavoriteNames = favorites
+        if favorites == true {
+            drugModel.drugFavoriteNames = arrayOfSavedMeds
+        }
+        else {
+            drugModel.drugRecentNames = arrayOfSavedMeds
+        }
         
         //Save settings to user defaults
-        defaults.set(favorites, forKey: "favoriteMedicines")
+        defaults.set(arrayOfSavedMeds, forKey: key)
         defaults.synchronize()
     }
     
@@ -95,7 +119,7 @@ extension DrugListViewController: UITableViewDelegate, UITableViewDataSource, Dr
         var brand =  drug["brand"] as? String
         if brand == nil || brand?.count == 0{
             brand = name
-        }
+        }   
         //Get percent - if no spec exists, just mention method name
         var percent = drug["specs"] as? String
         if percent ==  nil || percent!.count >= 25 {

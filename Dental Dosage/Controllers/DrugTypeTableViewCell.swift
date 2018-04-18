@@ -12,7 +12,7 @@ import UIKit
 protocol DrugTypeCellDelegate {
     //Pass data through here later on, if need be
     func transitionToDosageView (data: Any?, segue: String)
-    func updateFavorites (drugName: String, remove: Bool)
+    func updateFavoritesOrRecents (drugName: String, remove: Bool, favorites: Bool)
 }
 
 class DrugTypeTableViewCell: UITableViewCell {
@@ -64,20 +64,26 @@ class DrugTypeTableViewCell: UITableViewCell {
     //Declare the tap recgnizers
     //Favorites: Change colors and store
     @objc func favoritesViewTapped(_ sender: UITapGestureRecognizer) {
-        if favoritesSwitched == true { //Remove from favorites
+        
+        if favoritesSwitched == true {
+            //Remove from favorites
             //Set to green
             favoritesView.backgroundColor = UIColor(red: 88/255, green: 168/255, blue: 168/255, alpha: 1)
             favoritesSwitched = false
-            drugListCellDelegate.updateFavorites(drugName: drugNameLabel.text!, remove: true)
+            drugListCellDelegate.updateFavoritesOrRecents(drugName: drugNameLabel.text!, remove: true, favorites: true)
         }
-        else { //Save to favorites
+        else {
+            //Save to favorites
             //Set to pink
             favoritesView.backgroundColor = UIColor(red: 241/255, green: 141/255, blue: 154/255, alpha: 1)
             favoritesSwitched = true
-            drugListCellDelegate.updateFavorites(drugName: drugNameLabel.text!, remove: false)
+            drugListCellDelegate.updateFavoritesOrRecents(drugName: drugNameLabel.text!, remove: false, favorites: true)
         }
     }
     @objc func drugDetailsViewTapped(_ sender: UITapGestureRecognizer){
+        //If user taps on a drug, save it to recents
+        drugListCellDelegate.updateFavoritesOrRecents(drugName: drugNameLabel.text!, remove: false, favorites: false)
+        //And then transition away into appropriate drug's dosage view
         drugListCellDelegate.transitionToDosageView(data: nil, segue: segueToUse)
     }
   
