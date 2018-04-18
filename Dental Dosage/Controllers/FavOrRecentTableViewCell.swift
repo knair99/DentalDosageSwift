@@ -95,9 +95,9 @@ class FavOrRecentTableViewCell: UITableViewCell {
             //Only option available from favorites view should be remove when tapped
             favOrRecentListCellDelegate.updateFavoritesOrRecents(drugName: drugNameLabel.text!, remove: true, favorites: true)
             //We should also ask the tableView to reload via a protocol delegate method to make it disappear
-            
+            favOrRecentListCellDelegate.askTableViewToReload()
         }
-        favOrRecentListCellDelegate.askTableViewToReload()
+        
     }
     @objc func drugDetailsViewTapped(_ sender: UITapGestureRecognizer){
         //If user taps on a drug, save it to recents
