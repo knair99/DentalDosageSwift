@@ -651,6 +651,8 @@ fit your needs</string>
                         <viewLayoutGuide key="safeArea" id="E67-TM-vmW"/>
                     </view>
                     <connections>
+                        <outlet property="drugNameHeaderLabel" destination="Y0N-qF-bkL" id="c7b-kY-DDP"/>
+                        <outlet property="drugPercentHeaderLabel" destination="zSy-Wb-Yfz" id="7bo-Ls-ADB"/>
                         <outlet property="weightInputTextField" destination="cvQ-pg-Sbf" id="lKh-jr-NZ5"/>
                     </connections>
                 </viewController>

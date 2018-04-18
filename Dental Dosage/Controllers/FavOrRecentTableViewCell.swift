@@ -11,7 +11,7 @@ import UIKit
 //Create a protocol here to perform segue & save data
 protocol FavOrRecentTableViewCellDelegate {
     //Pass data through here later on, if need be
-    func transitionToDosageView (data: Any?, segue: String)
+    func transitionToDosageView (data: String, segue: String)
     func updateFavoritesOrRecents (drugName: String, remove: Bool, favorites: Bool)
     func askTableViewToReload()
 }
@@ -103,7 +103,7 @@ class FavOrRecentTableViewCell: UITableViewCell {
         //If user taps on a drug, save it to recents
         favOrRecentListCellDelegate.updateFavoritesOrRecents(drugName: drugNameLabel.text!, remove: false, favorites: false)
         //And then transition away into appropriate drug's dosage view
-        favOrRecentListCellDelegate.transitionToDosageView(data: nil, segue: segueToUse)
+        favOrRecentListCellDelegate.transitionToDosageView(data: drugNameLabel.text!, segue: segueToUse)
     }
 
 }

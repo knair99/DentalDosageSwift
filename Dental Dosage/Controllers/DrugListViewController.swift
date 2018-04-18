@@ -17,6 +17,10 @@ class DrugListViewController: UIViewController {
     var drugArray : [[String:Any]] = []
     //Store just the names of the drugs relevant to current drug type
     var drugNamesArray : [String] = []
+    //Get info about next view controller for segue prep
+    var dosageViewController : DosageViewController?
+    //HACK: Current drug info for seque stored here - Find proper way later
+    var currentDrugForSeque : String = "Lidocaine"
     
     //Declare all outlets here
     @IBOutlet weak var drugListTableView: UITableView!
@@ -31,6 +35,9 @@ class DrugListViewController: UIViewController {
         
         //Set nav bar back button color
         self.navigationController?.navigationBar.tintColor = UIColor.white;
+        
+        //Get info about next view controller (Dosage)
+        dosageViewController = DosageViewController()
         
         //Set header and image
         drugNameHeader.text = drugTypeName
@@ -49,6 +56,14 @@ class DrugListViewController: UIViewController {
         let backButtonItem = UIBarButtonItem()
         backButtonItem.title = drugTypeName
         navigationItem.backBarButtonItem = backButtonItem
+        
+        //Prep data to be passed into "Drug List" view controller
+        dosageViewController = segue.destination as? DosageViewController
+        dosageViewController?.drugName = currentDrugForSeque
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let drugModel = delegate.drugModel!
+        dosageViewController?.drugDetails = drugModel.drugDetailsDictionary[currentDrugForSeque] as? [String : Any]
+        
     }
     
 }
@@ -104,7 +119,9 @@ extension DrugListViewController: UITableViewDelegate, UITableViewDataSource, Dr
     }
     
     //Perform transition to calculator
-    func transitionToDosageView(data: Any?, segue: String) {
+    func transitionToDosageView(data: String, segue: String) {
+        //Set the next drug info by updating currentDrug
+        currentDrugForSeque = data
         //Segue to new dosage view controller
         performSegue(withIdentifier: segue, sender: self)
     }

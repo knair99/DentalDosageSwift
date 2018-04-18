@@ -13,8 +13,10 @@ class DashboardViewController: UIViewController {
     //Declare all locals here
     var settings : Settings?
     
-    //Details of next view controller
+    //Details of next view controller - Dosage or Drug List, depending on tab selected
     var drugListViewController: DrugListViewController?
+    var dosageViewController: DosageViewController?
+    var currentDrugForSeque: String = "Lidocaine"
     
     //All drug data
     var drugModel : DrugModel?
@@ -66,6 +68,7 @@ class DashboardViewController: UIViewController {
         
         //Get info about next View controller
         drugListViewController = DrugListViewController()
+        dosageViewController = DosageViewController()
         
         //Get JSON Data from App delegate where it was intialized
         let delegate = UIApplication.shared.delegate as! AppDelegate
@@ -108,6 +111,13 @@ class DashboardViewController: UIViewController {
             //Prepare for transition to Dosage View (Favorites and Recents)
             //Set the back button text for Favs and Recents
             backButtonItem.title =  currentIndex == 1 ? "Recent" : "Favorites"
+            
+            //Prep data to be passed into "Drug List" view controller
+            dosageViewController = segue.destination as? DosageViewController
+            dosageViewController?.drugName = currentDrugForSeque
+            let delegate = UIApplication.shared.delegate as! AppDelegate
+            let drugModel = delegate.drugModel!
+            dosageViewController?.drugDetails = drugModel.drugDetailsDictionary[currentDrugForSeque] as? [String : Any]
         }
         
         //Set the customized back button item
@@ -175,8 +185,9 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate, F
     }
     
     //Perform transition to dosage calculator view
-    func transitionToDosageView(data: Any?, segue: String) {
+    func transitionToDosageView(data: String, segue: String) {
         //Segue to new dosage view controller
+        currentDrugForSeque = data
         performSegue(withIdentifier: segue, sender: self)
     }
     
