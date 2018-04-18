@@ -26,13 +26,14 @@ class DentistTypeViewController: UIViewController {
     
     //Create all custom methods here
     func CreateDentistTypes () {
-        
+        //"dentist_types": ["general", "omfs", "pedo", "perio", "prostho", "endo", "oral_path"]
         dentistTypesArray.append(DentistType(dentistType: "General dentist", isSelected: false, key: "general"))
-        dentistTypesArray.append(DentistType(dentistType: "Orthodontist", isSelected: false, key: "orthodontist"))
-        dentistTypesArray.append(DentistType(dentistType: "Periodontist", isSelected: false, key: "periodontist"))
-        dentistTypesArray.append(DentistType(dentistType: "Oral & Maxillofacial Surgeon", isSelected: false, key: "oral"))
-        dentistTypesArray.append(DentistType(dentistType: "Endodontist", isSelected: false, key: "endodontist"))
-        dentistTypesArray.append(DentistType(dentistType: "Prosthodontist", isSelected: false, key: "prosthodontist"))
+        dentistTypesArray.append(DentistType(dentistType: "Orthodontist", isSelected: false, key: "ortho"))
+        dentistTypesArray.append(DentistType(dentistType: "Periodontist", isSelected: false, key: "perio"))
+        dentistTypesArray.append(DentistType(dentistType: "Oral & Maxillofacial Surgeon", isSelected: false, key: "omfs"))
+        dentistTypesArray.append(DentistType(dentistType: "Oral & Maxillofacial Pathologist", isSelected: false, key: "oral_path"))
+        dentistTypesArray.append(DentistType(dentistType: "Endodontist", isSelected: false, key: "endo"))
+        dentistTypesArray.append(DentistType(dentistType: "Prosthodontist", isSelected: false, key: "prostho"))
     }
     
     //Declare all overrides here

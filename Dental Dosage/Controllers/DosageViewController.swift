@@ -13,10 +13,8 @@ class DosageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //Make the calculator keyboard show up
         resultsField.becomeFirstResponder()
     }
-
 
 }

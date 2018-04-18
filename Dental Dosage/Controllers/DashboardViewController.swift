@@ -84,6 +84,8 @@ class DashboardViewController: UIViewController {
     
     //Handle segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backButtonItem = UIBarButtonItem()
+        
         if currentIndex == 0 { //Prepare for drug list transition
             //Prep data to be passed into "Drug List" view controller
             drugListViewController = segue.destination as? DrugListViewController
@@ -98,10 +100,18 @@ class DashboardViewController: UIViewController {
             let dashboardImageName = drugTypeDetails["display_image"] as! String
             drugListViewController?.drugTypeImage = dashboardImageName
             drugListViewController?.drugArray = (drugTypeDetails["drugs"] as! [[String:Any]])
+            
+            //Set the back button text for the next view (Drug Lists)
+            backButtonItem.title = "Drug Types"
         }
         else {
-            //TODO: Prepare data for transition to Dosage View (Favorites and Recents)
+            //Prepare for transition to Dosage View (Favorites and Recents)
+            //Set the back button text for Favs and Recents
+            backButtonItem.title =  currentIndex == 1 ? "Recent" : "Favorites"
         }
+        
+        //Set the customized back button item
+        navigationItem.backBarButtonItem = backButtonItem
     }
 }
 
@@ -148,8 +158,6 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate, F
         }
         
         //Update the drugModel JSON so the favorites tab will reflect this
-//        let delegate = UIApplication.shared.delegate as! AppDelegate
-//        let drugModel = delegate.drugModel!
         if favorites == true {
             drugModel?.drugFavoriteNames = arrayOfSavedMeds
         }
@@ -166,7 +174,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate, F
         dashboardAllTabContentsArray![correctIndex] = arrayOfSavedMeds
     }
     
-    //Perform transition to calculator
+    //Perform transition to dosage calculator view
     func transitionToDosageView(data: Any?, segue: String) {
         //Segue to new dosage view controller
         performSegue(withIdentifier: segue, sender: self)

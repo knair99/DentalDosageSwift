@@ -42,6 +42,15 @@ class DrugListViewController: UIViewController {
             drugNamesArray.append(name)
         }
     }
+    
+    //Prepare for segue to Dosage calculator view
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Set the name of the back button for the individual drug clicked on, in the Dosage VC
+        let backButtonItem = UIBarButtonItem()
+        backButtonItem.title = drugTypeName
+        navigationItem.backBarButtonItem = backButtonItem
+    }
+    
 }
 
 extension DrugListViewController: UITableViewDelegate, UITableViewDataSource, DrugTypeCellDelegate {
