@@ -125,18 +125,13 @@ extension DrugListViewController: UITableViewDelegate, UITableViewDataSource, Dr
         let name = drug["name"] as! String
         
         //Get brand, if no brand exists, just use the name of the drug
-        var brand =  drug["brand"] as? String
-        if brand == nil || brand?.count == 0{
-            brand = name
-        }   
+        let brand =  drug["brand"] as? String ?? name
         //Get percent - if no spec exists, just mention method name
-        var percent = drug["specs"] as? String
-        if percent ==  nil || percent!.count >= 25 {
-            percent = drug["method"] as? String
-        }
+        let percent = drug["specs"] as? String ?? drug["method"]
+        
         //Update cell
         let cell = drugListTableView.dequeueReusableCell(withIdentifier: "drugTableViewCell") as! DrugTypeTableViewCell
-        cell.setCell(name: name, percent: percent!, brand: brand!)
+        cell.setCell(name: name, percent: percent! as! String, brand: brand)
         cell.setSegue(segueToUse: "drugListToDosageSegue")
         
         //Remember to set the cell delegate for the transition protocol

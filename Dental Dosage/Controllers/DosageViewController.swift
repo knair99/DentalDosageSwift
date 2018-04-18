@@ -9,12 +9,13 @@
 import UIKit
 
 class DosageViewController: UIViewController {
-    @IBOutlet weak var resultsField: UITextField!
+    @IBOutlet weak var weightInputTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //Make the calculator keyboard show up
-        resultsField.becomeFirstResponder()
+        weightInputTextField.becomeFirstResponder()
     }
 
 }

@@ -579,23 +579,84 @@ fit your needs</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvQ-pg-Sbf">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvQ-pg-Sbf" userLabel="Weight Input Field">
                                 <rect key="frame" x="139" y="318" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="go"/>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="di9-Eu-fhE" userLabel="Header View">
+                                <rect key="frame" x="0.0" y="64" width="375" height="90"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlp-Rx-Iu0" userLabel="Image Container View">
+                                        <rect key="frame" x="30" y="10" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.34509803919999998" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="qlp-Rx-Iu0" secondAttribute="height" multiplier="1:1" id="4aw-tc-xkE"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfe-Bj-RH4" userLabel="Drug Label Container View">
+                                        <rect key="frame" x="115" y="10" width="230" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Drug Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0N-qF-bkL" userLabel="Drug Name Label">
+                                                <rect key="frame" x="10" y="0.0" width="210" height="53"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSy-Wb-Yfz" userLabel="Drug Percent Label">
+                                                <rect key="frame" x="10" y="53" width="210" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="zSy-Wb-Yfz" firstAttribute="top" secondItem="Y0N-qF-bkL" secondAttribute="bottom" id="BNU-il-MJg"/>
+                                            <constraint firstItem="Y0N-qF-bkL" firstAttribute="top" secondItem="nfe-Bj-RH4" secondAttribute="top" id="Hdo-V4-u43"/>
+                                            <constraint firstAttribute="trailing" secondItem="Y0N-qF-bkL" secondAttribute="trailing" constant="10" id="TG5-09-7cM"/>
+                                            <constraint firstItem="zSy-Wb-Yfz" firstAttribute="leading" secondItem="nfe-Bj-RH4" secondAttribute="leading" constant="10" id="aIw-mR-noW"/>
+                                            <constraint firstAttribute="bottom" secondItem="zSy-Wb-Yfz" secondAttribute="bottom" id="e07-Wh-IBR"/>
+                                            <constraint firstAttribute="trailing" secondItem="zSy-Wb-Yfz" secondAttribute="trailing" constant="10" id="fJH-Wd-UfY"/>
+                                            <constraint firstItem="Y0N-qF-bkL" firstAttribute="leading" secondItem="nfe-Bj-RH4" secondAttribute="leading" constant="10" id="nch-rW-VyJ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="nfe-Bj-RH4" firstAttribute="top" secondItem="di9-Eu-fhE" secondAttribute="top" constant="10" id="0pa-Hn-baR"/>
+                                    <constraint firstAttribute="bottom" secondItem="nfe-Bj-RH4" secondAttribute="bottom" constant="10" id="Cav-4K-Rog"/>
+                                    <constraint firstAttribute="trailing" secondItem="nfe-Bj-RH4" secondAttribute="trailing" constant="30" id="Khq-9E-CWf"/>
+                                    <constraint firstItem="nfe-Bj-RH4" firstAttribute="leading" secondItem="qlp-Rx-Iu0" secondAttribute="trailing" constant="15" id="XXB-CM-WUe"/>
+                                    <constraint firstItem="qlp-Rx-Iu0" firstAttribute="leading" secondItem="di9-Eu-fhE" secondAttribute="leading" constant="30" id="Y1C-89-ffH"/>
+                                    <constraint firstItem="qlp-Rx-Iu0" firstAttribute="top" secondItem="di9-Eu-fhE" secondAttribute="top" constant="10" id="bA7-xw-lWG"/>
+                                    <constraint firstAttribute="bottom" secondItem="qlp-Rx-Iu0" secondAttribute="bottom" constant="10" id="hUG-HD-dyQ"/>
+                                    <constraint firstAttribute="width" secondItem="di9-Eu-fhE" secondAttribute="height" multiplier="125:30" id="vda-wT-d4S"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="di9-Eu-fhE" firstAttribute="trailing" secondItem="E67-TM-vmW" secondAttribute="trailing" id="THc-be-wPW"/>
+                            <constraint firstItem="di9-Eu-fhE" firstAttribute="leading" secondItem="E67-TM-vmW" secondAttribute="leading" id="Wa4-pL-W9v"/>
+                            <constraint firstItem="di9-Eu-fhE" firstAttribute="top" secondItem="E67-TM-vmW" secondAttribute="top" id="uI7-mU-tKv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="E67-TM-vmW"/>
                     </view>
                     <connections>
-                        <outlet property="resultsField" destination="cvQ-pg-Sbf" id="lKh-jr-NZ5"/>
+                        <outlet property="weightInputTextField" destination="cvQ-pg-Sbf" id="lKh-jr-NZ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMJ-kT-wLb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2178" y="140"/>
+            <point key="canvasLocation" x="781.60000000000002" y="939.58020989505258"/>
         </scene>
         <!--Choose Dentist Type-->
         <scene sceneID="fXH-w4-32c">
