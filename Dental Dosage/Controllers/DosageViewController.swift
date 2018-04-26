@@ -28,6 +28,7 @@ class DosageViewController: UIViewController {
     @IBOutlet weak var dosageInputView: UIView!
     
     //Header outlets
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var drugNameHeaderLabel: UILabel!
     @IBOutlet weak var drugPercentHeaderLabel: UILabel!
     @IBOutlet weak var drugHeaderImageView: UIImageView!
@@ -35,6 +36,7 @@ class DosageViewController: UIViewController {
     @IBOutlet weak var resultsView: UIView!
     @IBOutlet weak var resultsLabel: UILabel!
     
+    @IBOutlet weak var resultViewTopConstraint: NSLayoutConstraint!
     
     //Declare all actions here
     @IBAction func dosageEditChanged(_ sender: Any) {
@@ -43,7 +45,7 @@ class DosageViewController: UIViewController {
             return
         }
         patientWeight = Float(dosageText)!
-        let _ = CalculateDosage()
+        let _ = calculateDosageAndUpdateResults()
     }
     
     @IBAction func weightEditChanged(_ sender: Any) {
@@ -52,7 +54,7 @@ class DosageViewController: UIViewController {
             return
         }
         patientWeight = Float(weightText)!
-        let _ = CalculateDosage()
+        let _ = calculateDosageAndUpdateResults()
     }
 
     //Declare all overrides here
@@ -68,11 +70,15 @@ class DosageViewController: UIViewController {
         
         //Decide the kind of layout based on the JSON data around the drug
         layoutType = setLayoutTypeFromJSON()
+        //Immediately display recommended dosage if static recommendation
+        if layoutType == 0 {
+            let _ = calculateDosageAndUpdateResults()
+        }
     }
     
     //Declare all custom methods here
     //Function to calculate dosage
-    func CalculateDosage() -> Float {
+    func calculateDosageAndUpdateResults() -> Float {
         var dentalDosage: Float = 0
         var resultsString : String = ""
         
@@ -108,6 +114,9 @@ class DosageViewController: UIViewController {
             //Hide both weight and dosage - just show results
             weightInputView.isHidden = true
             dosageInputView.isHidden = true
+            //Pull results view up to below the headerview's y position
+            resultViewTopConstraint.constant = resultViewTopConstraint.constant - weightInputView.frame.height - dosageInputView.frame.height
+            resultsView.layoutIfNeeded()
             return 0
         }
         else{ //Determine which type of weight layout
@@ -120,6 +129,8 @@ class DosageViewController: UIViewController {
             else {
                 //3. Weight only layout - hide dosage
                 dosageInputView.isHidden = true
+                //Pull results view up to below the headerview's y position
+                resultViewTopConstraint.constant = resultViewTopConstraint.constant - dosageInputView.frame.height
                 return 1
             }
         }
@@ -127,47 +138,4 @@ class DosageViewController: UIViewController {
     
 }
 
-/*
- //just weight needed
- {
- "dentist_types": ["general", "omfs", "pedo", "perio", "prostho", "endo", "oral_path"],
- "name": "Clindamycin",
- "display": true,
- "specs": "For Endocarditis prophylaxis (age 12 years and under)",
- "method": "pill",
- "unit_dosage": "weight",
- "mrd_metric": 20,
- "max_dosage": 600,
- "note": "Used for odontogenic infections. Use if penicillin allergy; 1 hr before appointment; may cause GI disturbance",
- "display_image": "dashboard_antibiotic"
- },
- //dosage needed
- {
- "dentist_types": ["general", "omfs", "pedo", "perio", "prostho", "endo", "oral_path"],
- "name": "Penicillin - Children",
- "display": true,
- "specs": "For age 12 years and under",
- "brand": "Penicillin VK™",
- "method": "pill",
- "unit_dosage": "weight",
- "mrd_metric_min": 25,
- "mrd_metric_max": 50,
- "max_dosage": 3000,
- "note": "Used for odontogenic infections. In equally divided doses q6-8h for at least 7 days; maximum dose: 3.0g/day",
- "display_image": "dashboard_antibiotic"
- },
- //STATIC
- {
- "dentist_types": ["general", "omfs", "pedo", "perio", "prostho", "endo", "oral_path"],
- "name": "Penicillin - Adult",
- "display": true,
- "specs": "For age over 12 years",
- "brand": "Penicillin VK™",
- "method": "pill",
- "unit_dosage": "static",
- "mrd_metric": 500,
- "max_dosage": 500,
- "note": "Used for odontogenic infections. q6h for at least 7 days",
- "display_image": "dashboard_antibiotic"
- },
- */
+

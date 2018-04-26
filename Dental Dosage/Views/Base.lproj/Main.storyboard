@@ -669,7 +669,7 @@ fit your needs</string>
                                         <rect key="frame" x="261.5" y="0.0" width="63.5" height="57.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctb-tc-jsK" userLabel="Unit Text Field">
-                                                <rect key="frame" x="8" y="22.5" width="19" height="12"/>
+                                                <rect key="frame" x="8" y="23" width="19" height="12"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -678,7 +678,7 @@ fit your needs</string>
                                                 </variation>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="ILs-3A-B0x" userLabel="Unit Image">
-                                                <rect key="frame" x="43.5" y="22.5" width="12" height="12"/>
+                                                <rect key="frame" x="43.5" y="23" width="12" height="12"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.94454169269999999" green="0.55312216280000004" blue="0.60491627449999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -857,6 +857,8 @@ fit your needs</string>
                         <outlet property="drugHeaderImageView" destination="9To-eu-DYT" id="aoB-aX-wkX"/>
                         <outlet property="drugNameHeaderLabel" destination="Y0N-qF-bkL" id="c7b-kY-DDP"/>
                         <outlet property="drugPercentHeaderLabel" destination="zSy-Wb-Yfz" id="7bo-Ls-ADB"/>
+                        <outlet property="headerView" destination="di9-Eu-fhE" id="Sec-jR-fNy"/>
+                        <outlet property="resultViewTopConstraint" destination="1wB-4Q-7ac" id="vFG-rt-nI3"/>
                         <outlet property="resultsLabel" destination="rld-xB-Jfe" id="vH9-2q-mWb"/>
                         <outlet property="resultsView" destination="gP4-iY-EyB" id="8E7-rA-fVj"/>
                         <outlet property="weightInputTextField" destination="cvQ-pg-Sbf" id="lKh-jr-NZ5"/>

@@ -10,93 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dental Dosage/Controllers/DosageViewController.swift"
-            timestampString = "546418600.943063"
+            timestampString = "546423289.5738699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "dosageEditChanged(_:)"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "setLayoutTypeFromJSON()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Dental_Dosage.DosageViewController.dosageEditChanged(Any) -&gt; ()"
-                  moduleName = "Dental Dosage"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kprasad/Dropbox/Focus/projects/ios_programming/Dental%20Dosage/Dental%20Dosage/Controllers/DosageViewController.swift"
-                  timestampString = "546418490.450345"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "34">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.String in Dental_Dosage.DosageViewController.dosageEditChanged(Any) -&gt; ()"
-                  moduleName = "Dental Dosage"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kprasad/Dropbox/Focus/projects/ios_programming/Dental%20Dosage/Dental%20Dosage/Controllers/DosageViewController.swift"
-                  timestampString = "546418490.4568239"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Dental Dosage/Controllers/DosageViewController.swift"
-            timestampString = "546418600.94364"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "weightEditChanged(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Dental_Dosage.DosageViewController.weightEditChanged(Any) -&gt; ()"
-                  moduleName = "Dental Dosage"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kprasad/Dropbox/Focus/projects/ios_programming/Dental%20Dosage/Dental%20Dosage/Controllers/DosageViewController.swift"
-                  timestampString = "546418490.475273"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "34">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.String in Dental_Dosage.DosageViewController.weightEditChanged(Any) -&gt; ()"
-                  moduleName = "Dental Dosage"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kprasad/Dropbox/Focus/projects/ios_programming/Dental%20Dosage/Dental%20Dosage/Controllers/DosageViewController.swift"
-                  timestampString = "546418490.479066"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
