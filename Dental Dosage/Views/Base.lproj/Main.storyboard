@@ -589,7 +589,7 @@ fit your needs</string>
                                         <rect key="frame" x="30" y="10" width="70" height="70"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboard_anasthetic" translatesAutoresizingMaskIntoConstraints="NO" id="9To-eu-DYT" userLabel="Drug Image View">
-                                                <rect key="frame" x="12" y="12" width="47" height="47"/>
+                                                <rect key="frame" x="12" y="11.5" width="47.5" height="47.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="9To-eu-DYT" secondAttribute="height" multiplier="1:1" id="EFi-Hg-i0a"/>
                                                 </constraints>
@@ -652,7 +652,7 @@ fit your needs</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOI-qd-fK0" userLabel="Weight Input View">
                                 <rect key="frame" x="20" y="164" width="335" height="57.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="bottomLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvQ-pg-Sbf" userLabel="Weight Input Field">
+                                    <textField opaque="NO" contentMode="bottomLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvQ-pg-Sbf" userLabel="Weight Input Field">
                                         <rect key="frame" x="10" y="0.0" width="251.5" height="57.5"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="textColor"/>
@@ -669,7 +669,7 @@ fit your needs</string>
                                         <rect key="frame" x="261.5" y="0.0" width="63.5" height="57.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctb-tc-jsK" userLabel="Unit Text Field">
-                                                <rect key="frame" x="8" y="23" width="19.5" height="12"/>
+                                                <rect key="frame" x="8" y="23" width="19" height="12"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -721,7 +721,7 @@ fit your needs</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGB-aA-WfR" userLabel="Dosage Input View">
                                 <rect key="frame" x="20" y="231.5" width="335" height="57.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="bottomLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AsT-tI-jkQ" userLabel="Dosage Input Field">
+                                    <textField opaque="NO" contentMode="bottomLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AsT-tI-jkQ" userLabel="Dosage Input Field">
                                         <rect key="frame" x="10" y="0.0" width="251.5" height="57.5"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="textColor"/>
@@ -737,8 +737,8 @@ fit your needs</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1V4-mU-1Dh" userLabel="Unit Switch View">
                                         <rect key="frame" x="261.5" y="0.0" width="63.5" height="57.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILT-rP-oi2" userLabel="Unit Text Field">
-                                                <rect key="frame" x="8" y="22.5" width="19" height="12"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MG/KG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILT-rP-oi2" userLabel="Unit Text Field">
+                                                <rect key="frame" x="15" y="23" width="34" height="12"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -746,20 +746,12 @@ fit your needs</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 </variation>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="mJo-5N-CQB" userLabel="Unit Image">
-                                                <rect key="frame" x="43.5" y="22.5" width="12" height="12"/>
-                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.72156862745098038" green="0.72156862745098038" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="mJo-5N-CQB" firstAttribute="width" secondItem="1V4-mU-1Dh" secondAttribute="height" multiplier="10:50" id="Ky4-w5-UEx"/>
                                             <constraint firstAttribute="width" secondItem="1V4-mU-1Dh" secondAttribute="height" multiplier="50:45" id="YJV-gB-8v7"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ILT-rP-oi2" secondAttribute="trailing" constant="20" symbolic="YES" id="Ydh-8G-c6p"/>
-                                            <constraint firstItem="mJo-5N-CQB" firstAttribute="centerY" secondItem="ILT-rP-oi2" secondAttribute="centerY" id="jIE-S4-xOt"/>
+                                            <constraint firstItem="ILT-rP-oi2" firstAttribute="centerX" secondItem="1V4-mU-1Dh" secondAttribute="centerX" id="fmF-ZO-RCz"/>
                                             <constraint firstItem="ILT-rP-oi2" firstAttribute="centerY" secondItem="1V4-mU-1Dh" secondAttribute="centerY" id="nGj-Or-0fP"/>
-                                            <constraint firstItem="ILT-rP-oi2" firstAttribute="width" secondItem="1V4-mU-1Dh" secondAttribute="height" multiplier="1:3" id="pIn-nB-v9X"/>
-                                            <constraint firstAttribute="trailing" secondItem="mJo-5N-CQB" secondAttribute="trailing" constant="8" id="sJC-MG-q4T"/>
-                                            <constraint firstItem="ILT-rP-oi2" firstAttribute="leading" secondItem="1V4-mU-1Dh" secondAttribute="leading" constant="8" id="w3s-9R-rVH"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dosage information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6Z-hH-KTS" userLabel="Dosage info label">
@@ -787,7 +779,7 @@ fit your needs</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gP4-iY-EyB" userLabel="Results View">
-                                <rect key="frame" x="30" y="309" width="315" height="89"/>
+                                <rect key="frame" x="30" y="309" width="315" height="88.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended dosage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tz1-5h-fCU">
                                         <rect key="frame" x="8" y="0.0" width="110.5" height="12"/>
@@ -799,7 +791,7 @@ fit your needs</string>
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rld-xB-Jfe">
-                                        <rect key="frame" x="8" y="0.0" width="79.5" height="83"/>
+                                        <rect key="frame" x="8" y="0.0" width="79.5" height="82.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -808,7 +800,7 @@ fit your needs</string>
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carpules" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsS-bc-bYB">
-                                        <rect key="frame" x="8" y="71" width="43" height="12"/>
+                                        <rect key="frame" x="8" y="70.5" width="43" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
