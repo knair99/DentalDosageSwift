@@ -221,6 +221,7 @@ fit your needs</string>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ds-XM-Vzs" userLabel="Drug Type Image View">
                                                             <rect key="frame" x="10" y="10" width="50" height="49.5"/>
                                                             <color key="backgroundColor" red="0.34509803919999998" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="6ds-XM-Vzs" secondAttribute="height" multiplier="1:1" id="t8g-mT-tXn"/>
                                                             </constraints>
@@ -1332,6 +1333,6 @@ By using this app, you consent to this disclaimer.</string>
         <image name="short_logo" width="218" height="209"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="I7o-nd-nrA"/>
+        <segue reference="hdD-CH-FRJ"/>
     </inferredMetricsTieBreakers>
 </document>

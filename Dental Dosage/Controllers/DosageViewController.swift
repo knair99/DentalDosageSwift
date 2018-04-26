@@ -90,17 +90,28 @@ class DosageViewController: UIViewController {
     //Function to calculate dosage
     func CalculateDosage() -> Float {
         var dentalDosage: Float = 0
-        if layoutType == 0 {
-            dentalDosage = drugDetails!["mrd_metric"] as! Float
+        var resultsString : String = ""
+        
+        if layoutType == 0 { //Static recommended dosage
+            if drugDetails!["mrd_metric"] != nil {
+                dentalDosage = drugDetails!["mrd_metric"] as! Float
+                resultsString = "" + String(dentalDosage) + ""
+            }
+            else if drugDetails!["mrd_metric_min"] != nil && drugDetails!["mrd_metric_max"] != nil {
+                let dentalDosageMin = drugDetails!["mrd_metric_min"] as! Float
+                let dentalDosageMax = drugDetails!["mrd_metric_max"] as! Float
+                resultsString = "" + String(dentalDosageMin) + " - " + String(dentalDosageMax)
+            }
         }
-        else if layoutType == 1{
+        else if layoutType == 1{ //Weight only recommended dosage
             let mrd_metric = drugDetails!["mrd_metric"] as! Float
             dentalDosage = ((patientWeight / 0.453592) * Float(mrd_metric) ) / 1000
+            resultsString = "" + String(dentalDosage) + ""
         }
-        else {
+        else { //Weight and Dosage recommended dosage
             
         }
-        resultsLabel.text = "" + String(dentalDosage) + ""
+        resultsLabel.text = resultsString
         return dentalDosage
     }
     

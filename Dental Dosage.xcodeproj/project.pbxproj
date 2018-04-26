@@ -79,10 +79,10 @@
 				4EDAFD692070045C002536C4 /* OnboardingViewController.swift */,
 				4E2DE34E207809C30008DCD6 /* OBDentistTypeTableViewCell.swift */,
 				4E2DE3552079B0C70008DCD6 /* OBMetricTableViewCell.swift */,
-				4E781C35206F6AA100CE5A7A /* DashboardViewController.swift */,
 				4E1FDD5E207F5145001D88C4 /* DashboardTableViewCell.swift */,
-				4E9DB70020872F1D00ED3CDE /* FavOrRecentTableViewCell.swift */,
+				4E781C35206F6AA100CE5A7A /* DashboardViewController.swift */,
 				4E41F9062084355E007639C1 /* DrugListViewController.swift */,
+				4E9DB70020872F1D00ED3CDE /* FavOrRecentTableViewCell.swift */,
 				4ED265DE2084B02700979B04 /* DrugTypeTableViewCell.swift */,
 				4E4ABA47208752C000CE04D7 /* DosageViewController.swift */,
 			);
