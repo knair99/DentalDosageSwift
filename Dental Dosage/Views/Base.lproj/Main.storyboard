@@ -663,7 +663,6 @@ fit your needs</string>
                                         </variation>
                                         <connections>
                                             <action selector="weightEditChanged:" destination="Krf-84-zyJ" eventType="editingChanged" id="4Om-8V-Mcd"/>
-                                            <action selector="weightInputChanged:" destination="Krf-84-zyJ" eventType="valueChanged" id="gsG-4t-8hg"/>
                                         </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXq-Ka-swZ" userLabel="Unit Switch View">
@@ -733,7 +732,6 @@ fit your needs</string>
                                         </variation>
                                         <connections>
                                             <action selector="dosageEditChanged:" destination="Krf-84-zyJ" eventType="editingChanged" id="s8W-ek-kmd"/>
-                                            <action selector="dosageInputChanged:" destination="Krf-84-zyJ" eventType="valueChanged" id="JHR-j1-k3n"/>
                                         </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1V4-mU-1Dh" userLabel="Unit Switch View">

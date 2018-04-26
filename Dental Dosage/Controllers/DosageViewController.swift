@@ -54,23 +54,7 @@ class DosageViewController: UIViewController {
         patientWeight = Float(weightText)!
         let _ = CalculateDosage()
     }
-    @IBAction func weightInputChanged(_ sender: Any) {
-        let weightText = weightInputTextField.text ?? ""
-        if weightText == "" || weightText.count == 0{
-            return
-        }
-        patientWeight = Float(weightText)!
-        let _ = CalculateDosage()
-    }
-    @IBAction func dosageInputChanged(_ sender: Any) {
-        let dosageText = weightInputTextField.text ?? ""
-        if dosageText == "" || dosageText.count == 0{
-            return
-        }
-        patientWeight = Float(dosageText)!
-        let _ = CalculateDosage()
-    }
-    
+
     //Declare all overrides here
     override func viewDidLoad() {
         super.viewDidLoad()
