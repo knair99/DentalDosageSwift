@@ -26,6 +26,7 @@ class DosageViewController: UIViewController {
     @IBOutlet weak var dosageInputTextField: UITextField!
     @IBOutlet weak var weightInputView: UIView!
     @IBOutlet weak var dosageInputView: UIView!
+    @IBOutlet weak var drugNoteLabel: UILabel!
     //Header outlets
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var drugNameHeaderLabel: UILabel!
@@ -78,13 +79,21 @@ class DosageViewController: UIViewController {
         //If both weight and dosage info is required, then update min/max info in the label
             dosageInfoLabel.text = "Dosage (Between " + String(drugDetails!["mrd_metric_min"] as! Float) + " - " + String(drugDetails!["mrd_metric_max"] as! Float)  + ")"
         }
+        //Setup Drug info note
+        if let drugNote = drugDetails!["note"] {
+            drugNoteLabel.text = "Note: " + (drugNote as? String)!
+        }
+        else{
+            //If no note, just hide it
+            drugNoteLabel.isHidden = true
+        }
     }
     
     //Declare all custom methods here
     //Function to calculate dosage
     func calculateDosageAndUpdateResults() -> Float {
         var dentalDosage: Float = 0
-        var dentalDosageMaximumLimit : Float = drugDetails!["max_dosage"] as! Float
+        let dentalDosageMaximumLimit : Float = drugDetails!["max_dosage"] as! Float
         
         var resultsString : String = ""
         
