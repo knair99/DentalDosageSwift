@@ -26,16 +26,16 @@ class DosageViewController: UIViewController {
     @IBOutlet weak var dosageInputTextField: UITextField!
     @IBOutlet weak var weightInputView: UIView!
     @IBOutlet weak var dosageInputView: UIView!
-    
     //Header outlets
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var drugNameHeaderLabel: UILabel!
     @IBOutlet weak var drugPercentHeaderLabel: UILabel!
     @IBOutlet weak var drugHeaderImageView: UIImageView!
+    @IBOutlet weak var dosageInfoLabel: UILabel!
     //Results outlets
     @IBOutlet weak var resultsView: UIView!
     @IBOutlet weak var resultsLabel: UILabel!
-    
+    //Constraints outlets
     @IBOutlet weak var resultViewTopConstraint: NSLayoutConstraint!
     
     //Declare all actions here
@@ -44,7 +44,7 @@ class DosageViewController: UIViewController {
         if dosageText == "" || dosageText.count == 0{
             return
         }
-        patientWeight = Float(dosageText)!
+        dosageAmount = Float(dosageText)!
         let _ = calculateDosageAndUpdateResults()
     }
     
@@ -74,12 +74,18 @@ class DosageViewController: UIViewController {
         if layoutType == 0 {
             let _ = calculateDosageAndUpdateResults()
         }
+        else if layoutType == 2 {
+        //If both weight and dosage info is required, then update min/max info in the label
+            dosageInfoLabel.text = "Dosage (Between " + String(drugDetails!["mrd_metric_min"] as! Float) + " - " + String(drugDetails!["mrd_metric_max"] as! Float)  + ")"
+        }
     }
     
     //Declare all custom methods here
     //Function to calculate dosage
     func calculateDosageAndUpdateResults() -> Float {
         var dentalDosage: Float = 0
+        var dentalDosageMaximumLimit : Float = drugDetails!["max_dosage"] as! Float
+        
         var resultsString : String = ""
         
         if layoutType == 0 { //Static recommended dosage
@@ -90,6 +96,7 @@ class DosageViewController: UIViewController {
             else if drugDetails!["mrd_metric_min"] != nil && drugDetails!["mrd_metric_max"] != nil {
                 let dentalDosageMin = drugDetails!["mrd_metric_min"] as! Float
                 let dentalDosageMax = drugDetails!["mrd_metric_max"] as! Float
+                dentalDosage = dentalDosageMax
                 resultsString = "" + String(dentalDosageMin) + " - " + String(dentalDosageMax)
             }
         }
@@ -99,7 +106,26 @@ class DosageViewController: UIViewController {
             resultsString = "" + String(dentalDosage) + ""
         }
         else { //Weight and Dosage recommended dosage
-            
+            //TODO - Check with Anu
+            if drugDetails!["mrd_metric_min"] != nil && drugDetails!["mrd_metric_max"] != nil {
+                let dentalDosageMin = drugDetails!["mrd_metric_min"] as! Float
+                let dentalDosageMax = drugDetails!["mrd_metric_max"] as! Float
+                
+                //Take care of edge cases here:
+                if dosageAmount >= dentalDosageMin && dosageAmount <= dentalDosageMax {
+                    dentalDosage = ((patientWeight / 0.453592) * dosageAmount ) / 1000
+                    resultsString = "" + String(dentalDosage) + ""
+                }
+                else if dosageAmount > dentalDosageMax {
+                    let alertController = UIAlertController(title: "Dosage limit", message: "Dosage should be between \(dentalDosageMin) and \(dentalDosageMax)", preferredStyle: UIAlertControllerStyle.alert)
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
+        //Check to see that the calculations hasn't gotten past max dosage
+        if dentalDosage >= dentalDosageMaximumLimit{
+            resultsString = String(dentalDosageMaximumLimit)
         }
         resultsLabel.text = resultsString
         return dentalDosage

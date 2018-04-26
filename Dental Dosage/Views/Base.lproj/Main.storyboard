@@ -669,7 +669,7 @@ fit your needs</string>
                                         <rect key="frame" x="261.5" y="0.0" width="63.5" height="57.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctb-tc-jsK" userLabel="Unit Text Field">
-                                                <rect key="frame" x="8" y="23" width="19" height="12"/>
+                                                <rect key="frame" x="8" y="23" width="19.5" height="12"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -787,7 +787,7 @@ fit your needs</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gP4-iY-EyB" userLabel="Results View">
-                                <rect key="frame" x="30" y="309" width="148" height="88.5"/>
+                                <rect key="frame" x="30" y="309" width="315" height="89"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended dosage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tz1-5h-fCU">
                                         <rect key="frame" x="8" y="0.0" width="110.5" height="12"/>
@@ -799,7 +799,7 @@ fit your needs</string>
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rld-xB-Jfe">
-                                        <rect key="frame" x="8" y="0.0" width="131.5" height="83.5"/>
+                                        <rect key="frame" x="8" y="0.0" width="79.5" height="83"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -808,7 +808,7 @@ fit your needs</string>
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carpules" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsS-bc-bYB">
-                                        <rect key="frame" x="8" y="71.5" width="132" height="12"/>
+                                        <rect key="frame" x="8" y="71" width="43" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -820,15 +820,15 @@ fit your needs</string>
                                 <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="tz1-5h-fCU" firstAttribute="leading" secondItem="gP4-iY-EyB" secondAttribute="leading" constant="8" id="1ga-BU-CNs"/>
-                                    <constraint firstAttribute="bottom" secondItem="nsS-bc-bYB" secondAttribute="bottom" constant="5" id="4an-n9-mcV"/>
-                                    <constraint firstAttribute="trailing" secondItem="nsS-bc-bYB" secondAttribute="trailing" constant="8" id="Bay-eQ-TWW"/>
+                                    <constraint firstAttribute="bottom" secondItem="nsS-bc-bYB" secondAttribute="bottom" constant="6" id="4an-n9-mcV"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nsS-bc-bYB" secondAttribute="trailing" id="Bay-eQ-TWW"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tz1-5h-fCU" secondAttribute="trailing" constant="20" symbolic="YES" id="HWS-jt-cD1"/>
                                     <constraint firstItem="rld-xB-Jfe" firstAttribute="leading" secondItem="gP4-iY-EyB" secondAttribute="leading" constant="8" id="P8q-ig-To7"/>
-                                    <constraint firstAttribute="width" secondItem="gP4-iY-EyB" secondAttribute="height" multiplier="5:3" id="QF4-X0-mIq"/>
+                                    <constraint firstAttribute="width" secondItem="gP4-iY-EyB" secondAttribute="height" multiplier="5:3" constant="166.66666666666666" id="QF4-X0-mIq"/>
                                     <constraint firstItem="nsS-bc-bYB" firstAttribute="leading" secondItem="gP4-iY-EyB" secondAttribute="leading" constant="8" id="Yxt-dI-YIr"/>
                                     <constraint firstItem="rld-xB-Jfe" firstAttribute="top" secondItem="tz1-5h-fCU" secondAttribute="top" id="iIf-AO-cc4"/>
                                     <constraint firstItem="rld-xB-Jfe" firstAttribute="bottom" secondItem="nsS-bc-bYB" secondAttribute="bottom" id="iki-1x-gP3"/>
-                                    <constraint firstAttribute="trailing" secondItem="rld-xB-Jfe" secondAttribute="trailing" constant="8" id="vfi-kC-zxP"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rld-xB-Jfe" secondAttribute="trailing" id="vfi-kC-zxP"/>
                                     <constraint firstItem="tz1-5h-fCU" firstAttribute="top" secondItem="gP4-iY-EyB" secondAttribute="top" id="w5r-YE-bVu"/>
                                 </constraints>
                             </view>
@@ -837,7 +837,7 @@ fit your needs</string>
                         <constraints>
                             <constraint firstItem="gP4-iY-EyB" firstAttribute="top" secondItem="kGB-aA-WfR" secondAttribute="bottom" constant="20" id="1wB-4Q-7ac"/>
                             <constraint firstItem="E67-TM-vmW" firstAttribute="trailing" secondItem="VOI-qd-fK0" secondAttribute="trailing" constant="20" id="41d-1q-lJ1"/>
-                            <constraint firstItem="gP4-iY-EyB" firstAttribute="width" secondItem="kGB-aA-WfR" secondAttribute="height" multiplier="90:35" id="8U6-5m-Tz1"/>
+                            <constraint firstItem="gP4-iY-EyB" firstAttribute="width" secondItem="kGB-aA-WfR" secondAttribute="height" multiplier="90:35" constant="167.14285714285714" id="8U6-5m-Tz1"/>
                             <constraint firstItem="VOI-qd-fK0" firstAttribute="top" secondItem="di9-Eu-fhE" secondAttribute="bottom" constant="10" id="BaC-Kx-Urz"/>
                             <constraint firstItem="kGB-aA-WfR" firstAttribute="top" secondItem="VOI-qd-fK0" secondAttribute="bottom" constant="10" id="IwI-KA-xtg"/>
                             <constraint firstItem="VOI-qd-fK0" firstAttribute="leading" secondItem="E67-TM-vmW" secondAttribute="leading" constant="20" id="JCI-w0-jit"/>
@@ -852,6 +852,7 @@ fit your needs</string>
                         <viewLayoutGuide key="safeArea" id="E67-TM-vmW"/>
                     </view>
                     <connections>
+                        <outlet property="dosageInfoLabel" destination="A6Z-hH-KTS" id="Jbe-zf-WQX"/>
                         <outlet property="dosageInputTextField" destination="AsT-tI-jkQ" id="py8-Nf-Wn3"/>
                         <outlet property="dosageInputView" destination="kGB-aA-WfR" id="YFe-Cg-GgN"/>
                         <outlet property="drugHeaderImageView" destination="9To-eu-DYT" id="aoB-aX-wkX"/>
